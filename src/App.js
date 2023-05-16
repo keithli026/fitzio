@@ -18,6 +18,12 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+        My content here. For testing only.
+      </div>
+      <div>
+        Hi everyone!
+      </div>
     </div>
   );
 }
