@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "variable";
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 2;
+  font-size: 16px;
+  overflow-x: hidden;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+h1, h2 ,h3 ,h4 ,h5 ,h6 {
+  margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+  font-weight: 500;
+  margin-top: 0;
+  color: black;
+}
+
+h1 {
+  font-size: 30px;
+  @media (min-width: $desktop-min-width) {
+    font-size: 45px;
+  }
+  @media (min-width: $desktop-min-width-2) {
+    font-size: 54px;
+  }
+}
+
+h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  @media (min-width: $desktop-min-width) {
+    font-size: 37px;
+    margin-bottom: 40px;
+  }
+  @media (min-width: $desktop-min-width-2) {
+    font-size: 45px;
+  }
+}
+
+h3 {
+  font-size: 22px;
+  @media (min-width: $desktop-min-width) {
+    font-size: 37px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  @media (min-width: $desktop-min-width) {
+    font-size: 30px;
+  }
+}
+
+h5 {
+  font-size: 18px;
+  @media (min-width: $desktop-min-width) {
+    font-size: 25px;
+  }
+}
+
+ul, ol {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  @media (min-width: $desktop-min-width) {
+    font-size: 16px;
+  }
+  @media (min-width: $desktop-min-width-2) {
+    font-size: 18px;
+  }
+}
+
+nav ul, nav ol {
+  list-style-type: none;
+  padding: 0;
+  font-weight: 700;
+}
+
+nav ul li, nav ol li {
+  padding: 0.5rem 1rem;
+}
+
+nav ul li a, nav ol li a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+a {
+  @media (min-width: $desktop-min-width) {
+    &:hover {
+      color: $lightblue;
+    }
+  }
+  &.button {
+    display: inline-block;
+    color: white;
+    background-color: $lightblue;
+    padding: 5px 20px;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    @media (min-width: $desktop-min-width) {
+      &:hover {
+        background-color: $blue;
+      }
+    }
+  }
+}
+
+p {
+  margin-top: 0;
+}
+
+.table_wrapper {
+  overflow-x: auto;
+  table {
+    width: 100%;
+    margin-bottom: 30px;
+    border-spacing: 0;
+    border: 0.5px solid grey;
+    th, td {
+      text-align: start;
+      border: 0.5px solid grey;
+      padding: 0.5rem;
+    }
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 30px;
+  a {
+    text-decoration: none;
+    &.active {
+      &:last-child {
+        color: $lightblue;
+      }
+    }
+  }
+  > span {
+    margin: 0 10px;
+  }
+}
+
+.overviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  @media (min-width: $desktop-min-width) {
+    margin-bottom: 50px;
+  }
+  .overview {
+    position: relative;
+    margin-bottom: 30px;
+    @media (min-width: $desktop-min-width) {
+      flex-basis: 49%;
+    }
+    h2 {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      height: fit-content;
+      text-align: center;
+      background-color: grey;
+      padding: 10px 0;
+      @media (min-width: $desktop-min-width) {
+        &:hover {
+          color: $lightblue;
+        }
+      }
+    }
+  }
+}

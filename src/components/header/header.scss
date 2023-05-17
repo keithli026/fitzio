@@ -1,0 +1,125 @@
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../../variable";
+#header {
+    background-color: $black;
+    z-index: 2;
+    > div {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        #logo {
+            a {
+                display: block;
+            }
+        }
+        .level-0 {
+            margin: 0;
+            li {
+                &.expandable {
+                    >a {
+                        &::after {
+                            font: var(--fa-font-solid);
+                            content: "\f078";
+                            font-size: 14px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                a {
+                    color: $white;
+                }
+                ul {
+                    white-space: nowrap;
+                    position: absolute;
+                    background-color: $black;
+                }
+                &:hover {
+                    > ul {
+                        display: flex;
+                    }
+                }
+        
+            }
+        
+            > li {
+                position: relative;
+                margin-left: 10px;
+                &:last-child {
+                    border: 2px solid $lightblue;
+                    border-radius: 10px;
+                }
+                > ul {
+                    top: 100%;
+                    left: 0;
+                    > li {
+                        &.expandable {
+                            >a {
+                                &::after {
+                                    font: var(--fa-font-solid);
+                                    content: "\f054";
+                                    font-size: 14px;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                        ul {
+                            top: 0;
+                            left: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .menuBtn {
+            svg {
+                font-size: 30px;
+                color: $white;
+            }
+        }
+    }
+    .mnav {
+        background-color: $lightblue;
+        .mlevel-0 {
+            overflow-y: auto;
+            a {
+                display: inline-block;
+                max-width: 90%;
+                padding: 0.375rem 0.75rem;
+                color: white;
+            }
+            .dropdownBtn {
+                max-width: 10%;
+                float: right;
+                padding: 0.375rem 0.75rem 0.375rem 0;
+                text-align: end;
+                color: white;
+                > div.down {
+                    @include fa-icon-solid($fa-var-chevron-down);
+                }
+                > div.up {
+                    @include fa-icon-solid($fa-var-chevron-up);
+                }
+            }
+            .mlevel-1 {
+                background-color: #c9c9c9;
+                a {
+                    color: black;
+                }
+                .dropdownBtn {
+                    color: black;
+                }
+            }
+            .mlevel-2 {
+                background-color: #F0F0F0;
+                a {
+                    color: black;
+                }
+                .dropdownBtn {
+                    color: black;
+                }
+            }
+        
+        }
+    }
+}
