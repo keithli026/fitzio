@@ -225,7 +225,9 @@ p {
       text-align: center;
       background-color: rgba(0,0,0,0.5);
       color: white;
+      padding: 10px 0;
       @media (min-width: $desktop-min-width) {
+        padding: 0;
         &:hover {
           color: $lightblue;
         }
@@ -236,7 +238,9 @@ p {
       }
       .title {
         color: inherit;
-        font-size: 30px;
+        @media (min-width: $desktop-min-width) {
+          font-size: 30px;
+        }
       }
     }
   }

@@ -6,11 +6,16 @@
     background-color: $black;
     z-index: 2;
     > div {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        // padding-top: 10px;
+        // padding-bottom: 10px;
         #logo {
             a {
                 display: block;
+                img {
+                    @media (min-width: $desktop-min-width-1) {
+                        min-width: 230px;
+                    }
+                }
             }
         }
         .level-0 {
@@ -73,6 +78,7 @@
         }
         .menuBtn {
             svg {
+                display: block;
                 font-size: 30px;
                 color: $white;
             }

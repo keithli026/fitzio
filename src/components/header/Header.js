@@ -99,7 +99,7 @@ const Header = () => {
           <Row spaceBetween alignItemsCenter>
             <H.LogoDiv id="logo">
               <a href="/">
-                <H.Logo alt="site-logo" src={process.env.PUBLIC_URL + '/logo1.jpeg'}></H.Logo>
+                <H.Logo alt="site-logo" src={process.env.PUBLIC_URL + '/logo_white.png'}></H.Logo>
               </a>
             </H.LogoDiv>
             <H.MenuWrapper>

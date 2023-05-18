@@ -2,6 +2,7 @@ import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { getPhysiotherapist, deletePhysiotherapist } from "../PhysiotherapistInfo";
 import { Container } from "../GlobalStyle";
 import "./staff.scss";
+import parse from 'html-react-parser'
 
 const Staff = () => {
     let navigate = useNavigate();
@@ -19,16 +20,7 @@ const Staff = () => {
                     <div className="content">
                         <h1 className="name">{staff.name}</h1>
                         <div className="title">{staff.title}</div>
-                        <div>
-                            {staff.pid === 1 ?
-                                <>
-                                    <p>Oliver graduated from Curtin with a Bachelor of Physiotherapy.</p>
-                                    <p>He understands the importance of professional development to further enhance his clinical skills after graduation.</p>
-                                    <p>He completed a qualification of deep dry needling and several courses including shoulder rehabilitation, running biomechanics, headache, and dizziness management.</p>
-                                    <p>Oliver is interested in treating musculoskeletal conditions especially shoulder, back, and neck pain.</p>
-                                    <p>He believes a combination of "hands-on" treatment and therapeutic exercises is important for clients to manage their musculoskeletal conditions and achieve their goals.</p><p>Outside the clinic, Oliver goes to the gym regularly. He enjoys grocery shopping and cooking big meals.</p>
-                                </> : "No summary"}
-                        </div>
+                        <div>{staff.summary ? parse(staff.summary) : "No summary"}</div>
                     </div>
                 </div>
                 {/* <button
