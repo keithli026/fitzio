@@ -14,9 +14,9 @@ const AboutOverview = () => {
                     </Link>
                 </div>
                 <div className="overview">
-                    <Link to="/about/pricing">
-                        <img src={process.env.PUBLIC_URL + "image_3_to_2.png"} alt="Pricing"></img>
-                        <h2>Pricing</h2>
+                    <Link to="/about/our-physiotherapy">
+                        <img src={process.env.PUBLIC_URL + "image_3_to_2.png"} alt="Our Physiotherapy"></img>
+                        <h2>Our Physiotherapy</h2>
                     </Link>
                 </div>
             </Container>

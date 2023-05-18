@@ -1,10 +1,10 @@
 var physiotherapists = [
     {
         pid: 1,
-        name: "John Lee",
+        name: "Oliver Li",
         gender: "M",
         title: "physiotherapist",
-        photo: process.env.PUBLIC_URL + "image_width_478.png"
+        photo: process.env.PUBLIC_URL + "Oliver_Li.jpg"
     },
     {
         pid: 2,

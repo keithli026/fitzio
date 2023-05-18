@@ -3,17 +3,32 @@ import { Link } from "react-router-dom";
 const OurTeamOverview = () => {
     return(
         <>
-        <Container className="overviews">
-            <div className="overview">
-                <Link to="/about/our-team/physiotherapists">
-                    <img src={process.env.PUBLIC_URL + "image_3_to_2.png"} alt="Physiotherapists"></img>
-                    <h2>Physiotherapists</h2>
+        <Container className="card_wrapper">
+            <div className="card">
+                <Link to="/about/our-team">
+                    <img src={process.env.PUBLIC_URL + "Oliver_Li.jpg"} alt="Oliver Li"></img>
+                    <div className="summary">
+                        <h2 className="name">Oliver Li</h2>
+                        <div className="title">Physiotherapist</div>
+                    </div>
                 </Link>
             </div>
-            <div className="overview">
-                <Link to="/about/our-team/remedial-massage-therapist">
-                    <img src={process.env.PUBLIC_URL + "image_3_to_2.png"} alt="Remedial Massage Therapist"></img>
-                    <h2>Remedial Massage Therapist</h2>
+            <div className="card">
+                <Link to="/about/our-team">
+                    <img src={process.env.PUBLIC_URL + "Oliver_Li.jpg"} alt="Oliver Li"></img>
+                    <div className="summary">
+                        <h2 className="name">Oliver Li 2</h2>
+                        <div className="title">Physiotherapist</div>
+                    </div>
+                </Link>
+            </div>
+            <div className="card">
+                <Link to="/about/our-team">
+                    <img src={process.env.PUBLIC_URL + "Oliver_Li.jpg"} alt="Oliver Li"></img>
+                    <div className="summary">
+                        <h2 className="name">Oliver Li 3</h2>
+                        <div className="title">Physiotherapist</div>
+                    </div>
                 </Link>
             </div>
         </Container>

@@ -7,7 +7,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import AboutOverview from './pages/AboutOverview';
 import OurTeam from './pages/OurTeam';
+import OurPhysiotherapy from './pages/OurPhysiotherapy';
 import OurTeamOverview from './pages/OurTeamOverview';
+import Staff from './pages/Staff';
 import Physiotherapists from './pages/Physiotherapists';
 import PhysiotherapistsOverview from './pages/physiotherapistsOverview';
 import Physiotherapist from './pages/Physiotherapist';
@@ -37,12 +39,14 @@ export default function MainApp() {
             <Route index element={<AboutOverview />} />
             <Route path="our-team" element={<OurTeam />}>
               <Route index element={<OurTeamOverview />} />
-              <Route path="physiotherapists" element={<Physiotherapists/>}>
+              <Route path=":staffId" element={<Staff />}/>
+              {/* <Route path="physiotherapists" element={<Physiotherapists/>}>
                 <Route index element={<PhysiotherapistsOverview />} />
                 <Route path=":physiotherapistId" element={<Physiotherapist />}/>
               </Route>
-              <Route path="remedial-massage-therapist" element={<RemedialMassageTherapist />}></Route>
+              <Route path="remedial-massage-therapist" element={<RemedialMassageTherapist />}></Route> */}
             </Route>
+            <Route path="our-physiotherapy" element={<OurPhysiotherapy />} />
           </Route>
           <Route path="services" element={<Services />}>
             <Route index element={<ServicesOverview />} />

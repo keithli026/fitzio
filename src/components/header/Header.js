@@ -107,12 +107,15 @@ const Header = () => {
                 <H.MenuItem className="expandable">
                   <Link to="/about">About</Link>
                   <H.MenuList className="level-1">
-                    <H.MenuItem className="expandable">
+                    <H.MenuItem>
                       <Link to="/about/our-team">Our Team</Link>
-                      <H.MenuList className="level-2">
+                      {/* <H.MenuList className="level-2">
                         <H.MenuItem><Link to="/about/our-team/physiotherapists">Physiotherapists</Link></H.MenuItem>
                         <H.MenuItem><Link to="/about/our-team/remedial-massage-therapist">Remedial Massage Therapist</Link></H.MenuItem>
-                      </H.MenuList>
+                      </H.MenuList> */}
+                    </H.MenuItem>
+                    <H.MenuItem>
+                      <Link to="/about/our-physiotherapy">Our Physiotherapy</Link>
                     </H.MenuItem>
                   </H.MenuList>
                 </H.MenuItem>
@@ -159,14 +162,17 @@ const Header = () => {
               </div>
               <H.MobileMenuList className="mlevel-1" style={{ display: state.about ? "flex" : "none" }}>
                 <H.MobileMenuItem style={{ paddingBottom: state.ourteam ? "0" : "0.5rem" }}>
-                  <Link to="/about/our-team" style={{ paddingBottom: state.ourteam ? "0.875rem" : "0.375rem" }} onClick={() => changeLocation('/about/our-team')}>Our Team</Link>
-                  <div className="dropdownBtn" onClick={showItemOurTeam} aria-expanded={state.ourteam ? "true" : "false"}>
+                  <Link to="/about/our-team" onClick={() => changeLocation('/about/our-team')}>Our Team</Link>
+                  {/* <div className="dropdownBtn" onClick={showItemOurTeam} aria-expanded={state.ourteam ? "true" : "false"}>
                     {state.ourteam ? (<div className="up"></div>) : (<div className="down"></div>)}
                   </div>
                   <H.MobileMenuList className="mlevel-2" style={{ display: state.ourteam ? "flex" : "none" }}>
                     <H.MobileMenuItem><Link to="/about/our-team/physiotherapists" onClick={() => changeLocation('/about/our-team/physiotherapists')}>Physiotherapists</Link></H.MobileMenuItem>
                     <H.MobileMenuItem><Link to="/about/our-team/remedial-massage-therapist" onClick={() => changeLocation('/about/our-team/remedial-massage-therapist')}>Remedial Massage Therapist</Link></H.MobileMenuItem>
-                  </H.MobileMenuList>
+                  </H.MobileMenuList> */}
+                </H.MobileMenuItem>
+                <H.MobileMenuItem>
+                  <Link to="/about/our-physiotherapy" onClick={() => changeLocation('/about/our-physiotherapy')}>Our Physiotherapy</Link>
                 </H.MobileMenuItem>
               </H.MobileMenuList>
             </H.MobileMenuItem>

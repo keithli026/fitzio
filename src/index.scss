@@ -193,3 +193,48 @@ p {
     }
   }
 }
+
+.card_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  @media (min-width: $desktop-min-width) {
+    margin-bottom: 50px;
+    > div:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  .card {
+    position: relative;
+    margin-bottom: 30px;
+    @media (min-width: $desktop-min-width) {
+      flex-basis: 32%;
+      margin-right: 2%;
+    }
+    img {
+      display: block;
+    }
+    .summary {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: fit-content;
+      text-align: center;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      @media (min-width: $desktop-min-width) {
+        &:hover {
+          color: $lightblue;
+        }
+      }
+      .name {
+        margin-bottom: 0;
+        color: inherit;
+      }
+      .title {
+        color: inherit;
+        font-size: 30px;
+      }
+    }
+  }
+}
