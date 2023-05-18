@@ -1,0 +1,41 @@
+@import "../variable";
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    .image_wrapper {
+        flex-basis: 100%;
+        @media (min-width: $desktop-min-width) {
+            flex-basis: 30%;
+        }
+    }
+    .content {
+        flex-basis: 100%;
+        @media (min-width: $desktop-min-width) {
+            flex-basis: 65%;
+        }
+        .name {
+            font-weight: 700;
+            @media (min-width: $desktop-min-width) {
+                margin-bottom: 0;
+            }
+        }
+        .title {
+            width: fit-content;
+            font-size: 20px;
+            position: relative;
+            margin-bottom: 30px;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 50%;
+                border-bottom: 1px solid red;
+            }
+        }
+    }
+}

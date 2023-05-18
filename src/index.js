@@ -14,6 +14,7 @@ import Physiotherapists from './pages/Physiotherapists';
 import PhysiotherapistsOverview from './pages/physiotherapistsOverview';
 import Physiotherapist from './pages/Physiotherapist';
 import RemedialMassageTherapist from './pages/RemedialMassageTherapist';
+import MeetOurTeam from './pages/MeetOurTeam';
 import Fees from './pages/Fees';
 import Services from "./pages/Services";
 import ServicesOverview from './pages/ServicesOverview';
@@ -28,25 +29,29 @@ import Conditions from "./pages/Conditions";
 import Contact from "./pages/Contact";
 import BookOnline from './pages/BookOnline';
 import NoPage from "./pages/NoPage";
+import MeetOurTeamOverview from './pages/MeetOurTeamOverview';
 
 export default function MainApp() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />}>
-            <Route index element={<AboutOverview />} />
+            {/* <Route index element={<AboutOverview />} />
             <Route path="our-team" element={<OurTeam />}>
               <Route index element={<OurTeamOverview />} />
-              <Route path=":staffId" element={<Staff />}/>
-              {/* <Route path="physiotherapists" element={<Physiotherapists/>}>
+              <Route path="physiotherapists" element={<Physiotherapists/>}>
                 <Route index element={<PhysiotherapistsOverview />} />
                 <Route path=":physiotherapistId" element={<Physiotherapist />}/>
               </Route>
-              <Route path="remedial-massage-therapist" element={<RemedialMassageTherapist />}></Route> */}
-            </Route>
+              <Route path="remedial-massage-therapist" element={<RemedialMassageTherapist />}></Route>
+            </Route> */}
             <Route path="our-physiotherapy" element={<OurPhysiotherapy />} />
+          </Route>
+          <Route path="meet-our-team" element={<MeetOurTeam />}>
+            <Route index element={<MeetOurTeamOverview />} />
+            <Route path=":staffId" element={<Staff />}/>
           </Route>
           <Route path="services" element={<Services />}>
             <Route index element={<ServicesOverview />} />
@@ -66,7 +71,7 @@ export default function MainApp() {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
