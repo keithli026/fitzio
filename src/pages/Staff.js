@@ -1,5 +1,5 @@
 import { useParams, useNavigate, useLocation } from "react-router-dom";
-import { getPhysiotherapist, deletePhysiotherapist } from "../PhysiotherapistInfo";
+import { getPhysiotherapist, getPhysiotherapists ,deletePhysiotherapist, getPhysiotherapistByName } from "../PhysiotherapistInfo";
 import { Container } from "../GlobalStyle";
 import "./staff.scss";
 import parse from 'html-react-parser'
@@ -8,7 +8,8 @@ const Staff = () => {
     let navigate = useNavigate();
     let location = useLocation();
     let params = useParams();
-    let staff = getPhysiotherapist(parseInt(params.staffId, 10));
+    let staff = getPhysiotherapistByName(params.staffId);
+    // let staff = getPhysiotherapist(parseInt(params.staffId, 10));
     console.log(location, params.staffId, staff);
     return (
         <>

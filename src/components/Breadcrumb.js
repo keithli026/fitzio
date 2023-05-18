@@ -4,6 +4,7 @@ import useBreadcrumbs from "use-react-router-breadcrumbs";
 
 const Breadcrumb = () => {
     const breadcrumbs = useBreadcrumbs();
+    console.log(breadcrumbs);
     return (
         <nav className="breadcrumb">
             {breadcrumbs.map(({ match, breadcrumb }, index) => (

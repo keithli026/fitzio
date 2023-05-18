@@ -7,8 +7,12 @@
     margin-bottom: 30px;
     .image_wrapper {
         flex-basis: 100%;
+        margin-bottom: 30px;
         @media (min-width: $desktop-min-width) {
             flex-basis: 30%;
+        }
+        img {
+            box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
         }
     }
     .content {
@@ -18,9 +22,7 @@
         }
         .name {
             font-weight: 700;
-            @media (min-width: $desktop-min-width) {
-                margin-bottom: 0;
-            }
+            margin-bottom: 0;
         }
         .title {
             width: fit-content;
