@@ -24,14 +24,7 @@ import Taping from './pages/Taping';
 import RadialShockwaveTherapy from './pages/RadialShockwaveTherapy';
 import Electrotherapy from './pages/Electrotherapy';
 import TherapeuticUltrasound from './pages/TherapeuticUltrasound';
-import MyofascialDecompression from './pages/MyofascialDecompression';
-import GeneralPhysiotherapy from './pages/GeneralPhysiotherapy';
-import GeneralPhysiotherapyOverview from './pages/GeneralPhysiotherapyOverview';
-import ChildrensPhysiotherapy from './pages/ChildrensPhysiotherapy';
-import DVAPhysiotherapy from './pages/DVAPhysiotherapy';
-import MotorVehicleClaims from './pages/MotorVehicleClaims';
-import WorkcoverPhysiotherapy from './pages/WorkcoverPhysiotherapy';
-import SportsPhysiotherapy from './pages/SportsPhysiotherapy';
+import CuppingTherapy from './pages/CuppingTherapy';
 import Conditions from "./pages/Conditions";
 import Contact from "./pages/Contact";
 import BookOnline from './pages/BookOnline';
@@ -46,7 +39,7 @@ export default function MainApp() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           {/* <Route path="physiotherapists" element={<Physiotherapists />}>
-            <Route index element={<PhysiotherapistsOverview />} />
+            <Route index element={<PhysiotherapistsOvervieCupping therapyw />} />
             <Route path=":physiotherapistId" element={<Physiotherapist />} />
           </Route> */}
           <Route path="meet-our-team" element={<MeetOurTeam />}>
@@ -61,20 +54,11 @@ export default function MainApp() {
             <Route path="massage-therapy" element={<MassageTherapy />} />
             <Route path="extracorporeal-shockwave-therapy" element={<ExtracorporealShockwaveTherapy />} />
             <Route path="electrotherapy" element={<Electrotherapy />} />
-            <Route path="myofascial-decompression" element={<MyofascialDecompression />} />
+            <Route path="cupping-therapy" element={<CuppingTherapy />} />
             <Route path="taping" element={<Taping />} />
             {/* <Route path="radial-shockwave-therapy" element={<RadialShockwaveTherapy />} />
             <Route path="myofascial-release" element={<MyofascialRelease />} />
             <Route path="therapeutic-ultrasound" element={<TherapeuticUltrasound />} /> */}
-          
-            {/* <Route path="general-physiotherapy" element={<GeneralPhysiotherapy />}>
-              <Route index element={<GeneralPhysiotherapyOverview />} />
-              <Route path="childrens-physiotherapy" element={<ChildrensPhysiotherapy />} />
-              <Route path="DVA-physiotherapy" element={<DVAPhysiotherapy />} />
-              <Route path="motor-vehicle-claims" element={<MotorVehicleClaims />} />
-              <Route path="workcover-physiotherapy" element={<WorkcoverPhysiotherapy />} />
-            </Route>
-            <Route path="sports-physiotherapy" element={<SportsPhysiotherapy />}></Route> */}
           </Route>
           <Route path="fees" element={<Fees />} />
           <Route path="conditions" element={<Conditions />} />

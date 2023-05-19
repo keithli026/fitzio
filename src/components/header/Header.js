@@ -53,8 +53,7 @@ const Header = () => {
     about: false,
     ourteam: false,
     services: false,
-    gp: false,
-    sp: false
+    gp: false
   };
   const [state, dispatch] = useReducer(reducer, initialState);
   function reducer(state, action) {
@@ -113,22 +112,13 @@ const Header = () => {
                 <H.MenuItem className="expandable">
                   <Link to="/services">Services</Link>
                   <H.MenuList className="level-1">
-                    {/* <H.MenuItem className="expandable">
-                      <Link to="/services/general-physiotherapy">General Physiotherapy</Link>
-                      <H.MenuList className="level-2">
-                        <H.MenuItem><Link to="/services/general-physiotherapy/childrens-physiotherapy">Children's Physiotherapy</Link></H.MenuItem>
-                        <H.MenuItem><Link to="/services/general-physiotherapy/DVA-physiotherapy">DVA Physiotherapy</Link></H.MenuItem>
-                        <H.MenuItem><Link to="/services/general-physiotherapy/motor-vehicle-claims">Motor Vehicle Claims</Link></H.MenuItem>
-                        <H.MenuItem><Link to="/services/general-physiotherapy/workcover-physiotherapy">Workcover Physiotherapy</Link></H.MenuItem>
-                      </H.MenuList>
-                    </H.MenuItem> */}
                     <H.MenuItem><Link to="/services/manual-therapy">Manual Therapy</Link></H.MenuItem>
                     <H.MenuItem><Link to="/services/dry-needling">Dry Needling</Link></H.MenuItem>
                     <H.MenuItem><Link to="/services/exercise-rehabilitation">Exercise Rehabilitation</Link></H.MenuItem>
                     <H.MenuItem><Link to="/services/massage-therapy">Massage Therapy</Link></H.MenuItem>
                     <H.MenuItem><Link to="/services/extracorporeal-shockwave-therapy">Extracorporeal Shockwave Therapy</Link></H.MenuItem>
                     <H.MenuItem><Link to="/services/electrotherapy">Electrotherapy</Link></H.MenuItem>
-                    <H.MenuItem><Link to="/services/myofascial-decompression">Myofascial Decompression</Link></H.MenuItem>
+                    <H.MenuItem><Link to="/services/cupping-therapy">Cupping Therapy</Link></H.MenuItem>
                     <H.MenuItem><Link to="/services/taping">Taping</Link></H.MenuItem>
                     {/* <H.MenuItem><Link to="/services/radial-shockwave-therapy">Radial Shockwave Therapy</Link></H.MenuItem>
                     <H.MenuItem><Link to="/services/therapeutic-ultrasound">Therapeutic Ultrasound</Link></H.MenuItem>
@@ -169,33 +159,17 @@ const Header = () => {
                 {state.services ? (<div className="up"></div>) : (<div className="down"></div>)}
               </div>
               <H.MobileMenuList className="mlevel-1" style={{ display: state.services ? "flex" : "none" }}>
-                {/* <H.MobileMenuItem style={{ paddingBottom: state.gp ? "0" : "0.5rem" }}>
-                  <Link to="/services/general-physiotherapy" style={{ paddingBottom: state.gp ? "0.875rem" : "0.375rem" }} onClick={() => changeLocation('/services/general-physiotherapy')}>General Physiotherapy</Link>
-                  <div className="dropdownBtn" onClick={showItemGP} aria-expanded={state.gp ? "true" : "false"}>
-                    {state.gp ? (<div className="up"></div>) : (<div className="down"></div>)}
-                  </div>
-                  <H.MobileMenuList className="mlevel-2" style={{ display: state.gp ? "flex" : "none" }}>
-                    <H.MobileMenuItem><Link to="/services/general-physiotherapy/childrens-physiotherapy" onClick={() => changeLocation('/services/general-physiotherapy/childrens-physiotherapy')}>Children's Physiotherapy</Link></H.MobileMenuItem>
-                    <H.MobileMenuItem><Link to="/services/general-physiotherapy/DVA-physiotherapy" onClick={() => changeLocation('/services/general-physiotherapy/DVA-physiotherapy')}>DVA Physiotherapy</Link></H.MobileMenuItem>
-                    <H.MobileMenuItem><Link to="/services/general-physiotherapy/motor-vehicle-claims" onClick={() => changeLocation('/services/general-physiotherapy/motor-vehicle-claims')}>Motor Vehicle Claims</Link></H.MobileMenuItem>
-                    <H.MobileMenuItem><Link to="/services/general-physiotherapy/workcover-physiotherapy" onClick={() => changeLocation('/services/general-physiotherapy/workcover-physiotherapy')}>Workcover Physiotherapy</Link></H.MobileMenuItem>
-                  </H.MobileMenuList>
-                </H.MobileMenuItem> */}
-               
                 <H.MobileMenuItem><Link to="/services/manual-therapy" onClick={() => changeLocation('/services/manual-therapy')}>Manual Therapy</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/dry-needling" onClick={() => changeLocation('/services/dry-needling')}>Dry Needling</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/exercise-rehabilitation" onClick={() => changeLocation('/services/exercise-rehabilitation')}>Exercise Rehabilitation</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/massage-therapy" onClick={() => changeLocation('/services/massage-therapy')}>Massage Therapy</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/extracorporeal-shockwave-therapy" onClick={() => changeLocation('/services/extracorporeal-shockwave-therapy')}>Extracorporeal Shockwave Therapy</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/electrotherapy" onClick={() => changeLocation('/services/electrotherapy')}>Electrotherapy</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/myofascial-decompression" onClick={() => changeLocation('/services/myofascial-decompression')}>Myofascial Decompression</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/cupping-therapy" onClick={() => changeLocation('/services/cupping-therapy')}>Cupping Therapy</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/taping" onClick={() => changeLocation('/services/taping')}>Taping</Link></H.MobileMenuItem>
                 {/* <H.MobileMenuItem><Link to="/services/radial-shockwave-therapy" onClick={() => changeLocation('/services/radial-shockwave-therapy')}>Radial Shockwave Therapy</Link></H.MobileMenuItem>               
                 <H.MobileMenuItem><Link to="/services/therapeutic-ultrasound" onClick={() => changeLocation('/services/therapeutic-ultrasound')}>Therapeutic Ultrasound</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/myofascial-release" onClick={() => changeLocation('/services/myofascial-release')}>Myofascial Release</Link></H.MobileMenuItem> */}
-                {/* <H.MobileMenuItem>
-                  <Link to="/services/sports-physiotherapy" onClick={() => changeLocation('/services/sports-physiotherapy')}>Sports Physiotherapy</Link>
-                </H.MobileMenuItem> */}
               </H.MobileMenuList>
             </H.MobileMenuItem>
             <H.MobileMenuItem>

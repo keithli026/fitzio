@@ -43,9 +43,9 @@ const ServicesOverview = () => {
                 </Link>
             </div>
             <div className="overview">
-                <Link to="/services/myofascial-decompression">
-                    <img src={process.env.PUBLIC_URL + "/image_3_to_2.png"} alt="Myofascial Decompression"></img>
-                    <h2>Myofascial Decompression</h2>
+                <Link to="/services/cupping-therapy">
+                    <img src={process.env.PUBLIC_URL + "/image_3_to_2.png"} alt="Cupping Therapy"></img>
+                    <h2>Cupping Therapy</h2>
                 </Link>
             </div>
             <div className="overview">
