@@ -5,19 +5,23 @@ import './index.scss';
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import AboutOverview from './pages/AboutOverview';
-import OurTeam from './pages/OurTeam';
-import OurPhysiotherapy from './pages/OurPhysiotherapy';
-import OurTeamOverview from './pages/OurTeamOverview';
 import Staff from './pages/Staff';
-import Physiotherapists from './pages/Physiotherapists';
-import PhysiotherapistsOverview from './pages/physiotherapistsOverview';
-import Physiotherapist from './pages/Physiotherapist';
-import RemedialMassageTherapist from './pages/RemedialMassageTherapist';
+// import Physiotherapists from './pages/Physiotherapists';
+// import PhysiotherapistsOverview from './pages/physiotherapistsOverview';
+// import Physiotherapist from './pages/Physiotherapist';
+
 import MeetOurTeam from './pages/MeetOurTeam';
 import Fees from './pages/Fees';
 import Services from "./pages/Services";
 import ServicesOverview from './pages/ServicesOverview';
+import DryNeedling from './pages/DryNeedling';
+import ManualTherapy from './pages/ManualTherapy';
+import MyofascialRelease from './pages/MyofascialRelease';
+import ExerciseRehabilitation from './pages/ExerciseRehabilitation';
+import RadialShockwaveTherapy from './pages/RadialShockwaveTherapy';
+import Electrotherapy from './pages/Electrotherapy';
+import TherapeuticUltrasound from './pages/TherapeuticUltrasound';
+import MyofascialDecompression from './pages/MyofascialDecompression';
 import GeneralPhysiotherapy from './pages/GeneralPhysiotherapy';
 import GeneralPhysiotherapyOverview from './pages/GeneralPhysiotherapyOverview';
 import ChildrensPhysiotherapy from './pages/ChildrensPhysiotherapy';
@@ -37,32 +41,33 @@ export default function MainApp() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<About />}>
-            {/* <Route index element={<AboutOverview />} />
-            <Route path="our-team" element={<OurTeam />}>
-              <Route index element={<OurTeamOverview />} />
-              <Route path="physiotherapists" element={<Physiotherapists/>}>
-                <Route index element={<PhysiotherapistsOverview />} />
-                <Route path=":physiotherapistId" element={<Physiotherapist />}/>
-              </Route>
-              <Route path="remedial-massage-therapist" element={<RemedialMassageTherapist />}></Route>
-            </Route> */}
-            <Route path="our-physiotherapy" element={<OurPhysiotherapy />} />
-          </Route>
+          <Route path="about" element={<About />} />
+          {/* <Route path="physiotherapists" element={<Physiotherapists />}>
+            <Route index element={<PhysiotherapistsOverview />} />
+            <Route path=":physiotherapistId" element={<Physiotherapist />} />
+          </Route> */}
           <Route path="meet-our-team" element={<MeetOurTeam />}>
             <Route index element={<MeetOurTeamOverview />} />
             <Route path=":staffId" element={<Staff />}/>
           </Route>
           <Route path="services" element={<Services />}>
             <Route index element={<ServicesOverview />} />
-            <Route path="general-physiotherapy" element={<GeneralPhysiotherapy />}>
+            <Route path="dry-needling" element={<DryNeedling />} />
+            <Route path="manual-therapy" element={<ManualTherapy />} />
+            <Route path="myofascial-release" element={<MyofascialRelease />} />
+            <Route path="exercise-rehabilitation" element={<ExerciseRehabilitation />} />
+            <Route path="radial-shockwave-therapy" element={<RadialShockwaveTherapy />} />
+            <Route path="electrotherapy" element={<Electrotherapy />} />
+            <Route path="therapeutic-ultrasound" element={<TherapeuticUltrasound />} />
+            <Route path="myofascial-decompression" element={<MyofascialDecompression />} />
+            {/* <Route path="general-physiotherapy" element={<GeneralPhysiotherapy />}>
               <Route index element={<GeneralPhysiotherapyOverview />} />
               <Route path="childrens-physiotherapy" element={<ChildrensPhysiotherapy />} />
               <Route path="DVA-physiotherapy" element={<DVAPhysiotherapy />} />
               <Route path="motor-vehicle-claims" element={<MotorVehicleClaims />} />
               <Route path="workcover-physiotherapy" element={<WorkcoverPhysiotherapy />} />
             </Route>
-            <Route path="sports-physiotherapy" element={<SportsPhysiotherapy />}></Route>
+            <Route path="sports-physiotherapy" element={<SportsPhysiotherapy />}></Route> */}
           </Route>
           <Route path="fees" element={<Fees />} />
           <Route path="conditions" element={<Conditions />} />

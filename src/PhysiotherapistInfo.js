@@ -14,17 +14,17 @@ var physiotherapists = [
     },
     {
         pid: 2,
-        name: "Carrie Lam",
+        name: "Oliver A",
         gender: "F",
         title: "Physiotherapist",
-        photo: process.env.PUBLIC_URL + "/image_width_478.png"
+        photo: process.env.PUBLIC_URL + "/Oliver_Li.jpg"
     },
     {
         pid: 3,
-        name: "CY Leung",
+        name: "Oliver B",
         gender: "M",
         title: "Physiotherapist",
-        photo: process.env.PUBLIC_URL + "/image_width_478.png"
+        photo: process.env.PUBLIC_URL + "/Oliver_Li.jpg"
     }
 ];
 
