@@ -18,6 +18,9 @@ import DryNeedling from './pages/DryNeedling';
 import ManualTherapy from './pages/ManualTherapy';
 import MyofascialRelease from './pages/MyofascialRelease';
 import ExerciseRehabilitation from './pages/ExerciseRehabilitation';
+import MassageTherapy from './pages/MassageTherapy';
+import ExtracorporealShockwaveTherapy from './pages/ExtracorporealShockwaveTherapy';
+import Taping from './pages/Taping';
 import RadialShockwaveTherapy from './pages/RadialShockwaveTherapy';
 import Electrotherapy from './pages/Electrotherapy';
 import TherapeuticUltrasound from './pages/TherapeuticUltrasound';
@@ -52,14 +55,18 @@ export default function MainApp() {
           </Route>
           <Route path="services" element={<Services />}>
             <Route index element={<ServicesOverview />} />
-            <Route path="dry-needling" element={<DryNeedling />} />
             <Route path="manual-therapy" element={<ManualTherapy />} />
-            <Route path="myofascial-release" element={<MyofascialRelease />} />
+            <Route path="dry-needling" element={<DryNeedling />} />
             <Route path="exercise-rehabilitation" element={<ExerciseRehabilitation />} />
-            <Route path="radial-shockwave-therapy" element={<RadialShockwaveTherapy />} />
+            <Route path="massage-therapy" element={<MassageTherapy />} />
+            <Route path="extracorporeal-shockwave-therapy" element={<ExtracorporealShockwaveTherapy />} />
             <Route path="electrotherapy" element={<Electrotherapy />} />
-            <Route path="therapeutic-ultrasound" element={<TherapeuticUltrasound />} />
             <Route path="myofascial-decompression" element={<MyofascialDecompression />} />
+            <Route path="taping" element={<Taping />} />
+            {/* <Route path="radial-shockwave-therapy" element={<RadialShockwaveTherapy />} />
+            <Route path="myofascial-release" element={<MyofascialRelease />} />
+            <Route path="therapeutic-ultrasound" element={<TherapeuticUltrasound />} /> */}
+          
             {/* <Route path="general-physiotherapy" element={<GeneralPhysiotherapy />}>
               <Route index element={<GeneralPhysiotherapyOverview />} />
               <Route path="childrens-physiotherapy" element={<ChildrensPhysiotherapy />} />

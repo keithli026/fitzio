@@ -5,7 +5,7 @@ const MyofascialRelease = () => {
   return (
     <>
       <Container>
-        <div className='service'>Myofascial Release</div>
+        <h1 className='service'>Myofascial Release</h1>
         <ul className='effect'>
           <li>Reduce stress and anxiety</li>
           <li>Restore muscle function</li>

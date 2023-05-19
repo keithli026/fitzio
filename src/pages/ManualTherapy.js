@@ -5,7 +5,10 @@ const ManualTherapy = () => {
   return (
     <>
       <Container>
-        <div className='service'>Manual Therapy</div>
+        <h1 className='service'>Manual Therapy</h1>
+        <p>Manual therapy consists of a wide range of hands-on interventions including soft tissue mobilizations, joint mobilizations, manipulations or muscle energy techniques.</p>
+        <p>Manual therapy is used in conjunction with an active rehabilitation program to become effective in optimizing the rehabilitation process and return to function.</p>
+        <div>Benefits of manual therapy are:</div>
         <ul className='effect'>
           <li>Restore joint range of motion</li>
           <li>Restore muscle function</li>

@@ -167,16 +167,26 @@ p {
 .overviews {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-bottom: 30px;
+  @media (min-width: $tablet-min-width) {
+    justify-content: space-between;
+  }
   @media (min-width: $desktop-min-width) {
+    justify-content: unset;
     margin-bottom: 50px;
   }
   .overview {
     position: relative;
     margin-bottom: 30px;
+    @media (min-width: $tablet-min-width) {
+      flex-basis: 48%;
+    }
     @media (min-width: $desktop-min-width) {
-      flex-basis: 49%;
+      margin-right: 2%;
+      flex-basis: 32%;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
     h2 {
       position: absolute;
@@ -188,6 +198,7 @@ p {
       text-align: center;
       background-color: grey;
       padding: 10px 0;
+      font-size: 20px;
       @media (min-width: $desktop-min-width) {
         &:hover {
           color: $lightblue;

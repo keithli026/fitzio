@@ -5,7 +5,7 @@ const TherapeuticUltrasound = () => {
     return (
         <>
             <Container>
-                <div className='service'>Therapeutic Ultrasound</div>
+                <h1 className='service'>Therapeutic Ultrasound</h1>
                 <ul className='effect'>
                     <li>Reduce pain</li>
                     <li>Reduce swelling</li>
