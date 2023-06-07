@@ -48,32 +48,12 @@ const ServicesOverview = () => {
                     <div className="title">Cupping Therapy</div>
                 </Link>
             </div>
-            <div className="overview">
+            {/* <div className="overview">
                 <Link to="/services/taping">
                     <img src={process.env.PUBLIC_URL + "/Taping.jpg"} alt="Taping"></img>
                     <div className="title">Taping</div>
                 </Link>
-            </div>
-
-            {/* <div className="overview">
-                <Link to="/services/myofascial-release">
-                    <img src={process.env.PUBLIC_URL + "/image_3_to_2.png"} alt="Myofascial Release"></img>
-                    <div className="title">Myofascial Release</div>
-                </Link>
-            </div>
-            <div className="overview">
-                <Link to="/services/radial-shockwave-therapy">
-                    <img src={process.env.PUBLIC_URL + "/image_3_to_2.png"} alt="Radial Shockwave Therapy"></img>
-                    <div className="title">Radial Shockwave Therapy</div>
-                </Link>
-            </div>
-            <div className="overview">
-                <Link to="/services/therapeutic-ultrasound">
-                    <img src={process.env.PUBLIC_URL + "/image_3_to_2.png"} alt="Therapeutic Ultrasound"></img>
-                    <div className="title">Therapeutic Ultrasound</div>
-                </Link>
             </div> */}
-
         </Container>
     );
 }

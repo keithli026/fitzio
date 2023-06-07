@@ -55,7 +55,7 @@ export default function MainApp() {
             <Route path="extracorporeal-shockwave-therapy" element={<ExtracorporealShockwaveTherapy />} />
             <Route path="electrotherapy" element={<Electrotherapy />} />
             <Route path="cupping-therapy" element={<CuppingTherapy />} />
-            <Route path="taping" element={<Taping />} />
+            {/* <Route path="taping" element={<Taping />} /> */}
             {/* <Route path="radial-shockwave-therapy" element={<RadialShockwaveTherapy />} />
             <Route path="myofascial-release" element={<MyofascialRelease />} />
             <Route path="therapeutic-ultrasound" element={<TherapeuticUltrasound />} /> */}

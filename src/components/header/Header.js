@@ -119,7 +119,7 @@ const Header = () => {
                     <H.MenuItem><Link to="/services/extracorporeal-shockwave-therapy">Extracorporeal Shockwave Therapy</Link></H.MenuItem>
                     <H.MenuItem><Link to="/services/electrotherapy">Electrotherapy</Link></H.MenuItem>
                     <H.MenuItem><Link to="/services/cupping-therapy">Cupping Therapy</Link></H.MenuItem>
-                    <H.MenuItem><Link to="/services/taping">Taping</Link></H.MenuItem>
+                    {/* <H.MenuItem><Link to="/services/taping">Taping</Link></H.MenuItem> */}
                     {/* <H.MenuItem><Link to="/services/radial-shockwave-therapy">Radial Shockwave Therapy</Link></H.MenuItem>
                     <H.MenuItem><Link to="/services/therapeutic-ultrasound">Therapeutic Ultrasound</Link></H.MenuItem>
                     <H.MenuItem><Link to="/services/myofascial-release">Myofascial Release</Link></H.MenuItem> */}
@@ -166,7 +166,7 @@ const Header = () => {
                 <H.MobileMenuItem><Link to="/services/extracorporeal-shockwave-therapy" onClick={() => changeLocation('/services/extracorporeal-shockwave-therapy')}>Extracorporeal Shockwave Therapy</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/electrotherapy" onClick={() => changeLocation('/services/electrotherapy')}>Electrotherapy</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/cupping-therapy" onClick={() => changeLocation('/services/cupping-therapy')}>Cupping Therapy</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/taping" onClick={() => changeLocation('/services/taping')}>Taping</Link></H.MobileMenuItem>
+                {/* <H.MobileMenuItem><Link to="/services/taping" onClick={() => changeLocation('/services/taping')}>Taping</Link></H.MobileMenuItem> */}
                 {/* <H.MobileMenuItem><Link to="/services/radial-shockwave-therapy" onClick={() => changeLocation('/services/radial-shockwave-therapy')}>Radial Shockwave Therapy</Link></H.MobileMenuItem>               
                 <H.MobileMenuItem><Link to="/services/therapeutic-ultrasound" onClick={() => changeLocation('/services/therapeutic-ultrasound')}>Therapeutic Ultrasound</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/myofascial-release" onClick={() => changeLocation('/services/myofascial-release')}>Myofascial Release</Link></H.MobileMenuItem> */}
