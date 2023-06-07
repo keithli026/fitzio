@@ -219,6 +219,16 @@ p {
         margin-right: 0;
       }
     }
+    @media (min-width: $desktop-min-width-2) {
+      margin-right: 2%;
+      flex-basis: 23.5%;
+      &:nth-child(3n) {
+        margin-right: 2%;
+      }
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
     a {
       text-decoration: none;
     }
