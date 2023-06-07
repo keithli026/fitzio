@@ -140,10 +140,40 @@ p {
     margin-bottom: 30px;
     border-spacing: 0;
     border: 0.5px solid grey;
-    th, td {
-      text-align: start;
-      border: 0.5px solid grey;
-      padding: 0.5rem;
+    tbody {
+      tr {
+        &:nth-of-type(odd) {
+          background-color: white;
+        }
+        @media (min-width: $desktop-min-width) {
+          &:hover {
+            background-color: $lightblue;
+            color: white;
+            // font-weight: 700;
+          }
+        }
+      }
+    }
+    tr {
+      th {
+        text-align: start;
+        border: 0.5px solid grey;
+        padding: 0.5rem;
+      }
+      td {
+        text-align: start;
+        border: 0.5px solid grey;
+        padding: 0.5rem;
+        p:last-of-type {
+          margin-bottom: 0;
+        }
+        ul {
+          padding-left: 2rem;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
     }
   }
 }
@@ -178,6 +208,7 @@ p {
   .overview {
     position: relative;
     margin-bottom: 30px;
+    flex-basis: 100%;
     @media (min-width: $tablet-min-width) {
       flex-basis: 48%;
     }
@@ -187,6 +218,33 @@ p {
       &:nth-child(3n) {
         margin-right: 0;
       }
+    }
+    a {
+      text-decoration: none;
+    }
+    img {
+      @media (min-width: $tablet-min-width) {
+        height: 200px;
+      }
+      @media (min-width: $tablet-min-width-1) {
+        height: 250px;
+      }
+      @media (min-width: $desktop-min-width) {
+        height: 300px;
+      }
+      @media (min-width: $desktop-min-width-1) {
+        height: 350px;
+      }
+      @media (min-width: $desktop-min-width-2) {
+        height: 400px;
+      }
+    }
+    .title {
+      text-align: center;
+      color: white;
+      background-color: grey;
+      padding: 10px 0;
+      font-size: 20px;
     }
     h2 {
       position: absolute;
