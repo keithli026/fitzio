@@ -33,7 +33,7 @@ function Footer() {
                             </ul>
                         </F.Column>
                         <F.Column className="footer-col">
-                            <h2>Address 1</h2>
+                            <h2>Address 01</h2>
                             <ul>
                                 <li>East Fremantle Clinic</li>
                                 <li>Inside the Fremantle Rowing Club</li>
@@ -42,7 +42,7 @@ function Footer() {
                             </ul>
                         </F.Column>
                         <F.Column className="footer-col">
-                            <h2>Address 2</h2>
+                            <h2>Address 02</h2>
                             <ul>
                                 <li>East Fremantle Clinic</li>
                                 <li>Inside the Fremantle Rowing Club</li>
