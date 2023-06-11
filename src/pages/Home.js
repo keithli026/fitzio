@@ -27,8 +27,18 @@ const Home = () => {
       <Slider {...settings}>
         <div className="image-wrapper">
           <div className="textbox">
-            <h2>Title 1</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <h2>GET BACK TO DOING WHAT YOU LOVE</h2>
+            <h3>Don’t suffer from pain when you can manage it with physiotherapy</h3>
+            <ul>
+              <li>Pain relief</li>
+              <li>Improved mobility and function</li>
+              <li>Injury prevention </li>
+              <li>Enhanced sports performance</li>
+            </ul>
+            <div className="button_container">
+              <a className="button" href="/contact">Contact Us</a>
+              <a className="button" href="/book-online">Book Now</a>
+            </div>
           </div>
           <img src={process.env.PUBLIC_URL + '/image_18_to_6.png'} alt="slide 1"></img>
         </div>
@@ -48,29 +58,73 @@ const Home = () => {
         </div>
       </Slider>
       <Container className="promo-section">
-        <h2>Top Rated Local Physio Clinic in Booragoon & East Fremantle</h2>
+        <h2>About</h2>
         <div className="content">
-          <p>Move Physiotherapy has an experienced physiotherapy and remedial massage team. We provide a premium yet affordable service to residents surrounding Booragoon and East Fremantle.</p>
-          <p>For immediate pain relief, we provide professional, hands-on treatment including manipulative physiotherapy, remedial massage, sports physiotherapy and dry needling.</p>
-          <p>We provide comprehensive assessments of your movement, with longer appointment times to truly assess areas of muscle tightness. We combine state of the art technology such as force platforms and dynamometers to objectively measure deficits in muscle strength and have a full rehab gym to take you through exercises to ensure you remain pain free.</p>
-          <p>Our team can get you back to the activities you love in a timely and efficient manner, and empower you to ensure these injuries do not reoccur. </p>
-        </div>
-        <div className="video_wrapper">
-          <iframe src="https://www.youtube.com/embed/pZxkV1nI1Bk" title="promo video"></iframe>
+          <p>People all have something they enjoy doing; whether it be sports or family activities. They all have goals they want to achieve. At Fitsio, guided by our core values, we empower people to live a better life. We love to see people who enjoy their life and do what they enjoy doing. To do that, we treat people as unique individuals. We discuss rehabilitation roadmap to achieve their personal goals. We use a holistic approach by taking into consideration both conditions and general well-being. We provide physiotherapy and prescribe exercises to enhance better outcomes.</p>
         </div>
       </Container>
       <div className="promo-section2">
         <Container>
           <div className="content">
-            <h2>Why You Should Choose Us:</h2>
-            <ul>
-              <li>Discounted Standard and Extended Initial Appointments – Get a Good Understanding of Your Pain!</li>
-              <li>Longer 30 minute follow up consultations</li>
-              <li>Experienced Physiotherapy and Remedial Massage team</li>
-              <li>Understand the root cause of your aches and pains</li>
-              <li>Targeted rehabilitation of your injuries utilising our fully equipped gym setting</li>
-              <li>Bulk Billing for DVA Patients (White and Gold Card)</li>
-            </ul>
+            <h2>Our values</h2>
+            <div className="boxes">
+              <div className="box">
+                <div className='image_wrapper'>
+                  <img src={process.env.PUBLIC_URL + "/Holistic_approach.jpg"} alt="Holistic care"></img>
+                </div>
+                <h3>Holistic care</h3>
+                <p>We consider our clients’ general well-being.</p>
+              </div>
+              <div className="box">
+                <div className='image_wrapper'>
+                  <img src={process.env.PUBLIC_URL + "/Individualised_service.jpg"} alt="Individualized services"></img>
+                </div>
+                <h3>Individualized services</h3>
+                <p>We treat our clients as unique individuals. We provide services on a one-to-one basis.</p>
+              </div>
+              <div className="box">
+                <div className='image_wrapper'>
+                  <img src={process.env.PUBLIC_URL + "/Exercise_based_rehabilitation.jpg"} alt="Exercise rehabilitation"></img>
+                </div>
+                <h3>Exercise rehabilitation</h3>
+                <p>Strong evidence supports exercise rehabilitation for management of musculoskeletal conditions. Therefore, we prescribe exercises as part of the treatment.</p>
+              </div>
+              <div className="box">
+                <div className='image_wrapper'>
+                  <img src={process.env.PUBLIC_URL + "/Goal_oriented.jpg"} alt="Goal-oriented"></img>
+                </div>
+                <h3>Goal-oriented</h3>
+                <p>Our treatment and exercise rehabilitation are guided by clients’ goals.</p>
+              </div>
+              <div className="box">
+                <div className='image_wrapper'>
+                  <img src={process.env.PUBLIC_URL + "/Empowerment.jpg"} alt="Empowerment"></img>
+                </div>
+                <h3>Empowerment</h3>
+                <p>We promote self-management and disease prevention.</p>
+              </div>
+              <div className="box">
+                <div className='image_wrapper'>
+                  <img src={process.env.PUBLIC_URL + "/Long_lasting_clinical_outcomes.jpg"} alt="Long-lasting clinical outcomes"></img>
+                </div>
+                <h3>Long-lasting clinical outcomes</h3>
+                <p>We focus on long-term solutions by addressing causes and symptoms of musculoskeletal conditions.</p>
+              </div>
+              <div className="box">
+                <div className='image_wrapper'>
+                  <img src={process.env.PUBLIC_URL + "/Ongoing_support.jpg"} alt="Ongoing support"></img>
+                </div>
+                <h3>Ongoing support</h3>
+                <p>Ongoing support is always available. Please contact us if you have any concerns. Our team will follow up on our clients regularly.</p>
+              </div>
+              <div className="box">
+                <div className='image_wrapper'>
+                  <img src={process.env.PUBLIC_URL + "/Evidence_based_practice.jpg"} alt="Evidence-based practice"></img>
+                </div>
+                <h3>Evidence-based practice</h3>
+                <p>We integrate the best available research evidence with clinical expertise and clients’ values for our treatment.</p>
+              </div>
+            </div>
           </div>
         </Container>
       </div>
