@@ -1,10 +1,13 @@
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Container } from "../GlobalStyle";
 import "./home.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { getPhysiotherapists } from "../PhysiotherapistInfo";
+
 const Home = () => {
   var settings = {
     dots: true,
@@ -21,6 +24,11 @@ const Home = () => {
       }
     ]
   };
+  let navigate = useNavigate();
+  const changeLocation = (placeToGo) => {
+    navigate(placeToGo, { replace: true });
+    window.location.reload();
+  }
   const physiotherapists = getPhysiotherapists();
   return (
     <>
@@ -29,32 +37,31 @@ const Home = () => {
           <div className="textbox">
             <h2>GET BACK TO DOING WHAT YOU LOVE</h2>
             <h3>Don’t suffer from pain when you can manage it with physiotherapy</h3>
-            <ul>
-              <li>Pain relief</li>
-              <li>Improved mobility and function</li>
-              <li>Injury prevention </li>
-              <li>Enhanced sports performance</li>
-            </ul>
+            <div className="points">
+              <div className="point">Pain relief</div>
+              <div className="point">Improved mobility and function</div>
+              <div className="point">Injury prevention</div>
+              <div className="point">Enhanced sports performance</div>
+            </div>
             <div className="button_container">
               <a className="button" href="/contact">Contact Us</a>
               <a className="button" href="/book-online">Book Now</a>
             </div>
+            <div className="learn-more">
+              <Link to="/" onClick={() => changeLocation('/')}>
+                <div>Learn More</div>
+                <FontAwesomeIcon icon={faCaretDown} />
+              </Link>
+            </div>
           </div>
-          <img src={process.env.PUBLIC_URL + '/image_18_to_6.png'} alt="slide 1"></img>
+          <img src={process.env.PUBLIC_URL + '/banner-image-1.jpg'} alt="slide 1"></img>
         </div>
         <div className="image-wrapper">
           <div className="textbox">
             <h2>Title 2</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
-          <img src={process.env.PUBLIC_URL + '/image_18_to_6.png'} alt="slide 1"></img>
-        </div>
-        <div className="image-wrapper">
-          <div className="textbox">
-            <h2>Title 3</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          </div>
-          <img src={process.env.PUBLIC_URL + '/image_18_to_6.png'} alt="slide 1"></img>
+          <img src={process.env.PUBLIC_URL + '/banner-image-2.jpg'} alt="slide 1"></img>
         </div>
       </Slider>
       <Container className="promo-section">

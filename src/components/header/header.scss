@@ -18,6 +18,7 @@
         }
         .level-0 {
             margin: 0;
+            align-items: center;
             li {
                 &.expandable {
                     >a {
@@ -49,8 +50,13 @@
                 position: relative;
                 margin-left: 10px;
                 &:last-child {
-                    border: 2px solid $lightblue;
-                    border-radius: 10px;
+                    a {
+                        color: $red;
+                        &:hover {
+                            color: $white;
+                            background-color: $red;
+                        }
+                    }
                 }
                 > ul {
                     top: 100%;

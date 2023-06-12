@@ -22,8 +22,8 @@ h1, h2 ,h3 ,h4 ,h5 ,h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.4;
-  font-weight: 500;
+  line-height: 1.6;
+  font-weight: 600;
   margin-top: 0;
   color: black;
 }
@@ -113,16 +113,20 @@ a {
     }
   }
   &.button {
+    position: relative;
     display: inline-block;
-    color: white;
-    background-color: $lightblue;
+    color: $red;
+    font-weight: 600;
+    background-color: $white;
     padding: 5px 20px;
     text-decoration: none;
-    border: 2px solid white;
+    border-bottom: 3px solid $black;
+    box-shadow: 0px 1px 0 0 $white;
     border-radius: 10px;
     @media (min-width: $desktop-min-width) {
       &:hover {
-        background-color: $blue;
+        background-color: $red;
+        color: $white;
       }
     }
   }
@@ -143,12 +147,12 @@ p {
     tbody {
       tr {
         &:nth-of-type(odd) {
-          background-color: white;
+          background-color: $white;
         }
         @media (min-width: $desktop-min-width) {
           &:hover {
             background-color: $lightblue;
-            color: white;
+            color: $white;
             // font-weight: 700;
           }
         }
@@ -251,7 +255,7 @@ p {
     }
     .title {
       text-align: center;
-      color: white;
+      color: $white;
       background-color: grey;
       padding: 10px 0;
       font-size: 20px;
@@ -303,7 +307,7 @@ p {
       height: fit-content;
       text-align: center;
       background-color: rgba(0,0,0,0.5);
-      color: white;
+      color: $white;
       padding: 10px 0;
       @media (min-width: $desktop-min-width) {
         padding: 0;

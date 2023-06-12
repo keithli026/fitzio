@@ -20,6 +20,12 @@ export const Container = styled.div`
   @media (min-width: 1400px) {
     max-width: 1320px;
   }
+  @media (min-width: 1600px) {
+    max-width: 1520px;
+  }
+  @media (min-width: 1800px) {
+    max-width: 1720px;
+  }
 
   ${prop => prop.flexbox && css`
     display: flex;

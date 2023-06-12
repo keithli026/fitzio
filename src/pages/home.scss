@@ -7,9 +7,10 @@
                 position: relative;
                 img {
                     object-fit: cover;
-                    height: 500px;
+                    min-height: 500px;
                 }
                 .textbox {
+                    @include container;
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -22,27 +23,65 @@
                     align-items: center;
                     margin: 0 auto;
                     padding: 0 20px;
-                    @media (min-width: $tablet-min-width-1) {
-                        width: 70%;
-                    }
-                    @media (min-width: $desktop-min-width-1) {
-                        width: 60%;
-                    }
+                    color: $white;
 
                     h2 {
                         margin-bottom: 0;
+                        color: inherit;
                         @media (min-width: $tablet-min-width-1) {
                             margin-bottom: 20px;
                         }
+                        @media (min-width: $desktop-min-width) {
+                            font-size: 64px;
+                        }
                     }
-                    ul {
-                        width: 100%;
+                    h3 {
+                        font-weight: 400;
+                        color: inherit;
+                        @media (min-width: $desktop-min-width) {
+                            font-size: 36px;
+                        }
+                    }
+                    .points {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        width: inherit;
+                        @media (min-width: $desktop-min-width) {
+                            margin-bottom: 50px;
+                        }
+                        .point {
+                            display: flex;
+                            align-items: center;
+                            flex-basis: auto;
+                            &:not(:first-child)::before {
+                                content: "\00B7";
+                                font-size: 60px;
+                                line-height: 1;
+                                margin: 0 20px;
+                            }
+                        }
                     }
                     .button_container {
                         text-align: center;
                         width: 100%;
+                        @media (min-width: $desktop-min-width) {
+                            margin-bottom: 150px;
+                        }
                         a {
                             margin: 0 20px 20px;
+                        }
+                    }
+                    .learn-more {
+                        display: flex;
+                        flex-direction: column;
+                        a {
+                            text-align: center;
+                            text-decoration: none;
+                            color: $white;
+                            svg {
+                                font-size: 50px;
+                            }
                         }
                     }
                     p {
@@ -61,12 +100,12 @@
         top: 50%;
         height: 23px;
         width: 23px;
-        background-color: white;
+        background-color: $white;
         border-radius: 50%;
         outline: unset;
         &:focus {
             top: 50%;
-            background-color: white;
+            background-color: $white;
         }
         &::before {
             font-size: 30px;
@@ -120,6 +159,7 @@
 .promo-section {
     padding: 30px 0;
     h2 {
+        text-align: center;
         @media (min-width: $desktop-min-width) {
             text-align: center;
         }
@@ -175,7 +215,7 @@
     padding: 20px 0;
     background-color: black;
     h2 {
-        color: white;
+        color: $white;
         margin-bottom: 0;
         text-align: center;
     }
@@ -228,7 +268,7 @@
     padding: 20px 0;
     background-color: black;
     h2 {
-        color: white;
+        color: $white;
         margin-bottom: 0;
         text-align: center;
     }

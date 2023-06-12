@@ -1,5 +1,7 @@
 $white: #FFFFFF;
 $black: #000000;
+$red: #C70000;
+$white: #FFFFFF;
 $grey: #f2f2f2;
 $lightblue: #0097BD;
 $blue: #0d6c8f;
@@ -8,3 +10,31 @@ $tablet-min-width-1: 768px;
 $desktop-min-width: 992px;
 $desktop-min-width-1: 1200px;
 $desktop-min-width-2: 1400px;
+@mixin container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: 576px) {
+      max-width: 540px;
+    }
+    @media (min-width: 768px) {
+      max-width: 720px;
+    }
+    @media (min-width: 992px) {
+      max-width: 960px;
+    }
+    @media (min-width: 1200px) {
+      max-width: 1140px;
+    }
+    @media (min-width: 1400px) {
+      max-width: 1320px;
+    }
+    @media (min-width: 1600px) {
+      max-width: 1520px;
+    }
+    @media (min-width: 1800px) {
+      max-width: 1720px;
+    }
+  }

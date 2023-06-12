@@ -132,7 +132,7 @@ const Header = () => {
                   <Link to="/contact">Contact</Link>
                 </H.MenuItem>
                 <H.MenuItem>
-                  <Link to="/book-online">Book Online</Link>
+                  <Link to="/book-online" className="button">Book Online</Link>
                 </H.MenuItem>
               </H.MenuList>
             </H.MenuWrapper>
