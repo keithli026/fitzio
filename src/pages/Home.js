@@ -70,56 +70,56 @@ const Home = () => {
             <div className="boxes">
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Holistic_approach.jpg"} alt="Holistic care"></img>
+                  <img src={process.env.PUBLIC_URL + "/Holistic_approach.png"} alt="Holistic care"></img>
                 </div>
                 <h3>Holistic care</h3>
                 <p>We consider our clients’ general well-being.</p>
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Individualised_service.jpg"} alt="Individualized services"></img>
+                  <img src={process.env.PUBLIC_URL + "/Individualised_service.png"} alt="Individualized services"></img>
                 </div>
                 <h3>Individualized services</h3>
                 <p>We treat our clients as unique individuals. We provide services on a one-to-one basis.</p>
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Exercise_based_rehabilitation.jpg"} alt="Exercise rehabilitation"></img>
+                  <img src={process.env.PUBLIC_URL + "/Exercise_based_rehabilitation.png"} alt="Exercise rehabilitation"></img>
                 </div>
                 <h3>Exercise rehabilitation</h3>
                 <p>Strong evidence supports exercise rehabilitation for management of musculoskeletal conditions. Therefore, we prescribe exercises as part of the treatment.</p>
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Goal_oriented.jpg"} alt="Goal-oriented"></img>
+                  <img src={process.env.PUBLIC_URL + "/Goal_oriented.png"} alt="Goal-oriented"></img>
                 </div>
                 <h3>Goal-oriented</h3>
                 <p>Our treatment and exercise rehabilitation are guided by clients’ goals.</p>
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Empowerment.jpg"} alt="Empowerment"></img>
+                  <img src={process.env.PUBLIC_URL + "/Empowerment.png"} alt="Empowerment"></img>
                 </div>
                 <h3>Empowerment</h3>
                 <p>We promote self-management and disease prevention.</p>
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Long_lasting_clinical_outcomes.jpg"} alt="Long-lasting clinical outcomes"></img>
+                  <img src={process.env.PUBLIC_URL + "/Long_lasting_clinical_outcomes.png"} alt="Long-lasting clinical outcomes"></img>
                 </div>
                 <h3>Long-lasting clinical outcomes</h3>
                 <p>We focus on long-term solutions by addressing causes and symptoms of musculoskeletal conditions.</p>
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Ongoing_support.jpg"} alt="Ongoing support"></img>
+                  <img src={process.env.PUBLIC_URL + "/Ongoing_support.png"} alt="Ongoing support"></img>
                 </div>
                 <h3>Ongoing support</h3>
                 <p>Ongoing support is always available. Please contact us if you have any concerns. Our team will follow up on our clients regularly.</p>
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Evidence_based_practice.jpg"} alt="Evidence-based practice"></img>
+                  <img src={process.env.PUBLIC_URL + "/Evidence_based_practice.png"} alt="Evidence-based practice"></img>
                 </div>
                 <h3>Evidence-based practice</h3>
                 <p>We integrate the best available research evidence with clinical expertise and clients’ values for our treatment.</p>

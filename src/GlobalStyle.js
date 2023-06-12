@@ -1,8 +1,8 @@
 import styled, { createGlobalStyle, css } from "styled-components/macro";
 export const Container = styled.div`
   width: 100%;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
   @media (min-width: 576px) {
@@ -30,8 +30,8 @@ export const Container = styled.div`
 export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
+  margin-left: -20px;
+  margin-right: -20px;
   ${ prop => prop.center && css`
     justify-content: center;
   `}

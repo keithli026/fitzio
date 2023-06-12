@@ -10,8 +10,8 @@ export const Header = styled.div`
 `;
 
 export const LogoDiv = styled.div`
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
+  margin-left: 20px;
+  margin-right: 20px;
   width: 180px;
 `;
 
@@ -20,8 +20,8 @@ export const Logo = styled.img`
 `;
 
 export const MenuWrapper = styled.nav`
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
+  margin-left: 20px;
+  margin-right: 20px;
   display: none;
   @media (min-width: 992px) {
     display: block;
@@ -31,7 +31,7 @@ export const MenuWrapper = styled.nav`
 export const MenuList = styled.ul`
   display: ${prop => prop.level_0 ? "flex" : "none"};
   flex-direction: ${prop => prop.level_0 ? "row" : "column"};
-  padding: 0.5rem 0;
+  padding: 10px 0;
 `;
 
 export const MenuItem = styled.li`
@@ -39,8 +39,8 @@ export const MenuItem = styled.li`
 `;
 
 export const MenuButton = styled.div`
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 20px;
+  padding-right: 20px;
   display: block;
   @media (min-width: 992px) {
     display: none;
