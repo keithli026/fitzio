@@ -7,6 +7,7 @@ import "./home.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { getPhysiotherapists } from "../PhysiotherapistInfo";
+import { HashLink } from 'react-router-hash-link';
 
 const Home = () => {
   var settings = {
@@ -33,39 +34,49 @@ const Home = () => {
   return (
     <>
       <Slider {...settings}>
-        <div className="image-wrapper">
-          <div className="textbox">
-            <h2>GET BACK TO DOING WHAT YOU LOVE</h2>
-            <h3>Don’t suffer from pain when you can manage it with physiotherapy</h3>
-            <div className="points">
-              <div className="point">Pain relief</div>
-              <div className="point">Improved mobility and function</div>
-              <div className="point">Injury prevention</div>
-              <div className="point">Enhanced sports performance</div>
-            </div>
-            <div className="button_container">
-              <a className="button" href="/contact">Contact Us</a>
-              <a className="button" href="/book-online">Book Now</a>
-            </div>
-            <div className="learn-more">
-              <Link to="/" onClick={() => changeLocation('/')}>
-                <div>Learn More</div>
-                <FontAwesomeIcon icon={faCaretDown} />
-              </Link>
+        <div className="banner">
+          <div className="textbox" style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL + '/banner-image-1.jpg'})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}>
+            <div className="content">
+              <h2>GET BACK TO DOING WHAT YOU LOVE</h2>
+              <h3>Don’t suffer from pain when you can manage it with physiotherapy</h3>
+              <ul>
+               <li>Pain relief</li>
+               <li>Improved mobility and function</li>
+               <li>Injury prevention</li>
+               <li>Enhanced sports performance</li>
+              </ul>
+              <div className="button_container">
+                <a className="button" href="/contact">Contact Us</a>
+                <a className="button" href="/book-online">Book Now</a>
+              </div>
+              <div className="learn-more">
+                <HashLink smooth to="/#about-section">
+                  <div>Learn More</div>
+                  <img src={process.env.PUBLIC_URL + '/arrow.png'} alt="arrow" />
+                </HashLink>
+              </div>
             </div>
           </div>
-          <img src={process.env.PUBLIC_URL + '/banner-image-1.jpg'} alt="slide 1"></img>
         </div>
-        <div className="image-wrapper">
-          <div className="textbox">
+        <div className="banner">
+          <div className="textbox" style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL + '/banner-image-2.jpg'})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}>
             <h2>Title 2</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
-          <img src={process.env.PUBLIC_URL + '/banner-image-2.jpg'} alt="slide 1"></img>
         </div>
       </Slider>
-      <Container className="promo-section">
-        <h2>About</h2>
+      <Container className="promo-section" id="about-section">
+        <h2 className="underline">About</h2>
         <div className="content">
           <p>People all have something they enjoy doing; whether it be sports or family activities. They all have goals they want to achieve. At Fitsio, guided by our core values, we empower people to live a better life. We love to see people who enjoy their life and do what they enjoy doing. To do that, we treat people as unique individuals. We discuss rehabilitation roadmap to achieve their personal goals. We use a holistic approach by taking into consideration both conditions and general well-being. We provide physiotherapy and prescribe exercises to enhance better outcomes.</p>
         </div>
@@ -73,7 +84,7 @@ const Home = () => {
       <div className="promo-section2">
         <Container>
           <div className="content">
-            <h2>Our values</h2>
+            <h2 className="underline">Our values</h2>
             <div className="boxes">
               <div className="box">
                 <div className='image_wrapper'>
@@ -137,7 +148,7 @@ const Home = () => {
       </div>
       <div className="our-services-title">
         <Container>
-          <h2>Our Services</h2>
+          <h2 className="underline">Our Services</h2>
         </Container>
       </div>
       <div className="our-services-content">
@@ -194,14 +205,14 @@ const Home = () => {
       </div>
       <div className="our-team-title">
         <Container>
-          <h2>Our Team</h2>
+          <h2 className="underline">Our Team</h2>
         </Container>
       </div>
       <div className="our-team-content">
         <Container>
           <div className="members_wrapper {">
             {physiotherapists.map((physiotherapist, i) => {
-              return(
+              return (
                 <div className="members" key={i}>
                   <img src={physiotherapist.photo} alt={physiotherapist.name}></img>
                   <h3>{physiotherapist.name}</h3>

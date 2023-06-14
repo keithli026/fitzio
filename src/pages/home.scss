@@ -1,333 +1,391 @@
 @import "../variable";
+
 .slick-slider {
-    margin-bottom: 30px;
-    .slick-list {
-        .slick-slide {
-            .image-wrapper {
-                position: relative;
-                img {
-                    object-fit: cover;
-                    min-height: 500px;
+  margin-bottom: 30px;
+
+  .slick-list {
+    .slick-slide {
+      .banner {
+        .textbox {
+          width: 100%;
+          min-height: 56.25vw;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          padding: 0 20px;
+          color: $white;
+          .content {
+            @include container;
+            text-align: center;
+            h2 {
+              margin-bottom: 0;
+              color: inherit;
+  
+              @media (min-width: $tablet-min-width-1) {
+                margin-bottom: 20px;
+              }
+  
+              @media (min-width: $desktop-min-width) {
+                font-size: 64px;
+              }
+            }
+  
+            h3 {
+              font-weight: 400;
+              color: inherit;
+  
+              @media (min-width: $desktop-min-width) {
+                font-size: 36px;
+              }
+            }
+            ul {
+              list-style-type: disclosure-closed;
+              @media (min-width: $desktop-min-width) {
+                list-style-type: disc;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+              }
+              li {
+                width: fit-content;
+                &::marker {
+                  color: $red;
                 }
-                .textbox {
-                    @include container;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 0 auto;
-                    padding: 0 20px;
+                @media (min-width: $desktop-min-width) {
+                  &::marker {
                     color: $white;
-
-                    h2 {
-                        margin-bottom: 0;
-                        color: inherit;
-                        @media (min-width: $tablet-min-width-1) {
-                            margin-bottom: 20px;
-                        }
-                        @media (min-width: $desktop-min-width) {
-                            font-size: 64px;
-                        }
-                    }
-                    h3 {
-                        font-weight: 400;
-                        color: inherit;
-                        @media (min-width: $desktop-min-width) {
-                            font-size: 36px;
-                        }
-                    }
-                    .points {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        width: inherit;
-                        @media (min-width: $desktop-min-width) {
-                            margin-bottom: 50px;
-                        }
-                        .point {
-                            display: flex;
-                            align-items: center;
-                            flex-basis: auto;
-                            &:not(:first-child)::before {
-                                content: "\00B7";
-                                font-size: 60px;
-                                line-height: 1;
-                                margin: 0 20px;
-                            }
-                        }
-                    }
-                    .button_container {
-                        text-align: center;
-                        width: 100%;
-                        @media (min-width: $desktop-min-width) {
-                            margin-bottom: 150px;
-                        }
-                        a {
-                            margin: 0 20px 20px;
-                        }
-                    }
-                    .learn-more {
-                        display: flex;
-                        flex-direction: column;
-                        a {
-                            text-align: center;
-                            text-decoration: none;
-                            color: $white;
-                            svg {
-                                font-size: 50px;
-                            }
-                        }
-                    }
-                    p {
-                        display: none;
-                        @media (min-width: $tablet-min-width-1) {
-                            display: block;
-                        }
-                    }
+                  }
+                  margin-right: 28px;
+    
+                  &:first-child {
+                    list-style-type: none;
+                    padding-left: 0;
+                  }
+                  &:last-child {
+                    margin-right: 0;
+                  }
                 }
+                @media (min-width: $desktop-min-width-1) {
+                  margin-right: 38px;
+                  padding-left: 10px;
+                }
+                @media (min-width: $desktop-min-width-2) {
+                  margin-right: 49px;
+                  padding-left: 21px;
+                }
+              }
             }
+  
+            .button_container {
+              text-align: center;
+              width: 100%;
+  
+              @media (min-width: $desktop-min-width) {
+                margin-bottom: 150px;
+              }
+  
+              a {
+                margin: 0 20px 20px;
+              }
+            }
+  
+            .learn-more {
+              display: flex;
+              flex-direction: column;
+  
+              a {
+                text-align: center;
+                text-decoration: none;
+                color: $white;
+                img {
+                  width: auto;
+                  margin-left: auto;
+                  margin-right: auto;
+                }
+              }
+            }
+  
+            p {
+              display: none;
+  
+              @media (min-width: $tablet-min-width-1) {
+                display: block;
+              }
+            }
+          }
         }
+      }
+    }
+  }
+
+  .slick-arrow {
+    z-index: 1;
+    top: 50%;
+    height: 23px;
+    width: 23px;
+    background-color: $white;
+    border-radius: 50%;
+    outline: unset;
+
+    &:focus {
+      top: 50%;
+      background-color: $white;
     }
 
-    .slick-arrow {
-        z-index: 1;
-        top: 50%;
-        height: 23px;
-        width: 23px;
-        background-color: $white;
-        border-radius: 50%;
-        outline: unset;
-        &:focus {
-            top: 50%;
-            background-color: $white;
-        }
-        &::before {
-            font-size: 30px;
+    &::before {
+      font-size: 30px;
+      color: $lightblue;
+      display: flex;
+      width: inherit;
+      height: inherit;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .slick-prev {
+    left: 10px;
+  }
+
+  .slick-next {
+    right: 10px;
+  }
+
+  .slick-dots {
+    li {
+      &.slick-active {
+        button {
+          &::before {
             color: $lightblue;
-            display: flex;
-            width: inherit;
-            height: inherit;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-    .slick-prev {
-        left: 10px;
-    }
-    
-    .slick-next {
-        right: 10px;
-    }
-    
-    .slick-dots {
-        li {
-            &.slick-active {
-                button {
-                    &::before {
-                        color: $lightblue;
-                    }
-                    &:focus {
-                        &::before {
-                            color: $lightblue;
-                        }
-                    }
-                }
+          }
+
+          &:focus {
+            &::before {
+              color: $lightblue;
             }
-            button {
-                &::before {
-                    font-size: 6px;
-                    @media (min-width: $desktop-min-width) {
-                        font-size: 10px;
-                    }
-                }
-                &:focus {
-                    &::before {
-                        color: $lightblue;
-                    }
-                }
-            }
+          }
         }
+      }
+
+      button {
+        &::before {
+          font-size: 6px;
+
+          @media (min-width: $desktop-min-width) {
+            font-size: 10px;
+          }
+        }
+
+        &:focus {
+          &::before {
+            color: $lightblue;
+          }
+        }
+      }
     }
+  }
 }
 
 .promo-section {
-    padding: 30px 0;
-    h2 {
-        text-align: center;
-        @media (min-width: $desktop-min-width) {
-            text-align: center;
-        }
-    }
+  padding: 30px 0;
+  min-height: 56.25vw;
 }
 
 .promo-section2 {
-    padding: 30px 0;
-    background-color: $grey;
-    h2 {
+  padding: 30px 0;
+  background-color: $grey;
+
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (min-width: $desktop-min-width) {
+      justify-content: start;
+    }
+
+    .box {
+      flex-basis: 100%;
+
+      @media (min-width: $tablet-min-width) {
+        flex-basis: 48%;
+      }
+
+      @media (min-width: $desktop-min-width) {
+        flex-basis: 23.5%;
+        margin-right: 2%;
+
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+      }
+
+      .image_wrapper {
+        margin-bottom: 20px;
+
+        @media (min-width: $tablet-min-width) {
+          width: 70%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        img {
+          height: 200px;
+        }
+      }
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
         text-align: center;
+      }
     }
-    .boxes {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        @media (min-width: $desktop-min-width) {
-            justify-content: start;
-        }
-        .box {
-            flex-basis: 100%;
-            @media (min-width: $tablet-min-width) {
-                flex-basis: 48%;
-            }
-            @media (min-width: $desktop-min-width) {
-                flex-basis: 32%;
-                margin-right: 2%;
-                &:nth-child(3n) {
-                    margin-right: 0;
-                }
-            }
-            .image_wrapper {
-                margin-bottom: 20px;
-                @media (min-width: $tablet-min-width) {
-                    width: 70%;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-                img {
-                    height: 200px;
-                }
-            }
-            h3 {
-                font-size: 20px;
-                margin-bottom: 10px;
-                text-align: center;
-            }
-        }
-    }
+  }
 }
 
 .our-services-title {
-    padding: 20px 0;
-    background-color: black;
-    h2 {
-        color: $white;
-        margin-bottom: 0;
-        text-align: center;
-    }
+  padding: 20px 0;
+  background-color: black;
+
+  h2 {
+    color: $white;
+    margin-bottom: 0;
+    text-align: center;
+  }
 }
 
 .our-services-content {
-    > div {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        .services {
-            padding: 30px 0;
-            &:not(:last-child) {
-                border-bottom: 1px solid grey;
-                @media (min-width: $tablet-min-width) {
-                    border-bottom: none;
-                }
-            }
-            text-align: center;
-            @media (min-width: $tablet-min-width) {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                flex-basis: 48%;
-            }
-            @media (min-width: $desktop-min-width) {
-                flex-basis: 32%;
-            }
-            .content {
-                img {
-                    width: auto;
-                    height: auto;
-                }
-                h3 {
-                    font-size: 20px;
-                }
-                p {
-                    text-align: start;
-                }
-            }
-            .button {
-                width: fit-content;
-                margin: 0 auto;
-            }
+  >div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .services {
+      padding: 30px 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid grey;
+
+        @media (min-width: $tablet-min-width) {
+          border-bottom: none;
         }
+      }
+
+      text-align: center;
+
+      @media (min-width: $tablet-min-width) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 48%;
+      }
+
+      @media (min-width: $desktop-min-width) {
+        flex-basis: 32%;
+      }
+
+      .content {
+        img {
+          width: auto;
+          height: auto;
+        }
+
+        h3 {
+          font-size: 20px;
+        }
+
+        p {
+          text-align: start;
+        }
+      }
+
+      .button {
+        width: fit-content;
+        margin: 0 auto;
+      }
     }
+  }
 }
 
 .our-team-title {
-    padding: 20px 0;
-    background-color: black;
-    h2 {
-        color: $white;
-        margin-bottom: 0;
-        text-align: center;
-    }
+  padding: 20px 0;
+  background-color: black;
+
+  h2 {
+    color: $white;
+    margin-bottom: 0;
+    text-align: center;
+  }
 }
 
 .our-team-content {
-    margin: 30px 0;
-    .members_wrapper {
+  margin: 30px 0;
+
+  .members_wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-min-width) {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      justify-content: start;
+    }
+
+    .members {
+      padding: 30px 0;
+      text-align: center;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid grey;
+
+        @media (min-width: $tablet-min-width) {
+          border-bottom: none;
+        }
+      }
+
+      @media (min-width: $tablet-min-width) {
         display: flex;
         flex-direction: column;
-        @media (min-width: $tablet-min-width) {
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        @media (min-width: $desktop-min-width) {
-            justify-content: start;
-        }
-        .members {
-            padding: 30px 0;
-            text-align: center;
-            &:not(:last-child) {
-                border-bottom: 1px solid grey;
-                @media (min-width: $tablet-min-width) {
-                    border-bottom: none;
-                }
-            }
-            @media (min-width: $tablet-min-width) {
-                display: flex;
-                flex-direction: column;
-                flex-basis: 48%;
-            }
-            @media (min-width: $desktop-min-width) {
-                flex-basis: 33.333333%;
-                &:nth-child(3n+1) {
-                    padding-right: 1%;
-                }
-                &:nth-child(3n+2) {
-                    padding-left: 0.5%;
-                    padding-right: 0.5%;
-                }
-                &:nth-child(3n) {
-                    padding-left: 1%;
-                }
-            }
+        flex-basis: 48%;
+      }
 
-            h3 {
-                font-size: 20px;
-                margin: 10px 0;
-            }
+      @media (min-width: $desktop-min-width) {
+        flex-basis: 33.333333%;
 
-            p {
-                margin-bottom: 0;
-            }
-
-            .button {
-                width: fit-content;
-                margin: 0 auto;
-            }
+        &:nth-child(3n+1) {
+          padding-right: 1%;
         }
+
+        &:nth-child(3n+2) {
+          padding-left: 0.5%;
+          padding-right: 0.5%;
+        }
+
+        &:nth-child(3n) {
+          padding-left: 1%;
+        }
+      }
+
+      h3 {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .button {
+        width: fit-content;
+        margin: 0 auto;
+      }
     }
+  }
 }

@@ -48,6 +48,13 @@ h2 {
   @media (min-width: $desktop-min-width-2) {
     font-size: 45px;
   }
+  &.underline {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    border-bottom: 10px solid $red;
+  }
 }
 
 h3 {
