@@ -45,10 +45,10 @@ const Home = () => {
               <h2>GET BACK TO DOING WHAT YOU LOVE</h2>
               <h3>Don’t suffer from pain when you can manage it with physiotherapy</h3>
               <ul>
-               <li>Pain relief</li>
-               <li>Improved mobility and function</li>
-               <li>Injury prevention</li>
-               <li>Enhanced sports performance</li>
+                <li>Pain relief</li>
+                <li>Improved mobility and function</li>
+                <li>Injury prevention</li>
+                <li>Enhanced sports performance</li>
               </ul>
               <div className="button_container">
                 <a className="button" href="/contact">Contact Us</a>
@@ -75,13 +75,13 @@ const Home = () => {
           </div>
         </div>
       </Slider>
-      <Container className="promo-section" id="about-section">
+      <Container id="about-section">
         <h2 className="underline">About</h2>
         <div className="content">
           <p>People all have something they enjoy doing; whether it be sports or family activities. They all have goals they want to achieve. At Fitsio, guided by our core values, we empower people to live a better life. We love to see people who enjoy their life and do what they enjoy doing. To do that, we treat people as unique individuals. We discuss rehabilitation roadmap to achieve their personal goals. We use a holistic approach by taking into consideration both conditions and general well-being. We provide physiotherapy and prescribe exercises to enhance better outcomes.</p>
         </div>
       </Container>
-      <div className="promo-section2">
+      <div id="our-values-section">
         <Container>
           <div className="content">
             <h2 className="underline">Our values</h2>
@@ -146,71 +146,28 @@ const Home = () => {
           </div>
         </Container>
       </div>
-      <div className="our-services-title">
+      <div id="our-services-section" style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL + '/our_services.png'})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover"
+      }}>
         <Container>
-          <h2 className="underline">Our Services</h2>
-        </Container>
-      </div>
-      <div className="our-services-content">
-        <Container>
-          <div className="services">
-            <div className="content">
-              <img src={process.env.PUBLIC_URL + "gp.png"} alt="General Physiotherapy"></img>
-              <h3>General Physiotherapy</h3>
-              <p>General physiotherapy for chronic and acute conditions.</p>
-            </div>
-            <Link to="/services/general-physiotherapy" className="button">Learn more</Link>
-          </div>
-          <div className="services">
-            <div className="content">
-              <img src={process.env.PUBLIC_URL + "dn.png"} alt="Dry Needling"></img>
-              <h3>Dry Needling</h3>
-              <p>Acupuncture needles applied directly to muscular trigger points to reduce muscle tone and improve blood flow.</p>
-            </div>
-            <Link to="/services/dry-needling" className="button">Learn more</Link>
-          </div>
-          <div className="services">
-            <div className="content">
-              <img src={process.env.PUBLIC_URL + "er.png"} alt="Exercise Rehabilitation"></img>
-              <h3>Exercise Rehabilitation</h3>
-              <p>Individually tailored and supervised exercises utilising our fully equipped gym, to help you get moving again after injury or surgery.</p>
-            </div>
-            <Link to="/services/exercise-rehabilitation" className="button">Learn more</Link>
-          </div>
-          <div className="services">
-            <div className="content">
-              <img src={process.env.PUBLIC_URL + "sp.png"} alt="Sports Physiotherapy"></img>
-              <h3>Sports Physiotherapy</h3>
-              <p>Our physiotherapists have experience in a range of sports including Australian Rules Football, Gridiron, Netball and Basketball.</p>
-            </div>
-            <Link to="/services/sports-physiotherapy" className="button">Learn more</Link>
-          </div>
-          <div className="services">
-            <div className="content">
-              <img src={process.env.PUBLIC_URL + "mt.png"} alt="Massage Therapy"></img>
-              <h3>Massage Therapy</h3>
-              <p>Utilising a range of techniques to improve circulation, blood flow, reduce muscle tension and improve joint mobility.</p>
-            </div>
-            <Link to="/services/massage-therapy" className="button">Learn more</Link>
-          </div>
-          <div className="services">
-            <div className="content">
-              <img src={process.env.PUBLIC_URL + "paa.png"} alt="Physiotherapy After a Car Accident"></img>
-              <h3>Physiotherapy After a Car Accident</h3>
-              <p>Your step by step guide to claiming your insurance and receiving treatment after your car accident.</p>
-            </div>
-            <Link to="/services/massage-therapy" className="button">Learn more</Link>
+          <h2 className="underline">Our services</h2>
+          <div className="boxes">
+            <div className="box"><Link to="/services/manual-therapy">Manual therapy</Link></div>
+            <div className="box"><Link to="/services/dry-needling">Acupuncture</Link></div>
+            <div className="box"><Link to="/services/exercise-rehabilitation">Exercise rehabilitation</Link></div>
+            <div className="box"><Link to="/services/massage-therapy">Massage therapy</Link></div>
+            <div className="box"><Link to="/services/extracorporeal-shockwave-therapy">Shockwave therapy</Link></div>
+            <div className="box"><Link to="/services/electrotherapy">Electrotherapy</Link></div>
+            <div className="box"><Link to="/services/cupping-therapy">Cupping therapy</Link></div>
           </div>
         </Container>
       </div>
-      <div className="our-team-title">
+      <div className="our-team-section">
         <Container>
-          <h2 className="underline">Our Team</h2>
-        </Container>
-      </div>
-      <div className="our-team-content">
-        <Container>
-          <div className="members_wrapper {">
+        <h2 className="underline">Our Team</h2>
+          <div className="wrapper">
             {physiotherapists.map((physiotherapist, i) => {
               return (
                 <div className="members" key={i}>

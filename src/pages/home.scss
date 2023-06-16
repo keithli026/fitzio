@@ -189,15 +189,21 @@
   }
 }
 
-.promo-section {
-  padding: 30px 0;
+#about-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
   min-height: 56.25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.promo-section2 {
+#our-values-section {
   padding: 30px 0;
   background-color: $grey;
-
+  @media (min-width: $desktop-min-width) {
+    padding: 80px 0;
+  }
   .boxes {
     display: flex;
     flex-wrap: wrap;
@@ -246,85 +252,61 @@
   }
 }
 
-.our-services-title {
-  padding: 20px 0;
-  background-color: black;
-
-  h2 {
-    color: $white;
-    margin-bottom: 0;
-    text-align: center;
+#our-services-section {
+  padding: 30px 0;
+  @media (min-width: $desktop-min-width) {
+    height: 700px;
+    padding-top: 80px;
   }
-}
-
-.our-services-content {
-  >div {
+  @media (min-width: $desktop-min-width-3) {
+    height: 900px;
+  }
+  h2 {
+    @media (min-width: $desktop-min-width) {
+      margin: 0;
+      float: left;
+    }
+  }
+  .boxes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
-    .services {
-      padding: 30px 0;
-
-      &:not(:last-child) {
-        border-bottom: 1px solid grey;
-
-        @media (min-width: $tablet-min-width) {
-          border-bottom: none;
-        }
-      }
-
-      text-align: center;
-
-      @media (min-width: $tablet-min-width) {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex-basis: 48%;
-      }
-
+    @media (min-width: $desktop-min-width) {
+      display: block;
+      float: right;
+    }
+    .box {
+      background-color: $white;
+      border-radius: 60px;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      width: fit-content;
       @media (min-width: $desktop-min-width) {
-        flex-basis: 32%;
+        padding: 10px 50px;
+        text-align: center;
+        width: auto;
+        margin-right: 0;
       }
-
-      .content {
-        img {
-          width: auto;
-          height: auto;
-        }
-
-        h3 {
+      a {
+        color: $black;
+        text-decoration: none;
+        @media (min-width: $desktop-min-width) {
           font-size: 20px;
+          font-weight: 600;
         }
-
-        p {
-          text-align: start;
+        @media (min-width: $desktop-min-width-3) {
+          font-size: 32px;
+          font-weight: 600;
         }
-      }
-
-      .button {
-        width: fit-content;
-        margin: 0 auto;
       }
     }
   }
 }
 
-.our-team-title {
-  padding: 20px 0;
-  background-color: black;
-
-  h2 {
-    color: $white;
-    margin-bottom: 0;
-    text-align: center;
-  }
-}
-
-.our-team-content {
+.our-team-section {
   margin: 30px 0;
 
-  .members_wrapper {
+  .wrapper {
     display: flex;
     flex-direction: column;
 
@@ -335,7 +317,7 @@
     }
 
     @media (min-width: $desktop-min-width) {
-      justify-content: start;
+      justify-content: space-evenly;
     }
 
     .members {
@@ -353,24 +335,11 @@
       @media (min-width: $tablet-min-width) {
         display: flex;
         flex-direction: column;
-        flex-basis: 48%;
+        flex-basis: 40%;
       }
 
       @media (min-width: $desktop-min-width) {
-        flex-basis: 33.333333%;
-
-        &:nth-child(3n+1) {
-          padding-right: 1%;
-        }
-
-        &:nth-child(3n+2) {
-          padding-left: 0.5%;
-          padding-right: 0.5%;
-        }
-
-        &:nth-child(3n) {
-          padding-left: 1%;
-        }
+        flex-basis: 20%
       }
 
       h3 {

@@ -96,7 +96,7 @@ const Header = () => {
       <H.Header id="header">
         <Container sm100 md100 ref={refHeader}>
           <Row spaceBetween alignItemsCenter>
-            <H.LogoDiv id="logo">
+            <H.LogoDiv className="logo">
               <a href="/">
                 <H.Logo alt="site-logo" src={process.env.PUBLIC_URL + '/logo_white.png'}></H.Logo>
               </a>
