@@ -56,6 +56,9 @@ const Footer = () => {
               Sunday: Appointment only
             </div>
           </div>
+          <div className="disclaimer">
+            Fitsio. Copyright 2024 - All rights reserved.
+          </div>
         </Container>
       </div>
     </>

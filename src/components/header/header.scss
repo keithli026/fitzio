@@ -2,134 +2,192 @@
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 @import "../../variable";
+
 #header {
-    background-color: $black;
-    z-index: 2;
-    > div {
-        .logo {
-            a {
-                display: block;
-                img {
-                    @media (min-width: $desktop-min-width-1) {
-                        min-width: 230px;
-                    }
-                }
-            }
+  background-color: $black;
+  z-index: 2;
+
+  >div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      order: 2;
+      @media (min-width: $desktop-min-width) {
+        order: unset;
+      }
+      a {
+        display: block;
+
+        img {
+          @media (min-width: $desktop-min-width-1) {
+            min-width: 230px;
+          }
         }
-        .level-0 {
-            margin: 0;
-            align-items: center;
-            li {
-                &.expandable {
-                    >a {
-                        &::after {
-                            font: var(--fa-font-solid);
-                            content: "\f078";
-                            font-size: 14px;
-                            margin-left: 10px;
-                        }
-                    }
-                }
-                a {
-                    color: $white;
-                }
-                ul {
-                    white-space: nowrap;
-                    position: absolute;
-                    background-color: $black;
-                }
-                &:hover {
-                    > ul {
-                        display: flex;
-                    }
-                }
-        
-            }
-        
-            > li {
-                position: relative;
-                margin-left: 10px;
-                &:last-child {
-                    a {
-                        color: $red;
-                        &:hover {
-                            color: $white;
-                            background-color: $red;
-                        }
-                    }
-                }
-                > ul {
-                    top: 100%;
-                    left: 0;
-                    > li {
-                        &.expandable {
-                            >a {
-                                &::after {
-                                    font: var(--fa-font-solid);
-                                    content: "\f054";
-                                    font-size: 14px;
-                                    margin-left: 10px;
-                                }
-                            }
-                        }
-                        ul {
-                            top: 0;
-                            left: 100%;
-                        }
-                    }
-                }
-            }
-        }
-        .menuBtn {
-            svg {
-                display: block;
-                font-size: 30px;
-                color: $white;
-            }
-        }
+      }
     }
-    .mnav {
-        background-color: $lightblue;
-        .mlevel-0 {
-            overflow-y: auto;
-            a {
-                display: inline-block;
-                max-width: 90%;
-                padding: 10px 20px;
-                color: white;
+
+    .level-0 {
+      margin: 0;
+      align-items: center;
+
+      li {
+        &.expandable {
+          >a {
+            &::after {
+              font: var(--fa-font-solid);
+              content: "\f078";
+              font-size: 14px;
+              margin-left: 10px;
             }
-            .dropdownBtn {
-                max-width: 10%;
-                float: right;
-                padding: 10px 20px 10px 0;
-                text-align: end;
-                color: white;
-                > div.down {
-                    @include fa-icon-solid($fa-var-chevron-down);
-                }
-                > div.up {
-                    @include fa-icon-solid($fa-var-chevron-up);
-                }
-            }
-            .mlevel-1 {
-                background-color: #c9c9c9;
-                a {
-                    color: black;
-                }
-                .dropdownBtn {
-                    color: black;
-                }
-            }
-            .mlevel-2 {
-                background-color: #F0F0F0;
-                a {
-                    color: black;
-                }
-                .dropdownBtn {
-                    color: black;
-                }
-            }
-        
+          }
         }
+
+        a {
+          color: $white;
+        }
+
+        ul {
+          white-space: nowrap;
+          position: absolute;
+          background-color: $black;
+        }
+
+        &:hover {
+          >ul {
+            display: flex;
+          }
+        }
+
+      }
+
+      >li {
+        position: relative;
+        // margin-left: 10px;
+        @media (min-width: $desktop-min-width) {
+          padding-right: 0;
+        }
+        @media (min-width: $desktop-min-width-1) {
+          padding-right: 1rem;
+        }
+        &:last-child {
+          a {
+            color: $red;
+
+            &:hover {
+              color: $white;
+              background-color: $red;
+            }
+          }
+        }
+
+        >ul {
+          top: 100%;
+          left: 0;
+
+          >li {
+            &.expandable {
+              >a {
+                &::after {
+                  font: var(--fa-font-solid);
+                  content: "\f054";
+                  font-size: 14px;
+                  margin-left: 10px;
+                }
+              }
+            }
+
+            ul {
+              top: 0;
+              left: 100%;
+            }
+          }
+        }
+      }
     }
+
+    .menuBtn {
+      order: 1;
+      @media (min-width: $desktop-min-width) {
+        order: unset;
+      }
+      svg {
+        display: block;
+        font-size: 30px;
+        color: $white;
+      }
+    }
+
+    .telphone {
+      order: 3;
+      @media (min-width: $desktop-min-width) {
+        display: none;
+        order: unset;
+      }
+      a {
+        svg {
+          display: block;
+          font-size: 30px;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .mnav {
+    background-color: $lightblue;
+
+    .mlevel-0 {
+      overflow-y: auto;
+
+      a {
+        display: inline-block;
+        max-width: 90%;
+        padding: 10px 20px;
+        color: white;
+      }
+
+      .dropdownBtn {
+        max-width: 10%;
+        float: right;
+        padding: 10px 20px 10px 0;
+        text-align: end;
+        color: white;
+
+        >div.down {
+          @include fa-icon-solid($fa-var-chevron-down);
+        }
+
+        >div.up {
+          @include fa-icon-solid($fa-var-chevron-up);
+        }
+      }
+
+      .mlevel-1 {
+        background-color: #c9c9c9;
+
+        a {
+          color: black;
+        }
+
+        .dropdownBtn {
+          color: black;
+        }
+      }
+
+      .mlevel-2 {
+        background-color: #F0F0F0;
+
+        a {
+          color: black;
+        }
+
+        .dropdownBtn {
+          color: black;
+        }
+      }
+
+    }
+  }
 }

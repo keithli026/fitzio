@@ -43,7 +43,7 @@ const Home = () => {
           }}>
             <div className="content">
               <h2>GET BACK TO DOING WHAT YOU LOVE</h2>
-              <h3>Don’t suffer from pain when you can manage it with physiotherapy</h3>
+              <h3>"Don’t suffer from pain when you can manage it with physiotherapy"</h3>
               <ul>
                 <li>Pain relief</li>
                 <li>Improved mobility and function</li>
@@ -146,11 +146,7 @@ const Home = () => {
           </div>
         </Container>
       </div>
-      <div id="our-services-section" style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + '/our_services.png'})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover"
-      }}>
+      <div id="our-services-section">
         <Container>
           <h2 className="underline">Our services</h2>
           <div className="boxes">
@@ -167,10 +163,10 @@ const Home = () => {
       <div className="our-team-section">
         <Container>
         <h2 className="underline">Our Team</h2>
-          <div className="wrapper">
+          <div className="members">
             {physiotherapists.map((physiotherapist, i) => {
               return (
-                <div className="members" key={i}>
+                <div className="member" key={i}>
                   <img src={physiotherapist.photo} alt={physiotherapist.name}></img>
                   <h3>{physiotherapist.name}</h3>
                   <p>{physiotherapist.title}</p>

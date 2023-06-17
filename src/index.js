@@ -30,7 +30,7 @@ import ScrollToTop from './components/ScrollToTop';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
-export const phone = "68958166";
+export const phone = "61431201847";
 export function WhatsApp() {
   return (
     <a

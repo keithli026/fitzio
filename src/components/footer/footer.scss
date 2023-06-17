@@ -3,7 +3,7 @@
 #footer {
   background-color: $dark;
   color: $white;
-  padding: 30px 0;
+  padding: 40px 40px 80px;
   @media (min-width: $desktop-min-width) {
     padding: 80px 0;
   }
@@ -13,22 +13,25 @@
     justify-content: space-between;
     .logo {
       flex-basis: 100%;
-      margin-bottom: 50px;
+      margin: 0 auto 50px;
       img {
+        max-width: 230px;
         @media (min-width: $desktop-min-width) {
           max-width: 230px;
         }
       }
     }
     .contact {
+      font-size: 14px;
+      margin-bottom: 80px;
       @media (min-width: $desktop-min-width) {
+        font-size: 20px;
         flex-basis: 60%;
       }
       @media (min-width: $desktop-min-width-1) {
         flex-basis: 50%;
       }
       .email {
-        font-size: 20px;
         margin-bottom: 20px;
         a {
           display: flex;
@@ -45,7 +48,6 @@
         }
       }
       .whatsapp {
-        font-size: 20px;
         margin-bottom: 80px;
         a {
           display: flex;
@@ -62,12 +64,19 @@
         }
       }
       .address {
-        margin-bottom: 80px;
-        font-size: 28px;
+        margin-bottom: 40px;
+        font-weight: 600;
+        @media (min-width: $desktop-min-width) {
+          font-size: 28px;
+        }
       }
       .follow-us {
-        font-size: 24px;
+        font-size: 16px;
+        @media (min-width: $desktop-min-width) {
+          font-size: 24px;
+        }
         .socialMedia {
+          margin-top: 10px;
           a {
             margin-right: 20px;
       
@@ -99,6 +108,10 @@
         font-size: 30px;
         font-weight: 400;
       }
+    }
+    .disclaimer {
+      margin: auto;
+      font-weight: 300;
     }
   }
 }

@@ -4,7 +4,8 @@ import { Container, Row } from "../../GlobalStyle";
 import * as H from "./style";
 import "./header.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faPhoneAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { phone } from "../../index";
 
 const desktopMinWidth = 992;
 
@@ -95,7 +96,6 @@ const Header = () => {
     <>
       <H.Header id="header">
         <Container sm100 md100 ref={refHeader}>
-          <Row spaceBetween alignItemsCenter>
             <H.LogoDiv className="logo">
               <a href="/">
                 <H.Logo alt="site-logo" src={process.env.PUBLIC_URL + '/logo_white.png'}></H.Logo>
@@ -139,7 +139,9 @@ const Header = () => {
             <H.MenuButton className="menuBtn" onClick={showMenu}>
               <FontAwesomeIcon icon={show ? faTimes : faBars} />
             </H.MenuButton>
-          </Row>
+            <H.PhoneButton className="telphone">
+              <a href={`tel:+${phone}`}><FontAwesomeIcon icon={faPhone} /></a>  
+            </H.PhoneButton>
         </Container>
         <H.MobileMenuWrapper style={{ display: show ? "block" : "none" }} className="mnav">
           <H.MobileMenuList className="mlevel-0" ref={refMenu}>
