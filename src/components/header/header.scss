@@ -49,7 +49,7 @@
         }
 
         ul {
-          white-space: nowrap;
+          $white-space: nowrap;
           position: absolute;
           background-color: $black;
         }
@@ -64,7 +64,6 @@
 
       >li {
         position: relative;
-        // margin-left: 10px;
         @media (min-width: $desktop-min-width) {
           padding-right: 0;
         }
@@ -136,56 +135,70 @@
   }
 
   .mnav {
-    background-color: $lightblue;
-
+    background-color: $dark;
+    li {
+      a {
+        color: $white;
+      }
+      .dropdownBtn {
+        color: $white;
+      }
+    }
     .mlevel-0 {
       overflow-y: auto;
-
-      a {
-        display: inline-block;
-        max-width: 90%;
-        padding: 10px 20px;
-        color: white;
-      }
-
-      .dropdownBtn {
-        max-width: 10%;
-        float: right;
-        padding: 10px 20px 10px 0;
-        text-align: end;
-        color: white;
-
-        >div.down {
-          @include fa-icon-solid($fa-var-chevron-down);
+      >li {
+        border-bottom: 1px solid $lightdark;
+        a {
+          display: inline-block;
+          max-width: 90%;
+          padding: 10px 20px;
         }
-
-        >div.up {
-          @include fa-icon-solid($fa-var-chevron-up);
+  
+        .dropdownBtn {
+          max-width: 10%;
+          float: right;
+          padding: 10px 20px 10px 0;
+          text-align: end;
+          >div {
+            transition: transform 0.3s;
+            @include fa-icon-solid($fa-var-chevron-down);
+            &.up {
+              transform: rotate(-180deg)
+            }
+          }
         }
       }
 
       .mlevel-1 {
-        background-color: #c9c9c9;
-
-        a {
-          color: black;
-        }
-
-        .dropdownBtn {
-          color: black;
+        >li {
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 25px;
+            height: 100%;
+            border-left: 1px solid $lightdark;
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 25px;
+            width: 10px;
+            border-bottom: 1px solid $lightdark;
+          }
+          &:last-child::before {
+            height: 50%;
+          }
+          a {
+            padding-left: 45px;
+          }
         }
       }
 
       .mlevel-2 {
-        background-color: #F0F0F0;
 
-        a {
-          color: black;
-        }
-
-        .dropdownBtn {
-          color: black;
-        }
       }
 
     }

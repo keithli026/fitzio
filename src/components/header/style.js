@@ -10,8 +10,6 @@ export const Header = styled.div`
 `;
 
 export const LogoDiv = styled.div`
-  // margin-left: 20px;
-  // margin-right: 20px;
   width: 180px;
 `;
 
@@ -20,8 +18,6 @@ export const Logo = styled.img`
 `;
 
 export const MenuWrapper = styled.nav`
-  // margin-left: 20px;
-  // margin-right: 20px;
   display: none;
   @media (min-width: 992px) {
     display: block;
@@ -39,8 +35,6 @@ export const MenuItem = styled.li`
 `;
 
 export const MenuButton = styled.div`
-  // padding-left: 20px;
-  // padding-right: 20px;
   display: block;
   @media (min-width: 992px) {
     display: none;
@@ -48,8 +42,6 @@ export const MenuButton = styled.div`
 `;
 
 export const PhoneButton = styled.div`
-  // padding-left: 20px;
-  // padding-right: 20px;
   display: block;
   @media (min-width: 992px) {
     display: none;
