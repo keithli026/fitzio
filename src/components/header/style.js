@@ -9,18 +9,19 @@ export const Header = styled.div`
   }
 `;
 
-export const LogoDiv = styled.div`
-  width: 180px;
-`;
-
-export const Logo = styled.img`
-  width: 100%;
-`;
-
 export const MenuWrapper = styled.nav`
   display: none;
   @media (min-width: 992px) {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    order: 2;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+  @media (min-width: 1400px) {
+    order: unset;
+    flex-basis: auto;
   }
 `;
 

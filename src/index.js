@@ -13,12 +13,11 @@ import MeetOurTeam from './pages/MeetOurTeam';
 import Fees from './pages/Fees';
 import Services from "./pages/Services";
 import ServicesOverview from './pages/ServicesOverview';
-import DryNeedling from './pages/DryNeedling';
+import Acupuncture from './pages/Acupuncture';
 import ManualTherapy from './pages/ManualTherapy';
 import ExerciseRehabilitation from './pages/ExerciseRehabilitation';
 import MassageTherapy from './pages/MassageTherapy';
 import ExtracorporealShockwaveTherapy from './pages/ExtracorporealShockwaveTherapy';
-import Taping from './pages/Taping';
 import Electrotherapy from './pages/Electrotherapy';
 import CuppingTherapy from './pages/CuppingTherapy';
 import Conditions from "./pages/Conditions";
@@ -29,6 +28,8 @@ import MeetOurTeamOverview from './pages/MeetOurTeamOverview';
 import ScrollToTop from './components/ScrollToTop';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+// import "./components/i18n";
+// import { useTranslation, Trans } from 'react-i18next';
 
 export const phone = "61431201847";
 export function WhatsApp() {
@@ -63,13 +64,12 @@ export default function MainApp() {
             <Route path="services" element={<Services />}>
               <Route index element={<ServicesOverview />} />
               <Route path="manual-therapy" element={<ManualTherapy />} />
-              <Route path="dry-needling" element={<DryNeedling />} />
+              <Route path="acupuncture" element={<Acupuncture />}/>
               <Route path="exercise-rehabilitation" element={<ExerciseRehabilitation />} />
               <Route path="massage-therapy" element={<MassageTherapy />} />
               <Route path="extracorporeal-shockwave-therapy" element={<ExtracorporealShockwaveTherapy />} />
               <Route path="electrotherapy" element={<Electrotherapy />} />
               <Route path="cupping-therapy" element={<CuppingTherapy />} />
-              {/* <Route path="taping" element={<Taping />} /> */}
             </Route>
             <Route path="fees" element={<Fees />} />
             <Route path="conditions" element={<Conditions />} />

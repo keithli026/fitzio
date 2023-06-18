@@ -6,24 +6,30 @@ import "./header.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faPhoneAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { phone } from "../../index";
+import "../../components/i18n";
+import { useTranslation, Trans } from 'react-i18next';
 
+const lngs = {
+  en: { nativeName: 'English', symbol: 'EN' },
+  tc: { nativeName: '繁體中文', symbol: '繁' }
+};
 const desktopMinWidth = 992;
 
-const QueryNavLink = ({to, ...props}) => {
+const QueryNavLink = ({ to, ...props }) => {
   let location = useLocation();
   return <NavLink to={to + location.search} {...props} />;
 }
 
 const useWindowSize = () => {
-  const [size, setSize] = useState([0,0]);
+  const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
-      function updateSize() {
-          setSize([window.innerWidth, window.innerHeight]);
-      }
-      window.addEventListener('resize', updateSize);
-      return () => {
-          window.removeEventListener('resize', updateSize);
-      }
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener('resize', updateSize);
+    return () => {
+      window.removeEventListener('resize', updateSize);
+    }
   }, []);
   return size;
 }
@@ -92,92 +98,101 @@ const Header = () => {
     }
   }
 
+  const { t, i18n } = useTranslation();
+  console.log(Object.keys(lngs), i18n.resolvedLanguage, i18n.language);
   return (
     <>
       <H.Header id="header">
         <Container sm100 md100 ref={refHeader}>
-            <H.LogoDiv className="logo">
-              <a href="/">
-                <H.Logo alt="site-logo" src={process.env.PUBLIC_URL + '/logo_white.png'}></H.Logo>
-              </a>
-            </H.LogoDiv>
-            <H.MenuWrapper>
-              <H.MenuList level_0 className="level-0">
-                <H.MenuItem>
-                  <Link to="/about">About</Link>
-                </H.MenuItem>
-                <H.MenuItem>
-                  <Link to="/meet-our-team">Meet Our Team</Link>
-                </H.MenuItem>
-                <H.MenuItem className="expandable">
-                  <Link to="/services">Services</Link>
-                  <H.MenuList className="level-1">
-                    <H.MenuItem><Link to="/services/manual-therapy">Manual Therapy</Link></H.MenuItem>
-                    <H.MenuItem><Link to="/services/dry-needling">Dry Needling</Link></H.MenuItem>
-                    <H.MenuItem><Link to="/services/exercise-rehabilitation">Exercise Rehabilitation</Link></H.MenuItem>
-                    <H.MenuItem><Link to="/services/massage-therapy">Massage Therapy</Link></H.MenuItem>
-                    <H.MenuItem><Link to="/services/extracorporeal-shockwave-therapy">Extracorporeal Shockwave Therapy</Link></H.MenuItem>
-                    <H.MenuItem><Link to="/services/electrotherapy">Electrotherapy</Link></H.MenuItem>
-                    <H.MenuItem><Link to="/services/cupping-therapy">Cupping Therapy</Link></H.MenuItem>
-                    {/* <H.MenuItem><Link to="/services/taping">Taping</Link></H.MenuItem> */}
-                  </H.MenuList>
-                </H.MenuItem>
-                <H.MenuItem>
-                  <Link to="/fees">Fees</Link>
-                </H.MenuItem>
-                <H.MenuItem>
-                  <Link to="/conditions">Conditions</Link>
-                </H.MenuItem>
-                <H.MenuItem>
-                  <Link to="/contact">Contact</Link>
-                </H.MenuItem>
-                <H.MenuItem>
-                  <Link to="/book-online" className="button">Book Online</Link>
-                </H.MenuItem>
-              </H.MenuList>
-            </H.MenuWrapper>
-            <H.MenuButton className="menuBtn" onClick={showMenu}>
-              <FontAwesomeIcon icon={show ? faTimes : faBars} />
-            </H.MenuButton>
-            <H.PhoneButton className="telphone">
-              <a href={`tel:+${phone}`}><FontAwesomeIcon icon={faPhone} /></a>  
-            </H.PhoneButton>
+          <div className="logo">
+            <a href="/">
+              <img alt="site-logo" src={process.env.PUBLIC_URL + '/logo_white.png'}></img>
+            </a>
+          </div>
+          <H.MenuWrapper>
+            <H.MenuList level_0 className="level-0">
+              <H.MenuItem>
+                <Link to="/about">{t('About')}</Link>
+              </H.MenuItem>
+              <H.MenuItem>
+                <Link to="/meet-our-team">{t('Meet Our Team')}</Link>
+              </H.MenuItem>
+              <H.MenuItem className="expandable">
+                <Link to="/services">{t('Services')}</Link>
+                <H.MenuList className="level-1">
+                  <H.MenuItem><Link to="/services/manual-therapy">{t('Manual Therapy')}</Link></H.MenuItem>
+                  <H.MenuItem><Link to="/services/acupuncture">{t('Acupuncture')}</Link></H.MenuItem>
+                  <H.MenuItem><Link to="/services/exercise-rehabilitation">{t('Exercise Rehabilitation')}</Link></H.MenuItem>
+                  <H.MenuItem><Link to="/services/massage-therapy">{t('Massage Therapy')}</Link></H.MenuItem>
+                  <H.MenuItem><Link to="/services/extracorporeal-shockwave-therapy">{t('Extracorporeal Shockwave Therapy')}</Link></H.MenuItem>
+                  <H.MenuItem><Link to="/services/electrotherapy">{t('Electrotherapy')}</Link></H.MenuItem>
+                  <H.MenuItem><Link to="/services/cupping-therapy">{t('Cupping Therapy')}</Link></H.MenuItem>
+                  {/* <H.MenuItem><Link to="/services/taping">Taping</Link></H.MenuItem> */}
+                </H.MenuList>
+              </H.MenuItem>
+              <H.MenuItem>
+                <Link to="/fees">{t('Fees')}</Link>
+              </H.MenuItem>
+              <H.MenuItem>
+                <Link to="/conditions">{t('Conditions')}</Link>
+              </H.MenuItem>
+              <H.MenuItem>
+                <Link to="/contact">{t('Contact')}</Link>
+              </H.MenuItem>
+              <H.MenuItem>
+                <Link to="/book-online" className="button">{t('Book Online')}</Link>
+              </H.MenuItem>
+            </H.MenuList>
+          </H.MenuWrapper>
+          <div className="language-switcher">
+              {Object.keys(lngs).map((lng) => (
+                <button key={lng} style={{ textDecoration: i18n.resolvedLanguage === lng ? 'underline' : 'none' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+                  {lngs[lng].symbol}
+                </button>
+              ))}
+            </div>
+          <H.MenuButton className="menuBtn" onClick={showMenu}>
+            <FontAwesomeIcon icon={show ? faTimes : faBars} />
+          </H.MenuButton>
+          <H.PhoneButton className="telphone">
+            <a href={`tel:+${phone}`}><FontAwesomeIcon icon={faPhone} /></a>
+          </H.PhoneButton>
         </Container>
         <H.MobileMenuWrapper style={{ display: show ? "block" : "none" }} className="mnav">
           <H.MobileMenuList className="mlevel-0" ref={refMenu}>
             <H.MobileMenuItem>
-              <Link to="/about" onClick={() => changeLocation('/about')}>About</Link>
+              <Link to="/about" onClick={() => changeLocation('/about')}>{t('About')}</Link>
             </H.MobileMenuItem>
             <H.MobileMenuItem>
-              <Link to="/meet-our-team" onClick={() => changeLocation('/meet-our-team')}>Meet Our Team</Link>
+              <Link to="/meet-our-team" onClick={() => changeLocation('/meet-our-team')}>{t('Meet Our Team')}</Link>
             </H.MobileMenuItem>
             <H.MobileMenuItem style={{ paddingBottom: state.services ? "0" : "0.5rem" }}>
-              <Link to="/services" style={{ paddingBottom: state.services ? "0.875rem" : "0.375rem" }} onClick={() => changeLocation('/services')}>Services</Link>
+              <Link to="/services" style={{ paddingBottom: state.services ? "0.875rem" : "0.375rem" }} onClick={() => changeLocation('/services')}>{t('Services')}</Link>
               <div className="dropdownBtn" onClick={showItemServices} aria-expanded={state.services ? "true" : "false"}>
                 {state.services ? (<div className="up"></div>) : (<div className="down"></div>)}
               </div>
               <H.MobileMenuList className="mlevel-1" style={{ display: state.services ? "flex" : "none" }}>
-                <H.MobileMenuItem><Link to="/services/manual-therapy" onClick={() => changeLocation('/services/manual-therapy')}>Manual Therapy</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/dry-needling" onClick={() => changeLocation('/services/dry-needling')}>Dry Needling</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/exercise-rehabilitation" onClick={() => changeLocation('/services/exercise-rehabilitation')}>Exercise Rehabilitation</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/massage-therapy" onClick={() => changeLocation('/services/massage-therapy')}>Massage Therapy</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/extracorporeal-shockwave-therapy" onClick={() => changeLocation('/services/extracorporeal-shockwave-therapy')}>Extracorporeal Shockwave Therapy</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/electrotherapy" onClick={() => changeLocation('/services/electrotherapy')}>Electrotherapy</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/cupping-therapy" onClick={() => changeLocation('/services/cupping-therapy')}>Cupping Therapy</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/manual-therapy" onClick={() => changeLocation('/services/manual-therapy')}>{t('Manual Therapy')}</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/acupuncture" onClick={() => changeLocation('/services/acupuncture')}>{t('Acupuncture')}</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/exercise-rehabilitation" onClick={() => changeLocation('/services/exercise-rehabilitation')}>{t('Exercise Rehabilitation')}</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/massage-therapy" onClick={() => changeLocation('/services/massage-therapy')}>{t('Massage Therapy')}</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/extracorporeal-shockwave-therapy" onClick={() => changeLocation('/services/extracorporeal-shockwave-therapy')}>{t('Extracorporeal Shockwave Therapy')}</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/electrotherapy" onClick={() => changeLocation('/services/electrotherapy')}>{t('Electrotherapy')}</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/cupping-therapy" onClick={() => changeLocation('/services/cupping-therapy')}>{t('Cupping Therapy')}</Link></H.MobileMenuItem>
                 {/* <H.MobileMenuItem><Link to="/services/taping" onClick={() => changeLocation('/services/taping')}>Taping</Link></H.MobileMenuItem> */}
               </H.MobileMenuList>
             </H.MobileMenuItem>
             <H.MobileMenuItem>
-              <Link to="/fees" onClick={() => changeLocation('/fees')}>Fees</Link>
+              <Link to="/fees" onClick={() => changeLocation('/fees')}>{t('Fees')}</Link>
             </H.MobileMenuItem>
             <H.MobileMenuItem>
-              <Link to="/conditions" onClick={() => changeLocation('/conditions')}>Conditions</Link>
+              <Link to="/conditions" onClick={() => changeLocation('/conditions')}>{t('Conditions')}</Link>
             </H.MobileMenuItem>
             <H.MobileMenuItem>
-              <Link to="/contact" onClick={() => changeLocation('/contact')}>Contact</Link>
+              <Link to="/contact" onClick={() => changeLocation('/contact')}>{t('Contact')}</Link>
             </H.MobileMenuItem>
             <H.MobileMenuItem>
-              <Link to="/book-online" onClick={() => changeLocation('/book-online')}>Book Online</Link>
+              <Link to="/book-online" onClick={() => changeLocation('/book-online')}>{t('Book Online')}</Link>
             </H.MobileMenuItem>
           </H.MobileMenuList>
         </H.MobileMenuWrapper>
