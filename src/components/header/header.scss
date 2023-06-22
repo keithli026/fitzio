@@ -16,7 +16,7 @@
     .logo {
       order: 2;
 
-      @media (min-width: $desktop-min-width) {
+      @media (min-width: $lg) {
         order: unset;
       }
 
@@ -25,7 +25,7 @@
 
         img {
           width: 180px;
-          @media (min-width: $desktop-min-width) {
+          @media (min-width: $lg) {
             width: 230px;
           }
         }
@@ -108,11 +108,11 @@
 
     .language-switcher {
       display: none;
-      @media (min-width: $desktop-min-width) {
+      @media (min-width: $lg) {
         display: block;
         order: 1;
       }
-      @media (min-width: $desktop-min-width-2) {
+      @media (min-width: $xxl) {
         order: unset;
       }
       button {
@@ -127,7 +127,7 @@
     .menuBtn {
       order: 1;
 
-      @media (min-width: $desktop-min-width) {
+      @media (min-width: $lg) {
         order: unset;
       }
 
@@ -141,7 +141,7 @@
     .telphone {
       order: 3;
 
-      @media (min-width: $desktop-min-width) {
+      @media (min-width: $lg) {
         display: none;
         order: unset;
       }

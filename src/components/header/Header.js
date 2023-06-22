@@ -99,7 +99,6 @@ const Header = () => {
   }
 
   const { t, i18n } = useTranslation();
-  console.log(Object.keys(lngs), i18n.resolvedLanguage, i18n.language);
   return (
     <>
       <H.Header id="header">

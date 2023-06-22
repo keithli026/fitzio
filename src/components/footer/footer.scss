@@ -4,7 +4,7 @@
   background-color: $dark;
   color: $white;
   padding: 40px 40px 80px;
-  @media (min-width: $desktop-min-width) {
+  @media (min-width: $lg) {
     padding: 80px 0;
   }
   > div {
@@ -16,7 +16,7 @@
       margin: 0 auto 50px;
       img {
         max-width: 230px;
-        @media (min-width: $desktop-min-width) {
+        @media (min-width: $lg) {
           max-width: 230px;
         }
       }
@@ -24,11 +24,11 @@
     .contact {
       font-size: 14px;
       margin-bottom: 80px;
-      @media (min-width: $desktop-min-width) {
+      @media (min-width: $lg) {
         font-size: 20px;
         flex-basis: 60%;
       }
-      @media (min-width: $desktop-min-width-1) {
+      @media (min-width: $xl) {
         flex-basis: 50%;
       }
       .email {
@@ -66,13 +66,13 @@
       .address {
         margin-bottom: 40px;
         font-weight: 600;
-        @media (min-width: $desktop-min-width) {
+        @media (min-width: $lg) {
           font-size: 28px;
         }
       }
       .follow-us {
         font-size: 16px;
-        @media (min-width: $desktop-min-width) {
+        @media (min-width: $lg) {
           font-size: 24px;
         }
         .socialMedia {
@@ -90,11 +90,11 @@
     }
     #opening {
       display: none;
-      @media (min-width: $desktop-min-width) {
+      @media (min-width: $lg) {
         display: block;
         flex-basis: 35%;
       }
-      @media (min-width: $desktop-min-width-1) {
+      @media (min-width: $xl) {
         flex-basis: 45%;
       }
       h2 {
