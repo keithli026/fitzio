@@ -1,4 +1,5 @@
 {
+  "Home": "首頁",
   "About": "關於",
   "Meet Our Team": "約見團隊",
   "Services": "服務",
@@ -68,30 +69,30 @@
   "Rotator cuff related (tear/tendinopathy/bursitis)": "旋轉肌相關（撕裂/腱病變/滑囊炎）。",
   "Joint related (frozen shoulder/labral tear/ACJ sprain)": "肩膀關節相關（冰凍肩/肩唇撕裂/肩鎖關節扭傷）。",
   "How to manage shoulder pain?": "如何改善肩膀疼痛？",
-  "Treatment and management:": "物理治療：",
+  "Treatment and management": "物理治療：",
   "Deload: avoid or modify activities that aggravate symptoms.": "減輕負荷：避免加重症狀的活動。",
   "Taping: taping might be used to reduce pain and offload sensitive structures around the shoulder.": "肌能系貼布及貼紮技術：可以使用肌能系貼布來減輕肩膀敏感和疼痛。",
   "Acupuncture: acupuncture might be used to release trigger points and provide short-term pain relief.": "針灸治療：可以使用針灸治療來釋放激痛點並舒緩短暫疼痛。",
   "Manual therapy: soft and deep tissue release, joint mobilization, or stretching might be used to reduce pain and muscle tightness, and improve range of motion.": "徒手治療：可以使用軟組織按摩和深層組織按摩，或關節鬆動術來減輕疼痛和肌肉繃緊以及改善關節活動度。",
   "Shockwave therapy: reduce tissue tightness around shoulder": "衝擊波治療：減少肩膀周圍組織的繃緊和促進組織修復。",
   "Electrotherapy: therapeutic ultrasound might be used to reduce pain and inflammation.": "電療：可以使用超聲波治療來減輕疼痛和炎症。",
-  "Exercises:": "運動治療：",
+ 
   "Range of motion exercises: Range of motion exercises help to improve shoulder mobility and prevent stiffness.": "關節活動運動：關節活動運動有助於改善肩膀的活動能力，防止僵硬。",
   "Strengthening exercises: Strengthening exercises for rotator cuffs and muscles around the shoulder blade can improve shoulder biomechanics and reduce pain.": "力量鍛鍊運動：旋轉肌和肩胛骨周圍肌肉的力量鍛鍊運動可以改善肩膀的生物力學並減輕疼痛。",
   
   "Elbow": "肘部",
   "What are the common conditions that cause elbow pain?": "什麼常見的情況會導致肘部疼痛？",
   "Tennis elbow: it involves extensor muscles of the forearm. It is common in tennis players but not limited to other sports players (squash and badminton) or non-sport populations. The main reason for developing tennis elbow is overuse.": "網球肘：涉及前臂的伸肌。這在網球運動員中常見，但不僅限於其他運動員（如壁球和羽毛球）或非運動人群。導致網球肘的主要原因是過度使用。",
-  "Golfer’s elbow: it involves flexor muscles of the forearm. It is common in golf players but not limited to other sports players. The main reason for developing a golfer's elbow is overuse.": "高爾夫球肘：涉及前臂的屈肌。這在高爾夫球運動員中常見，但不僅限於其他運動員。導致高爾夫球肘的主要原因是過度使用。",
+  "Golfer's elbow: it involves flexor muscles of the forearm. It is common in golf players but not limited to other sports players. The main reason for developing a golfer's elbow is overuse.": "高爾夫球肘：涉及前臂的屈肌。這在高爾夫球運動員中常見，但不僅限於其他運動員。導致高爾夫球肘的主要原因是過度使用。",
   "How to manage elbow pain?": "如何改善肘部疼痛？",
-  "Treatment and management:": "物理治療：",
+ 
   "Deload: avoid or modify activities that aggravate symptoms. Sometimes, elbow brace might be suggested to relieve symptoms.": "減輕負荷：避免加重症狀的活動。有時會建議使用護肘來緩解症狀。",
   "Taping: taping might be used to reduce pain and offload sensitive structures around the elbow.": "肌能系貼布及貼紮技術：可以使用肌能系貼布來減輕肘部敏感和疼痛。",
   "Acupuncture: acupuncture might be used to release trigger points, reduce muscle tightness, and restore muscle function.": "針灸治療：可以使用針灸治療來釋放激痛點、減輕肌肉繃緊和恢復肌肉功能。",
   "Manual therapy: soft and deep tissue release, or joint mobilization might be used to reduce pain and improve range of motion.": "徒手治療：可以使用軟組織按摩和深層組織按摩，或關節鬆動術來減輕疼痛和改善關節活動度。",
   "Shockwave therapy: promote tissue healing.": "衝擊波治療：促進組織修復。",
   "Electrotherapy: therapeutic ultrasound or interferential therapy might be used to reduce pain and inflammation.": "電療：可以使用超聲波治療或干擾波治療來減輕疼痛和炎症。",
-  "Exercises:": "運動治療：",
+
   "Range of motion exercises: Range of motion exercises help to improve elbow and wrist mobility and prevent stiffness.": "關節活動運動：關節活動運動有助於改善肘部和手腕的活動能力，防止僵硬。",
   "Strengthening exercises: Strengthening exercises for upper limbs can improve muscle performance.": "力量鍛鍊運動：上肢力量鍛鍊運動可以提高肌肉表現。",
   
@@ -100,25 +101,25 @@
   "Carpal tunnel syndrome: the median nerve is compressed as it passes through the carpal tunnel. This condition is characterized by burning wrist pain with numbness in the first three fingers.": "腕管综合症：當正中神經通過腕管時受壓迫。常見特徵有手腕灼熱疼痛並伴有第一到第三個手指的麻木感。",
   "How to manage wrist pain?": "如何改善手腕疼痛？",
   "For carpal tunnel syndrome": "腕管綜合症",
-  "Treatment and management:": "物理治療：",
+
   "Splinting and taping: maintain wrist in neutral to avoid compression to the median nerve.": "肌能系貼布及貼紮技術：保持手腕處於中性位置，避免對正中神經的壓迫。 有時可能會建議使用手腕護具來緩解症狀。",
   "Electrotherapy: might be helpful to reduce pain, swelling, and inflammation.": "電療：可能有助於減輕疼痛、腫脹和發炎。",
-  "Exercises:": "運動治療：",
+
   "Nerve and tendon gliding exercises.": "神經和肌腱滑動運動。",
   "Median nerve sliding exercises.": "正中神經滑動運動。",
   
   "Thumb": "拇指",
   "What are the common conditions that cause thumb pain?": "什麼是導致拇指疼痛的常見病症？",
-  "Mother’s thumb: also called De Quervain’s tenosynovitis affects the synovium of abductor pollicis longus and extensor pollicis brevis tendons. This results in pain, swelling, and inflammation.": "媽媽手：也稱為狹窄性腱鞘炎，影響到拇指外展長肌和拇指伸肌短肌的滑膜。這導致疼痛、腫脹和發炎。",
+  "Mother's thumb: also called De Quervain's tenosynovitis affects the synovium of abductor pollicis longus and extensor pollicis brevis tendons. This results in pain, swelling, and inflammation.": "媽媽手：也稱為狹窄性腱鞘炎，影響到拇指外展長肌和拇指伸肌短肌的滑膜。這導致疼痛、腫脹和發炎。",
   "How to manage thumb pain?": "如何改善拇指疼痛？",
-  "For mother’s thumb": "媽媽手：",
-  "Treatment and management:": "物理治療：",
+  "For mother's thumb": "媽媽手：",
+
   "Deload: avoid or modify activities that aggravate symptoms. Sometimes, thumb brace might be suggested to relieve symptoms.": "減輕負荷：避免加重症狀的活動。可能會建議使用拇指護具來緩解症狀。",
   "Taping: taping might be used to reduce pain and offload sensitive structures around the thumb.": "肌能系貼布及貼紮技術：可以使用肌能系貼布來減輕拇指敏感和疼痛。",
   "Acupuncture: acupuncture might be used to release trigger points, reduce muscle tightness, and restore muscle function.": "針灸治療：可以使用針灸治療來釋放激痛點、減輕肌肉繃緊和恢復肌肉功能。",
   "Shockwave therapy: promote tissue healing.": "促進組織修復。",
   "Electrotherapy: therapeutic ultrasound or interferential therapy might be used to reduce pain and inflammation.": "可以使用超聲波治療或干擾波治療來減輕疼痛和炎症。",
-  "Exercises:": "運動治療：",
+
   "Range of motion exercises: Range of motion exercises help to improve thumb and wrist mobility and prevent stiffness.": "關節活動運動：關節活動運動有助於改善拇指和手腕的活動能力，防止僵硬。",
   "Strengthening exercises: Strengthening exercises for upper limbs can improve muscle performance.": "力量鍛鍊運動：上肢增強運動可以提高肌肉表現。",
   
@@ -127,9 +128,9 @@
   "The structures that are commonly involved are sacroiliac joint, symphysis pubis and the surrounding ligaments and muscles.": "常常涉及的結構包括骶髂關節、恥骨聯合以及周圍的韌帶和肌肉。",
   "How to manage PGP?": "如何改善骨盆帶痛？",
   "A biopsychosocial model will be used to guide treatment and management.": "將使用生物心理社會模型來進行治療。",
-  "Treatment and management:": "物理治療：",
+
   "Reduce pain with massage therapy, acupuncture, taping, cupping therapy, or electrotherapy.": "使用按摩療法、針灸治療、肌能系貼布及貼紮技術、拔罐療法或電療減輕疼痛。",
-  "Exercises:": "運動治療：",
+ 
   "Stretches, strengthening, and relaxation exercises.": "進行伸展、力量鍛鍊和放鬆運動。",
   
   "Hip": "髖部",
@@ -137,10 +138,10 @@
   "Hip osteoarthritis: degenerative condition that affects the hip joint. The cartilage that cushions the joint is worn down causing inflammation, pain, and stiffness.": "髖部骨關節炎：這是一種影響髖關節的退化性疾病。緩衝關節的軟骨被磨損，引起炎症、疼痛和僵硬感。",
   "How to manage hip pain?": "如何改善髖部疼痛？",
   "For hip osteoarthritis": "對於髖部骨關節炎",
-  "Treatment and management:": "物理治療：",
+ 
   "Reduce pain with manual therapy and hydrotherapy.": "使用手法療法和水療減輕疼痛。",
   "Adopt healthy lifestyle.": "採取健康的生活方式。",
-  "Exercises:": "運動治療：",
+
   "Exercises are key in managing hip osteoarthritis. These include hip range of motion, hip strengthening exercises (deep hip stabilizers, gluteus maximus and medius, lower limbs, and trunk), and balance and proprioception.": "運動是改善髖部骨關節炎的關鍵。這包括髖關節的活動運動、髖部肌肉力量鍛鍊運動（深層髖部穩定肌群、臀大肌和臀中肌、下肢和軀幹），以及平衡和本體感覺訓練。",
   
   "Thigh": "大腿",
@@ -166,15 +167,15 @@
   "Patellofemoral pain syndrome: The patellofemoral joint is the articulation between the patella and the femoral trochlea. Patellofemoral pain occurs when the patellofemoral joint is overloaded. Patellofemoral pain is often associated with activities that load the patellofemoral joint such as stair walking, squating, and running.": "髕骨疼痛症候群：髕股關節是膝蓋骨和股骨滑車之間的接合處。當髕股關節過度負荷時，就會出現髕股關節疼痛。髕股關節疼痛通常與髕股關節負荷的活動有關，例如走樓梯、蹲下和跑步。",
   "How to manage knee pain?": "如何改善膝蓋疼痛？",
   "For knee osteoarthritis": "膝關節骨關節炎",
-  "Treatment and management:": "物理治療：",
+
   "Reduce pain with manual therapy and hydrotherapy.": "使用手法療法和水療減輕疼痛。",
   "Adopt healthy lifestyle.": " 採取健康的生活方式。",
-  "Exercises:": "運動治療：",
+  "Exercises": "運動治療：",
   "Exercises are key in managing knee osteoarthritis. These include range of motion and strengthening exercises (quadriceps, hamstring, and gluteus).": "運動是管理膝關節骨關節炎的關鍵。這包括關節活動運動和力量鍛鍊運動（股四頭肌、腿後肌群和臀肌）。",
   "For patellofemoral pain syndrome": "髕骨疼痛症候群",
-  "Treatment and management:": "物理治療：",
+
   "Reduce pain with manual therapy and taping.": "使用手法療法和肌能系貼布及貼紮技術來減輕疼痛。",
-  "Exercises:": "運動治療：",
+
   "Exercises are key in managing patellofemoral pain syndrome. These include range of motion exercises, strengthening exercises (quadriceps, hip muscles, lower limbs, and trunk muscles), and balance and coordination training.": "運動是改善髕骨疼痛症候群的關鍵。包括關節活動運動、力量鍛鍊運動（四頭肌、髖部肌肉、下肢和軀幹肌肉）以及平衡和協調訓練。",
   
   "Leg": "腿部",
@@ -195,26 +196,26 @@
   "What are the common conditions that cause medial leg pain?": "什麼導致腿內側的疼痛？",
   "Medial tibial stress syndrome (shin splints): shin splints is a common cause of medial leg pain due to overuse. People with shin splints complain about diffuse pain along the medial aspect of the tibia. Flexor digitorum longus is thought to be the source of pain.": "內脛骨應力症候群（脛骨炎）：脛骨炎是由於過度使用而引起的腿內側疼痛的常見原因。患有脛骨炎的人會感到脛骨內側的散發性疼痛。長趾屈肌被認為是疼痛的來源。",
   "How to manage medial leg pain?": "如何改善腿內側疼痛？",
-  "Treatment and management:": "物理治療：",
+ 
   "Deload: avoid or modify activities that aggravate symptoms. Sometimes, poor footwear might be one of the contributing factors to overloading muscles.": "減輕負荷：避免加重症狀的活動。有時，不良的鞋具可能是導致肌肉超負荷的原因之一。",
   "Taping: taping might be used to reduce pain and offload sensitive structures around the leg.": "肌能系貼布及貼紮技術：可以使用肌能系貼布減輕腿部敏感和疼痛。",
   "Acupuncture: acupuncture might be used to release trigger points, reduce muscle tightness, and restore muscle function.": "針灸治療：針灸治療可以釋放激痛點，減輕肌肉繃緊，恢復肌肉功能。",
   "Manual therapy: soft and deep tissue release, or joint mobilization might be used to reduce pain and improve range of motion.": "徒手治療：可以使用軟組織按摩和深層組織按摩，或關節鬆動術來減輕疼痛和改善關節活動度。",
   "Electrotherapy: therapeutic ultrasound or interferential therapy might be used to reduce pain and inflammation.": "電療：可以使用超聲波治療或干擾波治療來減輕疼痛和炎症。",
-  "Exercises:": "運動治療：",
+
   "Range of motion exercises: Range of motion exercises help to improve ankle and foot mobility and prevent stiffness.": "關節活動運動：關節活動運動有助於改善踝關節和足部的活動能力，防止僵硬。",
   "Strengthening exercises: Strengthening exercises for lower limbs can improve muscle performance.": "力量鍛鍊運動：下肢的強化運動可以改善肌肉功能。",
   
   "Achille pain": "跟腱痛",
   "What are the common conditions that cause achilles pain?": "麼疾病導致跟腱痛？",
   "Midportion and insertional achilles tendinopathy: achilles tendon is the combined tendon of gastrocnemius and soleus muscles. People with achilles tendinopathy complain about gradual onset of pain around mid-portion or at insertion. Achilles tendinopathy might occur in a single episode (reactive) or over a period of time (degenerative) as a result of the achilles tendon being overloaded.": "非止點性（midportion）和止點性（insertional）跟腱病變：跟腱是腓腸肌和比目魚肌的結合腱。患有跟腱病變的人會在跟腱中部或底部逐漸感到疼痛。跟腱病變可能是由於跟腱過度負荷導致。這可以從單次事件中發生（反應性），或者隨著時間的推移而逐漸形成（退化性）。",
-  "How to manage achilles pain": "如何改善跟腱痛？",
-  "Treatment and management:": "物理治療：",
+  "How to manage achilles pain?": "如何改善跟腱痛？",
+  
   "Deload: avoid or modify activities that aggravate symptoms. Shoe inserts might be used to reduce pain and offload achilles tendon.": "減輕負荷：避免加重症狀的活動。可以使用鞋墊減輕疼痛並減輕跟腱的負荷。",
   "Acupuncture: acupuncture might be used to release trigger points, reduce muscle tightness, and restore muscle function.": "針灸治療：針灸治療可以釋放激痛點，減輕肌肉繃緊，恢復肌肉功能。",
   "Manual therapy: soft and deep tissue release, or joint mobilization might be used to reduce pain and improve range of motion.": "徒手治療：可以使用軟組織按摩和深層組織按摩，或關節鬆動術來減輕疼痛和改善關節活動度。",
   "Electrotherapy: therapeutic ultrasound or interferential therapy might be used to reduce pain and inflammation.": "電療：可以使用超聲波治療或干擾波治療來減輕疼痛和炎症。",
-  "Exercises:": "運動治療：",
+
   "Range of motion exercises: Range of motion exercises help to improve ankle mobility and prevent stiffness.": "關節活動運動：關節活動運動有助於改善踝關節和足部的活動能力，防止僵硬。",
   "Strengthening exercises: Strengthening exercises (isometric, isotonic, plyometric) for lower limbs can improve muscle performance.": "力量鍛鍊運動：下肢的強化運動（等張運動、等長收縮、增強式訓練性）可以改善肌肉功能。",
   
@@ -240,7 +241,7 @@
   "Plantar fasciitis: develops when the connective tissue (plantar fascia), which supports the arch of the foot, is irritated as a result of being overused, overstretched, or direct pressure.": "足底筋膜炎：當支撐腳弓的結締組織（足底筋膜）由於過度使用、過度拉伸或直接壓力而受到刺激時，就會出現足底筋膜炎。",
   "How to manage foot pain?": "如何改善腳痛？",
   "Plantar fasciitis": "對於足底筋膜炎",
-  "Treatment and management:": "物理治療：",
+ 
   "Deload: avoid or modify activities that aggravate symptoms. Sometimes, customized and prefabricated foot orthoses might be used to relieve symptoms.": "減輕負荷：避免加重症狀的活動。有時，可以使用定制或預製足部裝具（foot orthoses）來緩解症狀。",
   "Taping: low dye taping to support plantar fascia.": "肌能系貼布及貼紮技術：使用low-dye taping來支撐足底筋膜。",
   "Shockwave therapy: promote tissue healing.": "衝擊波治療：促進組織修復。",

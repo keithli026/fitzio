@@ -4,7 +4,7 @@ import { Container, Row } from "../../GlobalStyle";
 import * as H from "./style";
 import "./header.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faPhoneAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { phone } from "../../index";
 import "../../components/i18n";
 import { useTranslation, Trans } from 'react-i18next';

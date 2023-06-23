@@ -1,8 +1,9 @@
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
-import translationEN from "../translationEN.json"
-import translationTC from "../translationTC.json"
+import translationEN from "../translationEN.json";
+import translationTC from "../translationTC.json";
+
 i18n
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector
@@ -14,6 +15,7 @@ i18n
     // for all options read: https://www.i18next.com/overview/configuration-options
     debug: true,
     fallbackLng: "en",
+    lng: "en",
     interpolation: {
       escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
     },

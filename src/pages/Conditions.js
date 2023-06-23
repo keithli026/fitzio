@@ -5,6 +5,8 @@ import "./conditions.scss";
 import { getCondition } from './ConditionInfo';
 import "../components/i18n";
 import { useTranslation, Trans } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Conditions = () => {
   const { t, i18n } = useTranslation();
@@ -112,100 +114,116 @@ const Conditions = () => {
               <div className="shining_dots" id={`shining_dot${x}`} ref={el => shiningDot.current[x] = el} onClick={showDetails(x)}>
                 <img src={process.env.PUBLIC_URL + '/shining_dot.png'} alt={`shining_dot${x}`}></img>
               </div>
-              <div className='textboxs' id={`box${x}`} ref={el => textBox.current[x] = el} onClick={showDetails(x)}>
-                <div className='title'>{t(getCondition(x).Q1)}</div>
-                <div className='description'>
-                  <ul>
-                    <li>{t(getCondition(x).A1a)}</li>
-                    {getCondition(x).A1b === undefined ? "" : <li>{t(getCondition(x).A1b)}</li>}
-                    {getCondition(x).A1c === undefined ? "" : <li>{t(getCondition(x).A1c)}</li>}
-                  </ul>
-                </div>
-                {getCondition(x).Q2 === undefined ? "" :
-                  <>
-                    <div className='title'>{t(getCondition(x).Q2)}</div>
-                    <div className='description'>
-                      {getCondition(x).example === undefined ? "" : <div>{t(getCondition(x).example)}</div>}
-                      <ul>
-                        <li>{t(getCondition(x).A2a)}</li>
-                        {getCondition(x).A2ai === undefined ? "" :
-                          <ul>
-                            {getCondition(x).A2ai === undefined ? "" : <li>{t(getCondition(x).A2ai)}</li>}
-                            {getCondition(x).A2aii === undefined ? "" : <li>{t(getCondition(x).A2aii)}</li>}
-                            {getCondition(x).A2aiii === undefined ? "" : <li>{t(getCondition(x).A2aiii)}</li>}
-                            {getCondition(x).A2aiv === undefined ? "" : <li>{t(getCondition(x).A2aiv)}</li>}
-                            {getCondition(x).A2av === undefined ? "" : <li>{t(getCondition(x).A2av)}</li>}
-                            {getCondition(x).A2avi === undefined ? "" : <li>{t(getCondition(x).A2avi)}</li>}
-                            {getCondition(x).A2avii === undefined ? "" : <li>{t(getCondition(x).A2avii)}</li>}
-                            {getCondition(x).A2aviii === undefined ? "" : <li>{t(getCondition(x).A2aviii)}</li>}
-                            {getCondition(x).A2aix === undefined ? "" : <li>{t(getCondition(x).A2aix)}</li>}
-                          </ul>
-                        }
-                        {getCondition(x).A2b === undefined ? "" : <li>{t(getCondition(x).A2b)}</li>}
-                        {getCondition(x).A2bi === undefined ? "" :
-                          <ul>
-                            {getCondition(x).A2bi === undefined ? "" : <li>{t(getCondition(x).A2bi)}</li>}
-                            {getCondition(x).A2bii === undefined ? "" : <li>{t(getCondition(x).A2bii)}</li>}
-                          </ul>
-                        }
-                        {getCondition(x).A2c === undefined ? "" : <li>{t(getCondition(x).A2c)}</li>}
-                      </ul>
-                      {getCondition(x).example1 === undefined ? "" : <div>{t(getCondition(x).example1)}</div>}
-                      {getCondition(x).A2a1 === undefined ? "" : 
-                        <>
+              <div className='textboxs' id={`box${x}`} ref={el => textBox.current[x] = el}>
+                <div className='icon_wrapper'><FontAwesomeIcon icon={faTimes} onClick={showDetails(x)}/></div>
+                <div className='content_wrapper'>
+                  <div className='title'>{t(getCondition(x).Q1)}</div>
+                  <div className='description'>
+                    <ul>
+                      <li>{t(getCondition(x).A1a)}</li>
+                      {getCondition(x).A1b === undefined ? "" : <li>{t(getCondition(x).A1b)}</li>}
+                      {getCondition(x).A1c === undefined ? "" : <li>{t(getCondition(x).A1c)}</li>}
+                    </ul>
+                  </div>
+                  {getCondition(x).Q2 === undefined ? "" :
+                    <>
+                      <div className='title'>{t(getCondition(x).Q2)}</div>
+                      <div className='description'>
+                        {getCondition(x).example === undefined ? "" : <div>{t(getCondition(x).example)}</div>}
                         <ul>
-                            <li>{t(getCondition(x).A2a1)}</li>
-                            {getCondition(x).A2a1i === undefined ? "" :
+                          <li>
+                            <div>{t(getCondition(x).A2a)}</div>
+                            {getCondition(x).A2ai === undefined ? "" :
                               <ul>
-                                <li>{t(getCondition(x).A2a1i)}</li>
-                              </ul>         
+                                {getCondition(x).A2ai === undefined ? "" : <li>{t(getCondition(x).A2ai)}</li>}
+                                {getCondition(x).A2aii === undefined ? "" : <li>{t(getCondition(x).A2aii)}</li>}
+                                {getCondition(x).A2aiii === undefined ? "" : <li>{t(getCondition(x).A2aiii)}</li>}
+                                {getCondition(x).A2aiv === undefined ? "" : <li>{t(getCondition(x).A2aiv)}</li>}
+                                {getCondition(x).A2av === undefined ? "" : <li>{t(getCondition(x).A2av)}</li>}
+                                {getCondition(x).A2avi === undefined ? "" : <li>{t(getCondition(x).A2avi)}</li>}
+                                {getCondition(x).A2avii === undefined ? "" : <li>{t(getCondition(x).A2avii)}</li>}
+                                {getCondition(x).A2aviii === undefined ? "" : <li>{t(getCondition(x).A2aviii)}</li>}
+                                {getCondition(x).A2aix === undefined ? "" : <li>{t(getCondition(x).A2aix)}</li>}
+                              </ul>
                             }
-                            {getCondition(x).A2b1 === undefined ? "" : <li>{t(getCondition(x).A2b1)}</li>}
+                          </li>
+                          {getCondition(x).A2b === undefined ? "" :
+                            <li>
+                              <div>{t(getCondition(x).A2b)}</div>
+                              {getCondition(x).A2bi === undefined ? "" :
+                                <ul>
+                                  {getCondition(x).A2bi === undefined ? "" : <li>{t(getCondition(x).A2bi)}</li>}
+                                  {getCondition(x).A2bii === undefined ? "" : <li>{t(getCondition(x).A2bii)}</li>}
+                                </ul>
+                              }
+                            </li>
+                          }
+
+                          {getCondition(x).A2c === undefined ? "" : <li>{t(getCondition(x).A2c)}</li>}
                         </ul>
-                        </>
-                      }
-                    </div>
-                  </>
-                }
-                {getCondition(x).Q3 === undefined ? "" :
-                  <>
-                    <div className='title'>{t(getCondition(x).Q3)}</div>
-                    <div className='description'>
-                      <ul>
-                        <li>{t(getCondition(x).A3a)}</li>
-                        {getCondition(x).A3b === undefined ? "" : <li>{t(getCondition(x).A3b)}</li>}
-                        {getCondition(x).A3c === undefined ? "" : <li>{t(getCondition(x).A3c)}</li>}
-                      </ul>
-                    </div>
-                  </>
-                }
-                {getCondition(x).Q4 === undefined ? "" :
-                  <>
-                    <div className='title'>{t(getCondition(x).Q4)}</div>
-                    <div className='description'>
-                      <ul>
-                        <li>{t(getCondition(x).A4a)}</li>
-                        {getCondition(x).A4ai === undefined ? "" :
-                          <ul>
-                            {getCondition(x).A4ai === undefined ? "" : <li>{t(getCondition(x).A4ai)}</li>}
-                            {getCondition(x).A4aii === undefined ? "" : <li>{t(getCondition(x).A4aii)}</li>}
-                            {getCondition(x).A4aiii === undefined ? "" : <li>{t(getCondition(x).A4aiii)}</li>}
-                            {getCondition(x).A4aiv === undefined ? "" : <li>{t(getCondition(x).A4aiv)}</li>}
-                            {getCondition(x).A4av === undefined ? "" : <li>{t(getCondition(x).A4av)}</li>}
-                          </ul>
+                        {getCondition(x).example1 === undefined ? "" : <div>{t(getCondition(x).example1)}</div>}
+                        {getCondition(x).A2a1 === undefined ? "" :
+                          <>
+                            <ul>
+                              <li>{t(getCondition(x).A2a1)}</li>
+                              {getCondition(x).A2a1i === undefined ? "" :
+                                <ul>
+                                  <li>{t(getCondition(x).A2a1i)}</li>
+                                </ul>
+                              }
+                              {getCondition(x).A2b1 === undefined ? "" : <li>{t(getCondition(x).A2b1)}</li>}
+                            </ul>
+                          </>
                         }
-                        {getCondition(x).A4b === undefined ? "" : <li>{t(getCondition(x).A4b)}</li>}
-                        {getCondition(x).A4bi === undefined ? "" :
-                          <ul>
-                            {getCondition(x).A4bi === undefined ? "" : <li>{t(getCondition(x).A4bi)}</li>}
-                            {getCondition(x).A4bii === undefined ? "" : <li>{t(getCondition(x).A4bii)}</li>}
-                          </ul>
-                        }
-                        {getCondition(x).A4c === undefined ? "" : <li>{t(getCondition(x).A4c)}</li>}
-                      </ul>
-                    </div>
-                  </>
-                }
+                      </div>
+                    </>
+                  }
+                  {getCondition(x).Q3 === undefined ? "" :
+                    <>
+                      <div className='title'>{t(getCondition(x).Q3)}</div>
+                      <div className='description'>
+                        <ul>
+                          <li>{t(getCondition(x).A3a)}</li>
+                          {getCondition(x).A3b === undefined ? "" : <li>{t(getCondition(x).A3b)}</li>}
+                          {getCondition(x).A3c === undefined ? "" : <li>{t(getCondition(x).A3c)}</li>}
+                        </ul>
+                      </div>
+                    </>
+                  }
+                  {getCondition(x).Q4 === undefined ? "" :
+                    <>
+                      <div className='title'>{t(getCondition(x).Q4)}</div>
+                      <div className='description'>
+                        <ul>
+                          <li>
+                            {t(getCondition(x).A4a)}
+                            {getCondition(x).A4ai === undefined ? "" :
+                              <ul>
+                                {getCondition(x).A4ai === undefined ? "" : <li>{t(getCondition(x).A4ai)}</li>}
+                                {getCondition(x).A4aii === undefined ? "" : <li>{t(getCondition(x).A4aii)}</li>}
+                                {getCondition(x).A4aiii === undefined ? "" : <li>{t(getCondition(x).A4aiii)}</li>}
+                                {getCondition(x).A4aiv === undefined ? "" : <li>{t(getCondition(x).A4aiv)}</li>}
+                                {getCondition(x).A4av === undefined ? "" : <li>{t(getCondition(x).A4av)}</li>}
+                              </ul>
+                            }
+                          </li>
+                          {getCondition(x).A4b === undefined ? "" :
+                            <li>
+                              {t(getCondition(x).A4b)}
+                              {getCondition(x).A4bi === undefined ? "" :
+                                <ul>
+                                  {getCondition(x).A4bi === undefined ? "" : <li>{t(getCondition(x).A4bi)}</li>}
+                                  {getCondition(x).A4bii === undefined ? "" : <li>{t(getCondition(x).A4bii)}</li>}
+                                </ul>
+                              }
+                            </li>
+                          }
+                          {getCondition(x).A4c === undefined ? "" : <li>{t(getCondition(x).A4c)}</li>}
+                        </ul>
+                      </div>
+                    </>
+                  }
+                </div>
               </div>
             </div>
           ))}
