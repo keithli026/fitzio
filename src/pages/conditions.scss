@@ -66,18 +66,36 @@
     }
 }
 @mixin right-box-position {
-  top: 4%;
-  left: unset;
-  right: 3%;
-  bottom: unset;
-  margin: unset;
+  @media (min-width: $lg) {
+    top: 4%;
+    left: unset;
+    right: 3%;
+    bottom: unset;
+    margin: unset;
+    max-width: 300px;
+  }
+  @media (min-width: $xxl) {
+    max-width: 350px;
+  }
+  @media (min-width: $xxxl) {
+    max-width: 450px;
+  }
 }
 @mixin left-box-position {
-  top: 4%;
-  left: 3%;
-  right: unset;
-  bottom: unset;
-  margin: unset;
+  @media (min-width: $lg) {
+    top: 4%;
+    left: 3%;
+    right: unset;
+    bottom: unset;
+    margin: unset;
+    max-width: 300px;
+  }
+  @media (min-width: $xxl) {
+    max-width: 350px;
+  }
+  @media (min-width: $xxxl) {
+    max-width: 450px;
+  }
 }
 .bodychart {
     background-image: url("../../public/bodychart_bg.jpg");
@@ -867,6 +885,9 @@
             margin-bottom: 20px;
 
             @media (min-width: $xl) {
+              font-size: 25px;
+            }
+            @media (min-width: $xxxl) {
               font-size: 30px;
             }
           }
@@ -875,107 +896,73 @@
             font-size: 16px;
             line-height: 1.3;
 
-            @media (min-width: $md) {
+            @media (min-width: $xl) {
               font-size: 18px;
             }
 
-            @media (min-width: $xl) {
+            @media (min-width: $xxxl) {
               font-size: 20px;
             }
-
+            .subtitle {
+              margin-bottom: 20px;
+            }
             ul {
               font-size: inherit;
               padding-left: 20px;
 
               li {
                 margin-bottom: 20px;
-
-                div {
-                  margin-bottom: 20px;
-                }
               }
             }
           }
         }
         &#box0 {
-          @media (min-width: $lg) {
-            @include right-box-position;
-          }
+          @include right-box-position;
         }
         &#box1 {
-            @media (min-width: $lg) {
-              @include right-box-position;
-            }
+          @include right-box-position;
         }
         &#box2 {
-            @media (min-width: $lg) {
-              @include left-box-position;
-            }
+          @include left-box-position;
         }
         &#box3 {
-            @media (min-width: $lg) {
-              @include left-box-position;
-            }
+          @include left-box-position;
         }
         &#box4 {
-            @media (min-width: $lg) {
-              @include left-box-position;
-            }
+          @include left-box-position;
         }
         &#box5 {
-            @media (min-width: $lg) {
-              @include left-box-position;
-            }
+          @include left-box-position;
         }
         &#box6 {
-            @media (min-width: $lg) {
-              @include right-box-position;
-            }
+          @include right-box-position;
         }
         &#box7 {
-            @media (min-width: $lg) {
-              @include right-box-position;
-            }
+          @include right-box-position;
         }
         &#box8 {
-            @media (min-width: $lg) {
-              @include left-box-position;
-            }
+          @include left-box-position;
         }
         &#box9 {
-            @media (min-width: $lg) {
-              @include left-box-position;
-            }
+          @include left-box-position;
         }
         &#box10 {
-            @media (min-width: $lg) {
-              @include right-box-position;
-            }
+          @include right-box-position;
         }
         &#box11 {
-            @media (min-width: $lg) {
-              @include left-box-position;
-            }
+          @include left-box-position;
         }
         &#box12 {
-            @media (min-width: $lg) {
-              @include right-box-position;
-            }
+          @include right-box-position;
         }
         &#box13 {
-            @media (min-width: $lg) {
-              @include right-box-position;
-            }
+          @include right-box-position;
         }
         &#box14 {
-            @media (min-width: $lg) {
-              @include left-box-position;
-            }
+          @include left-box-position;
         }
         &#box15 {
-          @media (min-width: $lg) {
-            @include left-box-position;
-          }
+          @include left-box-position;
       }
     }
 }

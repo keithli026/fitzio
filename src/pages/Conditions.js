@@ -129,10 +129,10 @@ const Conditions = () => {
                     <>
                       <div className='title'>{t(getCondition(x).Q2)}</div>
                       <div className='description'>
-                        {getCondition(x).example === undefined ? "" : <div>{t(getCondition(x).example)}</div>}
+                        {getCondition(x).example === undefined ? "" : <div className='subtitle'>{t(getCondition(x).example)}</div>}
                         <ul>
                           <li>
-                            <div>{t(getCondition(x).A2a)}</div>
+                            <div className='subtitle'>{t(getCondition(x).A2a)}</div>
                             {getCondition(x).A2ai === undefined ? "" :
                               <ul>
                                 {getCondition(x).A2ai === undefined ? "" : <li>{t(getCondition(x).A2ai)}</li>}
@@ -149,7 +149,7 @@ const Conditions = () => {
                           </li>
                           {getCondition(x).A2b === undefined ? "" :
                             <li>
-                              <div>{t(getCondition(x).A2b)}</div>
+                              <div className='subtitle'>{t(getCondition(x).A2b)}</div>
                               {getCondition(x).A2bi === undefined ? "" :
                                 <ul>
                                   {getCondition(x).A2bi === undefined ? "" : <li>{t(getCondition(x).A2bi)}</li>}
@@ -159,9 +159,20 @@ const Conditions = () => {
                             </li>
                           }
 
-                          {getCondition(x).A2c === undefined ? "" : <li>{t(getCondition(x).A2c)}</li>}
+                          {getCondition(x).A2c === undefined ? "" : 
+                            <li>
+                              <div className='subtitle'>{t(getCondition(x).A2c)}</div>
+                              {getCondition(x).A2ci === undefined ? "" :
+                                <ul>
+                                  {getCondition(x).A2ci === undefined ? "" : <li>{t(getCondition(x).A2ci)}</li>}
+                                  {getCondition(x).A2cii === undefined ? "" : <li>{t(getCondition(x).A2cii)}</li>}
+                                </ul>
+                              }
+                            </li>
+                          
+                          }
                         </ul>
-                        {getCondition(x).example1 === undefined ? "" : <div>{t(getCondition(x).example1)}</div>}
+                        {getCondition(x).example1 === undefined ? "" : <div className='subtitle'>{t(getCondition(x).example1)}</div>}
                         {getCondition(x).A2a1 === undefined ? "" :
                           <>
                             <ul>
