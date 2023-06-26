@@ -1,24 +1,27 @@
 import React from 'react'
 import { Container } from "../GlobalStyle"
+import "../components/i18n"
+import { useTranslation, Trans } from 'react-i18next'
 
 const Acupuncture = () => {
+  const { t } = useTranslation();
   return (
     <>
     <Container>
-      <h1 className='service'>Dry Needling</h1>
+      <h1 className='service'>{t('Acupuncture')}</h1>
       <div className="flexbox">
         <div className='image_wrapper'>
-          <img src={process.env.PUBLIC_URL + "/Acupuncture.jpg"} alt="Dry Needling"></img>
+          <img src={process.env.PUBLIC_URL + "/Acupuncture.jpg"} alt="Acupuncture"></img>
         </div>
         <div className='content'>
-          <p>Acupuncture is a treatment technique involving needling introduced to your skin and the soft tissue below, aiming for trigger points in your muscles and fascia.</p>
-          <div>Benefits of acupuncture are:</div>
+          <p>{t('Acupuncture is a treatment technique involving needling introduced to your skin and the soft tissue below, aiming for trigger points in your muscles and fascia.')}</p>
+          <div>{t('Benefits of acupuncture are')}</div>
           <ul className='effect'>
-            <li>Release trigger points (muscle knots)</li>
-            <li>Promote tissue healing response</li>
-            <li>Reduce pain</li>
-            <li>Reduce muscle tightness</li>
-            <li>Restore muscle function</li>
+            <li>{t('Release trigger points (muscle knots)')}</li>
+            <li>{t('Promote tissue healing response')}</li>
+            <li>{t('Reduce pain')}</li>
+            <li>{t('Reduce muscle tightness')}</li>
+            <li>{t('Restore muscle function')}</li>
           </ul>
         </div>
       </div>

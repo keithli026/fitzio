@@ -4,14 +4,14 @@ import Breadcrumb from "../components/Breadcrumb";
 import { Container } from "../GlobalStyle";
 
 const Services = () => {
-    return (
-        <>
-            <Container>
-                <Breadcrumb />
-            </Container>
-            <Outlet />
-        </>
-    );
+  return (
+    <>
+      <Container>
+        <Breadcrumb />
+      </Container>
+      <Outlet />
+    </>
+  );
 }
 
 export default Services;

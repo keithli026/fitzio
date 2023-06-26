@@ -1,61 +1,58 @@
 import React from 'react';
 import Breadcrumb from "../components/Breadcrumb";
 import { Container } from "../GlobalStyle";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import "../components/i18n";
+import { useTranslation, Trans } from 'react-i18next';
 
 const ServicesOverview = () => {
-    return (
-        <Container className="overviews">
-            <div className="overview">
-                <Link to="/services/manual-therapy">
-                    <img src={process.env.PUBLIC_URL + "/Manual_therapy.jpg"} alt="Manual Therapy"></img>
-                    <div className="title">Manual Therapy</div>
-                </Link>
-            </div>
-              <div className="overview">
-                <Link to="/services/dry-needling">
-                    <img src={process.env.PUBLIC_URL + "/Acupuncture.jpg"} alt="Dry Needling"></img>
-                    <div className="title">Dry Needling</div>
-                </Link>
-            </div>
-            <div className="overview">
-                <Link to="/services/exercise-rehabilitation">
-                    <img src={process.env.PUBLIC_URL + "/Exercise_therapy.jpg"} alt="Exercise Rehabilitation"></img>
-                    <div className="title">Exercise Rehabilitation</div>
-                </Link>
-            </div>
-            <div className="overview">
-                <Link to="/services/massage-therapy">
-                    <img src={process.env.PUBLIC_URL + "/Massage_therapy.jpg"} alt="Massage Therapy"></img>
-                    <div className="title">Massage Therapy</div>
-                </Link>
-            </div>
-            <div className="overview">
-                <Link to="/services/extracorporeal-shockwave-therapy">
-                    <img src={process.env.PUBLIC_URL + "/Shockwave_therapy.jpg"} alt="Extracorporeal Shockwave Therapy"></img>
-                    <div className="title">Extracorporeal Shockwave Therapy</div>
-                </Link>
-            </div>
-            <div className="overview">
-                <Link to="/services/electrotherapy">
-                    <img src={process.env.PUBLIC_URL + "/Electrotherapy.jpg"} alt="Electrotherapy"></img>
-                    <div className="title">Electrotherapy</div>
-                </Link>
-            </div>
-            <div className="overview">
-                <Link to="/services/cupping-therapy">
-                    <img src={process.env.PUBLIC_URL + "/Cupping_therapy.jpg"} alt="Cupping Therapy"></img>
-                    <div className="title">Cupping Therapy</div>
-                </Link>
-            </div>
-            {/* <div className="overview">
-                <Link to="/services/taping">
-                    <img src={process.env.PUBLIC_URL + "/Taping.jpg"} alt="Taping"></img>
-                    <div className="title">Taping</div>
-                </Link>
-            </div> */}
-        </Container>
-    );
+  const { t } = useTranslation();
+  return (
+    <Container className="overviews">
+      <div className="overview">
+        <Link to="/services/manual-therapy">
+          <img src={process.env.PUBLIC_URL + "/Manual_therapy.jpg"} alt="Manual Therapy"></img>
+          <div className="title">{t('Manual Therapy')}</div>
+        </Link>
+      </div>
+      <div className="overview">
+        <Link to="/services/dry-needling">
+          <img src={process.env.PUBLIC_URL + "/Acupuncture.jpg"} alt="Acupuncture"></img>
+          <div className="title">{t('Acupuncture')}</div>
+        </Link>
+      </div>
+      <div className="overview">
+        <Link to="/services/exercise-rehabilitation">
+          <img src={process.env.PUBLIC_URL + "/Exercise_therapy.jpg"} alt="Exercise Rehabilitation"></img>
+          <div className="title">{t('Exercise Rehabilitation')}</div>
+        </Link>
+      </div>
+      <div className="overview">
+        <Link to="/services/massage-therapy">
+          <img src={process.env.PUBLIC_URL + "/Massage_therapy.jpg"} alt="Massage Therapy"></img>
+          <div className="title">{t('Massage Therapy')}</div>
+        </Link>
+      </div>
+      <div className="overview">
+        <Link to="/services/extracorporeal-shockwave-therapy">
+          <img src={process.env.PUBLIC_URL + "/Shockwave_therapy.jpg"} alt="Extracorporeal Shockwave Therapy"></img>
+          <div className="title">{t('Extracorporeal Shockwave Therapy')}</div>
+        </Link>
+      </div>
+      <div className="overview">
+        <Link to="/services/electrotherapy">
+          <img src={process.env.PUBLIC_URL + "/Electrotherapy.jpg"} alt="Electrotherapy"></img>
+          <div className="title">{t('Electrotherapy')}</div>
+        </Link>
+      </div>
+      <div className="overview">
+        <Link to="/services/cupping-therapy">
+          <img src={process.env.PUBLIC_URL + "/Cupping_therapy.jpg"} alt="Cupping Therapy"></img>
+          <div className="title">{t('Cupping Therapy')}</div>
+        </Link>
+      </div>
+    </Container>
+  );
 }
 
 export default ServicesOverview;
