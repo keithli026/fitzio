@@ -123,10 +123,9 @@ const Header = () => {
                   <H.MenuItem><Link to="/services/acupuncture">{t('Acupuncture')}</Link></H.MenuItem>
                   <H.MenuItem><Link to="/services/exercise-rehabilitation">{t('Exercise Rehabilitation')}</Link></H.MenuItem>
                   <H.MenuItem><Link to="/services/massage-therapy">{t('Massage Therapy')}</Link></H.MenuItem>
-                  <H.MenuItem><Link to="/services/extracorporeal-shockwave-therapy">{t('Extracorporeal Shockwave Therapy')}</Link></H.MenuItem>
+                  <H.MenuItem><Link to="/services/shockwave-therapy">{t('Shockwave Therapy')}</Link></H.MenuItem>
                   <H.MenuItem><Link to="/services/electrotherapy">{t('Electrotherapy')}</Link></H.MenuItem>
                   <H.MenuItem><Link to="/services/cupping-therapy">{t('Cupping Therapy')}</Link></H.MenuItem>
-                  {/* <H.MenuItem><Link to="/services/taping">Taping</Link></H.MenuItem> */}
                 </H.MenuList>
               </H.MenuItem>
               <H.MenuItem>
@@ -175,7 +174,7 @@ const Header = () => {
                 <H.MobileMenuItem><Link to="/services/acupuncture" onClick={() => changeLocation('/services/acupuncture')}>{t('Acupuncture')}</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/exercise-rehabilitation" onClick={() => changeLocation('/services/exercise-rehabilitation')}>{t('Exercise Rehabilitation')}</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/massage-therapy" onClick={() => changeLocation('/services/massage-therapy')}>{t('Massage Therapy')}</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/extracorporeal-shockwave-therapy" onClick={() => changeLocation('/services/extracorporeal-shockwave-therapy')}>{t('Extracorporeal Shockwave Therapy')}</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/shockwave-therapy" onClick={() => changeLocation('/services/shockwave-therapy')}>{t('Shockwave Therapy')}</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/electrotherapy" onClick={() => changeLocation('/services/electrotherapy')}>{t('Electrotherapy')}</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/cupping-therapy" onClick={() => changeLocation('/services/cupping-therapy')}>{t('Cupping Therapy')}</Link></H.MobileMenuItem>
                 {/* <H.MobileMenuItem><Link to="/services/taping" onClick={() => changeLocation('/services/taping')}>Taping</Link></H.MobileMenuItem> */}

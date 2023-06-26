@@ -34,9 +34,9 @@ const ServicesOverview = () => {
         </Link>
       </div>
       <div className="overview">
-        <Link to="/services/extracorporeal-shockwave-therapy">
-          <img src={process.env.PUBLIC_URL + "/Shockwave_therapy.jpg"} alt="Extracorporeal Shockwave Therapy"></img>
-          <div className="title">{t('Extracorporeal Shockwave Therapy')}</div>
+        <Link to="/services/shockwave-therapy">
+          <img src={process.env.PUBLIC_URL + "/Shockwave_therapy.jpg"} alt="Shockwave Therapy"></img>
+          <div className="title">{t('Shockwave Therapy')}</div>
         </Link>
       </div>
       <div className="overview">
