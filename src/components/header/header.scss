@@ -35,7 +35,6 @@
     .level-0 {
       margin: 0;
       align-items: center;
-
       li {
         &.expandable {
           >a {
@@ -171,7 +170,7 @@
 
     .mlevel-0 {
       overflow-y: auto;
-
+      overscroll-behavior-y: contain;
       >li {
         border-bottom: 1px solid $lightdark;
 
