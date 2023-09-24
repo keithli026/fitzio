@@ -1,6 +1,6 @@
 import { useState, useLayoutEffect, useRef, useReducer, useEffect } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
-import { Container, Row } from "../../GlobalStyle";
+import { Container, Row, lg } from "../../GlobalStyle";
 import * as H from "./style";
 import "./header.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,7 +13,6 @@ const lngs = {
   en: { nativeName: 'English', symbol: 'EN' },
   tc: { nativeName: '繁體中文', symbol: '繁' }
 };
-const desktopMinWidth = 992;
 
 const QueryNavLink = ({ to, ...props }) => {
   let location = useLocation();
@@ -93,10 +92,16 @@ const Header = () => {
   const [width, height] = useWindowSize();
   if (show) {
     refMenu.current.style.height = `${height - refHeader.current.clientHeight}px`;
-    if (width >= desktopMinWidth) {
+    if (width >= lg) {
       setShow(false);
+      document.body.style.overflowY = null;
+    } else {
+      document.body.style.overflowY = "hidden";
     }
+  } else {
+    document.body.style.overflowY = null;
   }
+
 
   const { t, i18n } = useTranslation();
   return (

@@ -14,31 +14,47 @@ $xl: 1200px;
 $xxl: 1400px;
 $xxxl: 1600px;
 $xxxxl: 1800px;
+$sm-max-width: 540px;
+$md-max-width: 720px;
+$lg-max-width: 960px;
+$xl-max-width: 1140px;
+$xxl-max-width: 1320px;
+$xxxl-max-width: 1520px;
+$xxxxl-max-width: 1720px;
+$padding-x: 20px;
+
 @mixin container {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    @media (min-width: 576px) {
-      max-width: 540px;
-    }
-    @media (min-width: 768px) {
-      max-width: 720px;
-    }
-    @media (min-width: 992px) {
-      max-width: 960px;
-    }
-    @media (min-width: 1200px) {
-      max-width: 1140px;
-    }
-    @media (min-width: 1400px) {
-      max-width: 1320px;
-    }
-    @media (min-width: 1600px) {
-      max-width: 1520px;
-    }
-    @media (min-width: 1800px) {
-      max-width: 1720px;
-    }
+  width: 100%;
+  padding-left: $padding-x;
+  padding-right: $padding-x;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $sm) {
+    max-width: $sm-max-width;
   }
+
+  @media (min-width: $md) {
+    max-width: $md-max-width;
+  }
+
+  @media (min-width: $lg) {
+    max-width: $lg-max-width;
+  }
+
+  @media (min-width: $xl) {
+    max-width: $xl-max-width;
+  }
+
+  @media (min-width: $xxl) {
+    max-width: $xxl-max-width;
+  }
+
+  @media (min-width: $xxxl) {
+    max-width: $xxxl-max-width;
+  }
+
+  @media (min-width: $xxxxl) {
+    max-width: $xxxxl-max-width;
+  }
+}

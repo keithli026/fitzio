@@ -1,4 +1,11 @@
 import styled, { createGlobalStyle, css } from "styled-components/macro";
+export const sm = 576;
+export const md = 768;
+export const lg = 992;
+export const xl = 1200;
+export const xxl = 1400;
+export const xxxl = 1600;
+export const xxxxl = 1800;
 export const Container = styled.div`
   width: 100%;
   padding-left: 20px;
@@ -11,7 +18,7 @@ export const Container = styled.div`
   @media (min-width: 768px) {
     max-width: ${prop => prop.md100 ? "unset" : "720px"};
   }
-  @media (min-width: 992px) {
+  @media (min-width: 992px) {styled-components/macro
     max-width: ${prop => prop.lg100 ? "unset" : "960px"};
   }
   @media (min-width: 1200px) {
