@@ -1,6 +1,6 @@
 import { useState, useLayoutEffect, useRef, useReducer, useEffect } from "react";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
-import { Container, Row, lg } from "../../GlobalStyle";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { Container, lg } from "../../GlobalStyle";
 import * as H from "./style";
 import "./header.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -34,17 +34,14 @@ const useWindowSize = () => {
 }
 
 const Header = () => {
-  let navigate = useNavigate();
-  let location = useLocation();
   const [show, setShow] = useState(false);
   const showMenu = () => {
     setShow(!show);
   }
-
-  const changeLocation = (placeToGo) => {
-    navigate(placeToGo, { replace: true });
-    window.location.reload();
+  const closeMenu = () => {
+    setShow(false);
   }
+
   const refHeader = useRef(null);
   const refMenu = useRef(null);
 
@@ -164,38 +161,37 @@ const Header = () => {
         <H.MobileMenuWrapper style={{ display: show ? "block" : "none" }} className="mnav">
           <H.MobileMenuList className="mlevel-0" ref={refMenu}>
             <H.MobileMenuItem>
-              <Link to="/about" onClick={() => changeLocation('/about')}>{t('About')}</Link>
+              <Link to="/about" onClick={closeMenu}>{t('About')}</Link>
             </H.MobileMenuItem>
             <H.MobileMenuItem>
-              <Link to="/meet-our-team" onClick={() => changeLocation('/meet-our-team')}>{t('Meet Our Team')}</Link>
+              <Link to="/meet-our-team" onClick={closeMenu}>{t('Meet Our Team')}</Link>
             </H.MobileMenuItem>
             <H.MobileMenuItem style={{ paddingBottom: state.services ? "0" : "0.5rem" }}>
-              <Link to="/services" style={{ paddingBottom: state.services ? "0.875rem" : "0.375rem" }} onClick={() => changeLocation('/services')}>{t('Services')}</Link>
+              <Link to="/services" style={{ paddingBottom: state.services ? "0.875rem" : "0.375rem" }} onClick={closeMenu}>{t('Services')}</Link>
               <div className="dropdownBtn" onClick={showItemServices} aria-expanded={state.services ? "true" : "false"}>
                 {state.services ? (<div className="up"></div>) : (<div className="down"></div>)}
               </div>
               <H.MobileMenuList className="mlevel-1" style={{ display: state.services ? "flex" : "none" }}>
-                <H.MobileMenuItem><Link to="/services/manual-therapy" onClick={() => changeLocation('/services/manual-therapy')}>{t('Manual Therapy')}</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/acupuncture" onClick={() => changeLocation('/services/acupuncture')}>{t('Acupuncture')}</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/exercise-rehabilitation" onClick={() => changeLocation('/services/exercise-rehabilitation')}>{t('Exercise Rehabilitation')}</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/massage-therapy" onClick={() => changeLocation('/services/massage-therapy')}>{t('Massage Therapy')}</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/shockwave-therapy" onClick={() => changeLocation('/services/shockwave-therapy')}>{t('Shockwave Therapy')}</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/electrotherapy" onClick={() => changeLocation('/services/electrotherapy')}>{t('Electrotherapy')}</Link></H.MobileMenuItem>
-                <H.MobileMenuItem><Link to="/services/cupping-therapy" onClick={() => changeLocation('/services/cupping-therapy')}>{t('Cupping Therapy')}</Link></H.MobileMenuItem>
-                {/* <H.MobileMenuItem><Link to="/services/taping" onClick={() => changeLocation('/services/taping')}>Taping</Link></H.MobileMenuItem> */}
+                <H.MobileMenuItem><Link to="/services/manual-therapy" onClick={closeMenu}>{t('Manual Therapy')}</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/acupuncture" onClick={closeMenu}>{t('Acupuncture')}</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/exercise-rehabilitation" onClick={closeMenu}>{t('Exercise Rehabilitation')}</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/massage-therapy" onClick={closeMenu}>{t('Massage Therapy')}</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/shockwave-therapy" onClick={closeMenu}>{t('Shockwave Therapy')}</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/electrotherapy" onClick={closeMenu}>{t('Electrotherapy')}</Link></H.MobileMenuItem>
+                <H.MobileMenuItem><Link to="/services/cupping-therapy" onClick={closeMenu}>{t('Cupping Therapy')}</Link></H.MobileMenuItem>
               </H.MobileMenuList>
             </H.MobileMenuItem>
             <H.MobileMenuItem>
-              <Link to="/fees" onClick={() => changeLocation('/fees')}>{t('Fees')}</Link>
+              <Link to="/fees" onClick={closeMenu}>{t('Fees')}</Link>
             </H.MobileMenuItem>
             <H.MobileMenuItem>
-              <Link to="/conditions" onClick={() => changeLocation('/conditions')}>{t('Conditions')}</Link>
+              <Link to="/conditions" onClick={closeMenu}>{t('Conditions')}</Link>
             </H.MobileMenuItem>
             <H.MobileMenuItem>
-              <Link to="/contact" onClick={() => changeLocation('/contact')}>{t('Contact')}</Link>
+              <Link to="/contact" onClick={closeMenu}>{t('Contact')}</Link>
             </H.MobileMenuItem>
             <H.MobileMenuItem>
-              <Link to="/book-online" onClick={() => changeLocation('/book-online')}>{t('Book Online')}</Link>
+              <Link to="/book-online" onClick={closeMenu}>{t('Book Online')}</Link>
             </H.MobileMenuItem>
           </H.MobileMenuList>
         </H.MobileMenuWrapper>
