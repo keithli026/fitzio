@@ -26,22 +26,7 @@ import BookOnline from './pages/BookOnline';
 import NoPage from "./pages/NoPage";
 import MeetOurTeamOverview from './pages/MeetOurTeamOverview';
 import ScrollToTop from './components/ScrollToTop';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-
-export const phone = "61431201847";
-export function WhatsApp() {
-  return (
-    <a
-      href={`https://wa.me/${phone}`}
-      className="whatsapp_float"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <FontAwesomeIcon icon={faWhatsapp} ></FontAwesomeIcon>
-    </a>
-  );
-}
+import WhatsappButton from './components/WhatsappButton';
 
 export default function MainApp() {
   return (
@@ -85,6 +70,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <MainApp />
-    <WhatsApp />
+    <WhatsappButton />
   </React.StrictMode>
 );

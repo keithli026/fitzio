@@ -1,15 +1,24 @@
 @import "../variable";
-
+$header-height: 56.27px;
+$header-height-lg: 152.89px;
+$header-height-xxl: 105px;
 .slick-slider {
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
 
   .slick-list {
     .slick-slide {
       .banner {
         .textbox {
           width: 100%;
-          min-height: 56.25vw;
-          height: 100%;
+          // min-height: 56.25vw;
+          // height: 100%;
+          height: calc(100vh - $header-height);
+          @media (min-width: $lg) {
+            height: calc(100vh - $header-height-lg);
+          }
+          @media (min-width: $xxl) {
+            height: calc(100vh - $header-height-xxl);
+          }
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -22,12 +31,9 @@
             text-align: center;
             h2 {
               font-size: 40px;
-              margin-bottom: 0;
+              margin-bottom: 30px;
               color: inherit;
-  
-              @media (min-width: $md) {
-                margin-bottom: 20px;
-              }
+              line-height: 1.2;
   
               @media (min-width: $lg) {
                 font-size: 64px;
@@ -35,7 +41,7 @@
             }
   
             h3 {
-              font-size: 20px;
+              font-size: 30px;
               font-weight: 400;
               color: inherit;
   
@@ -86,6 +92,9 @@
               width: 100%;
   
               @media (min-width: $lg) {
+                margin-bottom: 50px;
+              }
+              @media (min-width: $xxxl) {
                 margin-bottom: 150px;
               }
   
@@ -97,11 +106,16 @@
             .learn-more {
               display: flex;
               flex-direction: column;
-  
-              a {
+              @media (min-width: $lg) {
+                margin-bottom: 30px;
+              }
+              button {
                 text-align: center;
                 text-decoration: none;
                 color: $white;
+                align-self: center;
+                background-color: unset;
+                border: none;
                 img {
                   width: auto;
                   margin-left: auto;
@@ -157,7 +171,9 @@
   }
 
   .slick-dots {
+    bottom: 10px;
     li {
+      margin: 0;
       &.slick-active {
         button {
           &::before {
@@ -194,14 +210,22 @@
 #about-section {
   padding-top: 80px;
   padding-bottom: 80px;
-  min-height: 56.25vw;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (min-width: $lg) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  @media (min-width: $xxl) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
 }
 
 #our-values-section {
-  padding: 80px 0;
+  padding: 100px 0;
   background-color: $lightgrey;
   .boxes {
     display: flex;
@@ -214,6 +238,7 @@
 
     .box {
       flex-basis: 100%;
+      margin-bottom: 50px;
       @media (min-width: $sm) {
         flex-basis: 48%;
       }
@@ -248,10 +273,13 @@
       }
     }
   }
+  .button_wrapper {
+    text-align: center;
+  }
 }
 
 #our-services-section {
-  padding: 80px 0;
+  padding: 100px 0;
   background-color: $grey;
   @media (min-width: $lg) {
     height: 700px;
@@ -325,8 +353,7 @@
 }
 
 .our-team-section {
-  margin: 30px 0;
-
+  padding: 100px 0;
   .members {
     display: flex;
     flex-direction: column;

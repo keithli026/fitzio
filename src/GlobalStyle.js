@@ -18,7 +18,7 @@ export const Container = styled.div`
   @media (min-width: 768px) {
     max-width: ${prop => prop.md100 ? "unset" : "720px"};
   }
-  @media (min-width: 992px) {styled-components/macro
+  @media (min-width: 992px) {
     max-width: ${prop => prop.lg100 ? "unset" : "960px"};
   }
   @media (min-width: 1200px) {

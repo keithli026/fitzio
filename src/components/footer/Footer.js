@@ -3,7 +3,7 @@ import * as F from "./style";
 import "./footer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faTwitter, faYoutube, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
-import { phone } from "../../index";
+import { phone } from "../WhatsappButton";
 
 const email = "info@fitsiophysiotherapyandfitness.com.hk";
 const Footer = () => {

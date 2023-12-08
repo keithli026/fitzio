@@ -1,18 +1,19 @@
 import Slider from "react-slick";
-import { Link, useNavigate } from "react-router-dom";
+import { useRef } from "react";
+import { Link } from "react-router-dom";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Container } from "../GlobalStyle";
 import "./home.scss";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { getPhysiotherapists } from "../PhysiotherapistInfo";
-import { HashLink } from 'react-router-hash-link';
 import "../components/i18n";
 import { useTranslation, Trans } from 'react-i18next';
 
+
 const Home = () => {
   const { t } = useTranslation();
+  const ref = useRef(null);
+  const executeScroll = () => ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   var settings = {
     dots: true,
     infinite: true,
@@ -28,11 +29,6 @@ const Home = () => {
       }
     ]
   };
-  let navigate = useNavigate();
-  const changeLocation = (placeToGo) => {
-    navigate(placeToGo, { replace: true });
-    window.location.reload();
-  }
   const physiotherapists = getPhysiotherapists();
   return (
     <>
@@ -58,33 +54,47 @@ const Home = () => {
                 <a className="button" href="/book-online">{t('Book Now')}</a>
               </div>
               <div className="learn-more">
-                <HashLink smooth to="/#about-section">
-                  <div>{t('Learn More')}</div>
-                  <img src={process.env.PUBLIC_URL + '/arrow.png'} alt="arrow" />
-                </HashLink>
+                <div>{t('Learn More')}</div>
+                <button onClick={executeScroll}><img src={process.env.PUBLIC_URL + '/arrow.png'} alt="arrow" /></button>
               </div>
             </div>
           </div>
         </div>
         <div className="banner">
           <div className="textbox" style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL + '/banner-image-2.jpg'})`,
+            backgroundImage: `url(${process.env.PUBLIC_URL + '/banner-image-1.jpg'})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center"
           }}>
-            <h2>Title 2</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <div className="content">
+              <h2>{t('GET BACK TO DOING WHAT YOU LOVE')}</h2>
+              <h3>{t("DON'T SUFFER FROM PAIN WHEN YOU CAN MANAGE IT")}</h3>
+              <ul>
+                <li>{t('Pain relief')}</li>
+                <li>{t('Improved mobility and function')}</li>
+                <li>{t('Injury prevention')}</li>
+                <li>{t('Enhanced sports performance')}</li>
+              </ul>
+              <div className="button_container">
+                <a className="button" href="/contact">{t('Contact Us')}</a>
+                <a className="button" href="/book-online">{t('Book Now')}</a>
+              </div>
+              <div className="learn-more">
+                <div>{t('Learn More')}</div>
+                <button onClick={executeScroll}><img src={process.env.PUBLIC_URL + '/arrow.png'} alt="arrow" /></button>
+              </div>
+            </div>
           </div>
         </div>
       </Slider>
-      <Container id="about-section">
+      {/* <Container id="about-section">
         <h2 className="underline">{t('About')}</h2>
         <div className="content">
           <p>{t('People all have something they enjoy doing; whether it be sports or family activities. They all have goals they want to achieve. At Fitsio, guided by our core values, we empower people to live a better life. We love to see people who enjoy their life and do what they enjoy doing. To do that, we treat people as unique individuals. We discuss rehabilitation roadmap to achieve their personal goals. We use a holistic approach by taking into consideration both conditions and general well-being. We provide physiotherapy and prescribe exercises to enhance better outcomes.')}</p>
         </div>
-      </Container>
-      <div id="our-values-section">
+      </Container> */}
+      <div id="our-values-section" ref={ref}>
         <Container>
           <div className="content">
             <h2 className="underline">{t('Our values')}</h2>
@@ -94,57 +104,60 @@ const Home = () => {
                   <img src={process.env.PUBLIC_URL + "/Holistic_approach.png"} alt="Holistic care"></img>
                 </div>
                 <h3>{t('Holistic care')}</h3>
-                <p>{t("We consider our clients' general well-being.")}</p>
+                {/* <p>{t("We consider our clients' general well-being.")}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
                   <img src={process.env.PUBLIC_URL + "/Individualised_service.png"} alt="Individualized services"></img>
                 </div>
                 <h3>{t('Individualized services')}</h3>
-                <p>{t('We provide services on a one-to-one basis.')}</p>
+                {/* <p>{t('We provide services on a one-to-one basis.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
                   <img src={process.env.PUBLIC_URL + "/Exercise_based_rehabilitation.png"} alt="Exercise rehabilitation"></img>
                 </div>
                 <h3>{t('Exercise rehabilitation')}</h3>
-                <p>{t('We prescribe exercises as part of the management.')}</p>
+                {/* <p>{t('We prescribe exercises as part of the management.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
                   <img src={process.env.PUBLIC_URL + "/Goal_oriented.png"} alt="Goal-oriented"></img>
                 </div>
                 <h3>{t('Goal-oriented')}</h3>
-                <p>{t("Our treatment and exercise rehabilitation are guided by clients' goals.")}</p>
+                {/* <p>{t("Our treatment and exercise rehabilitation are guided by clients' goals.")}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
                   <img src={process.env.PUBLIC_URL + "/Empowerment.png"} alt="Empowerment"></img>
                 </div>
                 <h3>{t('Empowerment')}</h3>
-                <p>{t('We promote self-management and disease prevention.')}</p>
+                {/* <p>{t('We promote self-management and disease prevention.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
                   <img src={process.env.PUBLIC_URL + "/Long_lasting_clinical_outcomes.png"} alt="Long-lasting clinical outcomes"></img>
                 </div>
                 <h3>{t('Long-lasting clinical outcomes')}</h3>
-                <p>{t('We focus on long-term solutions by addressing causes and symptoms of musculoskeletal conditions.')}</p>
+                {/* <p>{t('We focus on long-term solutions by addressing causes and symptoms of musculoskeletal conditions.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
                   <img src={process.env.PUBLIC_URL + "/Ongoing_support.png"} alt="Ongoing support"></img>
                 </div>
                 <h3>{t('Ongoing support')}</h3>
-                <p>{t('Our team will follow up on our clients regularly. Please contact us if you have any concerns.')}</p>
+                {/* <p>{t('Our team will follow up on our clients regularly. Please contact us if you have any concerns.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
                   <img src={process.env.PUBLIC_URL + "/Evidence_based_practice.png"} alt="Evidence-based practice"></img>
                 </div>
                 <h3>{t('Evidence-based practice')}</h3>
-                <p>{t("We integrate the best available research evidence with clinical expertise and clients' values for our treatment.")}</p>
+                {/* <p>{t("We integrate the best available research evidence with clinical expertise and clients' values for our treatment.")}</p> */}
               </div>
+            </div>
+            <div className="button_wrapper">
+              <Link className="button" to="/about">Learn more</Link>
             </div>
           </div>
         </Container>
@@ -165,7 +178,7 @@ const Home = () => {
       </div>
       <div className="our-team-section">
         <Container>
-        <h2 className="underline">{t('Our team')}</h2>
+          <h2 className="underline">{t('Our team')}</h2>
           <div className="members">
             {physiotherapists.map((physiotherapist, i) => {
               return (

@@ -5,7 +5,7 @@ import * as H from "./style";
 import "./header.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { phone } from "../../index";
+import { phone } from "../WhatsappButton";
 import "../../components/i18n";
 import { useTranslation, Trans } from 'react-i18next';
 
@@ -106,9 +106,9 @@ const Header = () => {
       <H.Header id="header">
         <Container sm100 md100 ref={refHeader}>
           <div className="logo">
-            <a href="/">
-              <img alt="site-logo" src={process.env.PUBLIC_URL + '/logo_white.png'}></img>
-            </a>
+            <Link to="/" onClick={closeMenu} title="home">
+              <img alt="site logo" src={process.env.PUBLIC_URL + '/logo_white.png'} />
+            </Link>
           </div>
           <H.MenuWrapper>
             <H.MenuList level_0 className="level-0">

@@ -1,10 +1,10 @@
 var physiotherapists = [
     {
         pid: 1,
-        name: "Oliver Li",
+        name: "Oliver A",
         gender: "M",
         title: "Physiotherapist",
-        photo: process.env.PUBLIC_URL + "/Oliver_Li.jpg",
+        photo: process.env.PUBLIC_URL + "/physiotherapist.png",
         summary: `<p>Oliver graduated from Curtin with a Bachelor of Physiotherapy.</p>
         <p>He understands the importance of professional development to further enhance his clinical skills after graduation.</p>
         <p>He completed a qualification of deep dry needling and several courses including shoulder rehabilitation, running biomechanics, headache, and dizziness management.</p>
@@ -14,17 +14,17 @@ var physiotherapists = [
     },
     {
         pid: 2,
-        name: "Oliver A",
+        name: "Oliver B",
         gender: "F",
         title: "Physiotherapist",
-        photo: process.env.PUBLIC_URL + "/Oliver_Li.jpg"
+        photo: process.env.PUBLIC_URL + "/physiotherapist.png"
     },
     {
         pid: 3,
-        name: "Oliver B",
+        name: "Oliver C",
         gender: "M",
         title: "Physiotherapist",
-        photo: process.env.PUBLIC_URL + "/Oliver_Li.jpg"
+        photo: process.env.PUBLIC_URL + "/physiotherapist.png"
     }
 ];
 
