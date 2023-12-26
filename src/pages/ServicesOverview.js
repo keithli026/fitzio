@@ -1,9 +1,16 @@
-import React from 'react';
-import Breadcrumb from "../components/Breadcrumb";
-import { Container } from "../GlobalStyle";
-import { Link } from "react-router-dom";
-import "../components/i18n";
-import { useTranslation, Trans } from 'react-i18next';
+import React from 'react'
+import Breadcrumb from "../components/Breadcrumb"
+import { Container } from "../GlobalStyle"
+import { Link } from "react-router-dom"
+import "../components/i18n"
+import { useTranslation, Trans } from 'react-i18next'
+import acupuncture from "../assets/images/Acupuncture.jpg"
+import manualTherapy from "../assets/images/Manual_therapy.jpg"
+import exerciseRehabilitation from "../assets/images/Exercise_therapy.jpg"
+import massageTherapy from "../assets/images/Massage_therapy.jpg"
+import electrotherapy from "../assets/images/Electrotherapy.jpg"
+import cuppingTherapy from "../assets/images/Cupping_therapy.jpg"
+import shockwaveTherapy from "../assets/images/Shockwave_therapy.jpg"
 
 const ServicesOverview = () => {
   const { t } = useTranslation();
@@ -11,43 +18,43 @@ const ServicesOverview = () => {
     <Container className="overviews">
       <div className="overview">
         <Link to="/services/manual-therapy">
-          <img src={process.env.PUBLIC_URL + "/Manual_therapy.jpg"} alt="Manual Therapy"></img>
+          <img src={manualTherapy} alt={t('Manual Therapy')} />
           <div className="title">{t('Manual Therapy')}</div>
         </Link>
       </div>
       <div className="overview">
-        <Link to="/services/dry-needling">
-          <img src={process.env.PUBLIC_URL + "/Acupuncture.jpg"} alt="Acupuncture"></img>
+        <Link to="/services/acupuncture">
+          <img src={acupuncture} alt={t('Acupuncture')} />
           <div className="title">{t('Acupuncture')}</div>
         </Link>
       </div>
       <div className="overview">
         <Link to="/services/exercise-rehabilitation">
-          <img src={process.env.PUBLIC_URL + "/Exercise_therapy.jpg"} alt="Exercise Rehabilitation"></img>
+          <img src={exerciseRehabilitation} alt={t('Exercise Rehabilitation')} />
           <div className="title">{t('Exercise Rehabilitation')}</div>
         </Link>
       </div>
       <div className="overview">
         <Link to="/services/massage-therapy">
-          <img src={process.env.PUBLIC_URL + "/Massage_therapy.jpg"} alt="Massage Therapy"></img>
+          <img src={massageTherapy} alt={t('Massage Therapy')} />
           <div className="title">{t('Massage Therapy')}</div>
         </Link>
       </div>
       <div className="overview">
         <Link to="/services/shockwave-therapy">
-          <img src={process.env.PUBLIC_URL + "/Shockwave_therapy.jpg"} alt="Shockwave Therapy"></img>
+          <img src={shockwaveTherapy} alt={t('Shockwave Therapy')} />
           <div className="title">{t('Shockwave Therapy')}</div>
         </Link>
       </div>
       <div className="overview">
         <Link to="/services/electrotherapy">
-          <img src={process.env.PUBLIC_URL + "/Electrotherapy.jpg"} alt="Electrotherapy"></img>
+          <img src={electrotherapy} alt={t('Electrotherapy')} />
           <div className="title">{t('Electrotherapy')}</div>
         </Link>
       </div>
       <div className="overview">
         <Link to="/services/cupping-therapy">
-          <img src={process.env.PUBLIC_URL + "/Cupping_therapy.jpg"} alt="Cupping Therapy"></img>
+          <img src={cuppingTherapy} alt={t('Cupping Therapy')} />
           <div className="title">{t('Cupping Therapy')}</div>
         </Link>
       </div>

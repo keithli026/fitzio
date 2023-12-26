@@ -8,7 +8,17 @@ import "./home.scss";
 import { getPhysiotherapists } from "../PhysiotherapistInfo";
 import "../components/i18n";
 import { useTranslation, Trans } from 'react-i18next';
-
+import bannerImg from "../assets/images/banner-image-1.jpg"
+import banner2Img from "../assets/images/banner-image-2.jpg"
+import holisticCare from "../assets/images/Holistic_approach.png"
+import individualizedServices from "../assets/images/Individualised_service.png"
+import exerciseRehabilitation from "../assets/images/Exercise_based_rehabilitation.png"
+import goalOriented from "../assets/images/Goal_oriented.png"
+import empowerment from "../assets/images/Empowerment.png"
+import longLastingClinicalOutcomes from "../assets/images/Long_lasting_clinical_outcomes.png"
+import ongoingSupport from "../assets/images/Ongoing_support.png"
+import evidenceBasedPractice from "../assets/images/Evidence_based_practice.png"
+import arrowIcon from "../assets/images/arrow.png"
 
 const Home = () => {
   const { t } = useTranslation();
@@ -33,56 +43,54 @@ const Home = () => {
   return (
     <>
       <Slider {...settings}>
-        <div className="banner">
-          <div className="textbox" style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL + '/banner-image-1.jpg'})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center"
-          }}>
-            <div className="content">
-              <h2>{t('GET BACK TO DOING WHAT YOU LOVE')}</h2>
-              <h3>{t("DON'T SUFFER FROM PAIN WHEN YOU CAN MANAGE IT")}</h3>
-              <ul>
-                <li>{t('Pain relief')}</li>
-                <li>{t('Improved mobility and function')}</li>
-                <li>{t('Injury prevention')}</li>
-                <li>{t('Enhanced sports performance')}</li>
-              </ul>
-              <div className="button_container">
-                <a className="button" href="/contact">{t('Contact Us')}</a>
-                <a className="button" href="/book-online">{t('Book Now')}</a>
-              </div>
-              <div className="learn-more">
-                <div>{t('Learn More')}</div>
-                <button onClick={executeScroll}><img src={process.env.PUBLIC_URL + '/arrow.png'} alt="arrow" /></button>
+        <div className="slide">
+          <div className="banner">
+            <img src={bannerImg} alt={t('banner')} />
+            <div className="textbox">
+              <div className="content">
+                <h2>{t('GET BACK TO DOING WHAT YOU LOVE')}</h2>
+                <h3>{t("DON'T SUFFER FROM PAIN WHEN YOU CAN MANAGE IT")}</h3>
+                <ul>
+                  <li>{t('Pain relief')}</li>
+                  <li>{t('Improved mobility and function')}</li>
+                  <li>{t('Injury prevention')}</li>
+                  <li>{t('Enhanced sports performance')}</li>
+                </ul>
+                <div className="button_container">
+                  <a className="button" href="/contact">{t('Contact Us')}</a>
+                  <a className="button" href="/book-online">{t('Book Now')}</a>
+                </div>
+                <div className="learn-more">
+                  <div>{t('Learn More')}</div>
+                  <button onClick={executeScroll}><img src={arrowIcon} alt={t('arrow')} /></button>
+                  {/* <button onClick={executeScroll}><img src={process.env.PUBLIC_URL + '/arrow.png'} alt={t('arrow')} /></button> */}
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="banner">
-          <div className="textbox" style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL + '/banner-image-1.jpg'})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center"
-          }}>
-            <div className="content">
-              <h2>{t('GET BACK TO DOING WHAT YOU LOVE')}</h2>
-              <h3>{t("DON'T SUFFER FROM PAIN WHEN YOU CAN MANAGE IT")}</h3>
-              <ul>
-                <li>{t('Pain relief')}</li>
-                <li>{t('Improved mobility and function')}</li>
-                <li>{t('Injury prevention')}</li>
-                <li>{t('Enhanced sports performance')}</li>
-              </ul>
-              <div className="button_container">
-                <a className="button" href="/contact">{t('Contact Us')}</a>
-                <a className="button" href="/book-online">{t('Book Now')}</a>
-              </div>
-              <div className="learn-more">
-                <div>{t('Learn More')}</div>
-                <button onClick={executeScroll}><img src={process.env.PUBLIC_URL + '/arrow.png'} alt="arrow" /></button>
+        <div className="slide">
+          <div className="banner">
+            <img src={banner2Img} alt={t('banner')} />
+            <div className="textbox">
+              <div className="content">
+                <h2>{t('GET BACK TO DOING WHAT YOU LOVE')}</h2>
+                <h3>{t("DON'T SUFFER FROM PAIN WHEN YOU CAN MANAGE IT")}</h3>
+                <ul>
+                  <li>{t('Pain relief')}</li>
+                  <li>{t('Improved mobility and function')}</li>
+                  <li>{t('Injury prevention')}</li>
+                  <li>{t('Enhanced sports performance')}</li>
+                </ul>
+                <div className="button_container">
+                  <a className="button" href="/contact">{t('Contact Us')}</a>
+                  <a className="button" href="/book-online">{t('Book Now')}</a>
+                </div>
+                <div className="learn-more">
+                  <div>{t('Learn More')}</div>
+                  <button onClick={executeScroll}><img src={arrowIcon} alt={t('arrow')} /></button>
+                  {/* <button onClick={executeScroll}><img src={process.env.PUBLIC_URL + '/arrow.png'} alt={t('arrow')} /></button> */}
+                </div>
               </div>
             </div>
           </div>
@@ -101,56 +109,64 @@ const Home = () => {
             <div className="boxes">
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Holistic_approach.png"} alt="Holistic care"></img>
+                  <img src={holisticCare} alt={t('Holistic care')} />
+                  {/* <img src={process.env.PUBLIC_URL + "/Holistic_approach.png"} alt="Holistic care"></img> */}
                 </div>
                 <h3>{t('Holistic care')}</h3>
                 {/* <p>{t("We consider our clients' general well-being.")}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Individualised_service.png"} alt="Individualized services"></img>
+                  <img src={individualizedServices} alt={t('Individualized services')} />
+                  {/* <img src={process.env.PUBLIC_URL + "/Individualised_service.png"} alt="Individualized services"></img> */}
                 </div>
                 <h3>{t('Individualized services')}</h3>
                 {/* <p>{t('We provide services on a one-to-one basis.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Exercise_based_rehabilitation.png"} alt="Exercise rehabilitation"></img>
+                  <img src={exerciseRehabilitation} alt={t('Exercise rehabilitation')} />
+                  {/* <img src={process.env.PUBLIC_URL + "/Exercise_based_rehabilitation.png"} alt="Exercise rehabilitation"></img> */}
                 </div>
                 <h3>{t('Exercise rehabilitation')}</h3>
                 {/* <p>{t('We prescribe exercises as part of the management.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Goal_oriented.png"} alt="Goal-oriented"></img>
+                  <img src={goalOriented} alt={t('Goal-oriented')} />
+                  {/* <img src={process.env.PUBLIC_URL + "/Goal_oriented.png"} alt="Goal-oriented"></img> */}
                 </div>
                 <h3>{t('Goal-oriented')}</h3>
                 {/* <p>{t("Our treatment and exercise rehabilitation are guided by clients' goals.")}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Empowerment.png"} alt="Empowerment"></img>
+                  <img src={empowerment} alt={t('Empowerment')} />
+                  {/* <img src={process.env.PUBLIC_URL + "/Empowerment.png"} alt="Empowerment"></img> */}
                 </div>
                 <h3>{t('Empowerment')}</h3>
                 {/* <p>{t('We promote self-management and disease prevention.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Long_lasting_clinical_outcomes.png"} alt="Long-lasting clinical outcomes"></img>
+                  <img src={longLastingClinicalOutcomes} alt={t('Long-lasting clinical outcomes')} />
+                  {/* <img src={process.env.PUBLIC_URL + "/Long_lasting_clinical_outcomes.png"} alt="Long-lasting clinical outcomes"></img> */}
                 </div>
                 <h3>{t('Long-lasting clinical outcomes')}</h3>
                 {/* <p>{t('We focus on long-term solutions by addressing causes and symptoms of musculoskeletal conditions.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Ongoing_support.png"} alt="Ongoing support"></img>
+                  <img src={ongoingSupport} alt={t('Ongoing support')} />
+                  {/* <img src={process.env.PUBLIC_URL + "/Ongoing_support.png"} alt="Ongoing support"></img> */}
                 </div>
                 <h3>{t('Ongoing support')}</h3>
                 {/* <p>{t('Our team will follow up on our clients regularly. Please contact us if you have any concerns.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={process.env.PUBLIC_URL + "/Evidence_based_practice.png"} alt="Evidence-based practice"></img>
+                  <img src={evidenceBasedPractice} alt={t('Evidence-based practice')} />
+                  {/* <img src={process.env.PUBLIC_URL + "/Evidence_based_practice.png"} alt="Evidence-based practice"></img> */}
                 </div>
                 <h3>{t('Evidence-based practice')}</h3>
                 {/* <p>{t("We integrate the best available research evidence with clinical expertise and clients' values for our treatment.")}</p> */}
@@ -183,9 +199,9 @@ const Home = () => {
             {physiotherapists.map((physiotherapist, i) => {
               return (
                 <div className="member" key={i}>
-                  <img src={physiotherapist.photo} alt={physiotherapist.name}></img>
-                  <h3>{physiotherapist.name}</h3>
-                  <p>{physiotherapist.title}</p>
+                  <img src={physiotherapist.photo} alt={t(physiotherapist.name)}></img>
+                  <h3>{t(physiotherapist.name)}</h3>
+                  <p>{t(physiotherapist.title)}</p>
                 </div>
               );
             })}

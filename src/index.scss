@@ -106,9 +106,8 @@ nav ul li a, nav ol li a {
 }
 
 img {
-  width: 100%;
+  width: auto;
   height: auto;
-  object-fit: contain;
   display: block;
 }
 
@@ -244,6 +243,7 @@ p {
       text-decoration: none;
     }
     img {
+      width: 100%;
       @media (min-width: $sm) {
         height: 200px;
       }

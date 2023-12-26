@@ -4,9 +4,6 @@ export const Header = styled.div`
   position: sticky;
   top: 0;
   background-color: white;
-  @media (min-width: 992px) {
-    padding: 10px 0;
-  }
 `;
 
 export const MenuWrapper = styled.nav`
@@ -28,7 +25,6 @@ export const MenuWrapper = styled.nav`
 export const MenuList = styled.ul`
   display: ${prop => prop.level_0 ? "flex" : "none"};
   flex-direction: ${prop => prop.level_0 ? "row" : "column"};
-  padding: 10px 0;
 `;
 
 export const MenuItem = styled.li`

@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from "../GlobalStyle"
 import "../components/i18n"
 import { useTranslation, Trans } from 'react-i18next'
+import manualTherapy from "../assets/images/Manual_therapy.jpg"
 
 const ManualTherapy = () => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ const ManualTherapy = () => {
         <h1 className='service'>{t('Manual Therapy')}</h1>
         <div className='flexbox'>
           <div className='image_wrapper'>
-            <img src={process.env.PUBLIC_URL + "/Manual_therapy.jpg"} alt="Manual Therapy"></img>
+            <img src={manualTherapy} alt={t('Manual Therapy')} />
           </div>
           <div className='content'>
             <p>{t('Manual therapy consists of a wide range of hands-on interventions including soft tissue mobilizations, joint mobilizations, manipulations or muscle energy techniques.')}</p>

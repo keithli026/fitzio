@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from "../GlobalStyle"
 import "../components/i18n"
 import { useTranslation, Trans } from 'react-i18next'
+import acupuncture from "../assets/images/Acupuncture.jpg"
 
 const Acupuncture = () => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ const Acupuncture = () => {
       <h1 className='service'>{t('Acupuncture')}</h1>
       <div className="flexbox">
         <div className='image_wrapper'>
-          <img src={process.env.PUBLIC_URL + "/Acupuncture.jpg"} alt="Acupuncture"></img>
+          <img src={acupuncture} alt={t('Acupuncture')} />
         </div>
         <div className='content'>
           <p>{t('Acupuncture is a treatment technique involving needling introduced to your skin and the soft tissue below, aiming for trigger points in your muscles and fascia.')}</p>

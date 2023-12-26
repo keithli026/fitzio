@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from "../GlobalStyle"
 import "../components/i18n"
 import { useTranslation, Trans } from 'react-i18next'
+import cuppingTherapy from "../assets/images/Cupping_therapy.jpg"
 
 const CuppingTherapy = () => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ const CuppingTherapy = () => {
         <h1 className='service'>{t('Cupping Therapy')}</h1>
         <div className='flexbox'>
           <div className='image_wrapper'>
-            <img src={process.env.PUBLIC_URL + "/Cupping_therapy.jpg"} alt="Cupping Therapy"></img>
+            <img src={cuppingTherapy} alt={t('Cupping Therapy')} />
           </div>
           <div className='content'>
             <p>{t('Cupping therapy is an ancient form of alternative medicine in which a therapist puts special cups on your skin to create suction.')}</p>

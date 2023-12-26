@@ -8,16 +8,12 @@ import { faBars, faTimes, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { phone } from "../WhatsappButton";
 import "../../components/i18n";
 import { useTranslation, Trans } from 'react-i18next';
+import logoIcon from "../../assets/images/logo_white.png"
 
 const lngs = {
   en: { nativeName: 'English', symbol: 'EN' },
   tc: { nativeName: '繁體中文', symbol: '繁' }
 };
-
-const QueryNavLink = ({ to, ...props }) => {
-  let location = useLocation();
-  return <NavLink to={to + location.search} {...props} />;
-}
 
 const useWindowSize = () => {
   const [size, setSize] = useState([0, 0]);
@@ -35,57 +31,38 @@ const useWindowSize = () => {
 
 const Header = () => {
   const [show, setShow] = useState(false);
-  const showMenu = () => {
-    setShow(!show);
-  }
   const closeMenu = () => {
     setShow(false);
   }
 
   const refHeader = useRef(null);
   const refMenu = useRef(null);
+  const initialState = {
+    isServicesOn: false,
+    isTestingOn: false
+  };
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
     refMenu.current.style.height = `${window.innerHeight - refHeader.current.clientHeight}px`;
     // console.log(window.innerHeight, refHeader.current.clientHeight);
     // console.log("pathname: " + location.pathname + "; search: " + location.search);
     // console.log("after setShow: ",show);
-    // console.log(initialState.about, state.about, initialState.ourteam, state.ourteam);
+    // console.log(initialState.isServicesOn, state.isServicesOn, initialState.isTestingOn, state.isTestingOn);
   }, []);
-  const initialState = {
-    about: false,
-    ourteam: false,
-    services: false,
-    gp: false
-  };
-  const [state, dispatch] = useReducer(reducer, initialState);
+
+
   function reducer(state, action) {
     switch (action.type) {
-      case "about":
-        return { ...state, about: !state.about, ourteam: false, services: false, gp: false };
-      case "ourteam":
-        return { ...state, about: true, ourteam: !state.ourteam, services: false, gp: false };
-      case "services":
-        return { ...state, about: false, ourteam: false, services: !state.services, gp: false };
-      case "gp":
-        return { ...state, about: false, ourteam: false, services: true, gp: !state.gp };
+      case "isServicesOn":
+        return { ...state, isServicesOn: !state.isServicesOn, isTestingOn: false};
+      case "isTestingOn":
+        return { ...state, isTestingOn: !state.isTestingOn, isServicesOn: false};
       default:
         return initialState;
     }
   }
 
-  const showItemAbout = () => {
-    dispatch({ type: "about" });
-  }
-  const showItemOurTeam = () => {
-    dispatch({ type: "ourteam" });
-  }
-  const showItemServices = () => {
-    dispatch({ type: "services" });
-  }
-  const showItemGP = () => {
-    dispatch({ type: "gp" });
-  }
   const [width, height] = useWindowSize();
   if (show) {
     refMenu.current.style.height = `${height - refHeader.current.clientHeight}px`;
@@ -107,11 +84,18 @@ const Header = () => {
         <Container sm100 md100 ref={refHeader}>
           <div className="logo">
             <Link to="/" onClick={closeMenu} title="home">
-              <img alt="site logo" src={process.env.PUBLIC_URL + '/logo_white.png'} />
+            <img src={logoIcon} alt={t('site logo')} />
+              {/* <img alt="site logo" src={process.env.PUBLIC_URL + '/logo_white.png'} /> */}
             </Link>
           </div>
           <H.MenuWrapper>
             <H.MenuList level_0 className="level-0">
+              {/* <H.MenuItem className="expandable">
+                <Link to="/testing">Testing</Link>
+                <H.MenuList className="level-1">
+                  <H.MenuItem><Link to="/testing/testing-content-page">Testing Content page</Link></H.MenuItem>
+                </H.MenuList>
+              </H.MenuItem> */}
               <H.MenuItem>
                 <Link to="/about">{t('About')}</Link>
               </H.MenuItem>
@@ -145,13 +129,13 @@ const Header = () => {
             </H.MenuList>
           </H.MenuWrapper>
           <div className="language-switcher">
-              {Object.keys(lngs).map((lng) => (
-                <button key={lng} style={{ textDecoration: i18n.resolvedLanguage === lng ? 'underline' : 'none' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
-                  {lngs[lng].symbol}
-                </button>
-              ))}
-            </div>
-          <H.MenuButton className="menuBtn" onClick={showMenu}>
+            {Object.keys(lngs).map((lng) => (
+              <button key={lng} style={{ textDecoration: i18n.resolvedLanguage === lng ? 'underline' : 'none' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+                {lngs[lng].symbol}
+              </button>
+            ))}
+          </div>
+          <H.MenuButton className="menuBtn" onClick={() => setShow(!show)}>
             <FontAwesomeIcon icon={show ? faTimes : faBars} />
           </H.MenuButton>
           <H.PhoneButton className="telphone">
@@ -160,18 +144,27 @@ const Header = () => {
         </Container>
         <H.MobileMenuWrapper style={{ display: show ? "block" : "none" }} className="mnav">
           <H.MobileMenuList className="mlevel-0" ref={refMenu}>
+            {/* <H.MobileMenuItem>
+              <Link to="/testing" style={{ paddingBottom: state.isTestingOn ? "0.875rem" : "0.375rem" }} onClick={closeMenu}>Testing</Link>
+              <div className="dropdownBtn" onClick={() => dispatch({type: "isTestingOn"})} aria-expanded={state.isTestingOn ? "true" : "false"}>
+                {state.isTestingOn ? (<div className="up"></div>) : (<div className="down"></div>)}
+              </div>
+              <H.MobileMenuList className="mlevel-1" style={{ display: state.isTestingOn ? "flex" : "none" }}>
+                <H.MobileMenuItem><Link to="/testing/testing-content-page" onClick={closeMenu}>Testing Content page</Link></H.MobileMenuItem>
+              </H.MobileMenuList>
+            </H.MobileMenuItem> */}
             <H.MobileMenuItem>
               <Link to="/about" onClick={closeMenu}>{t('About')}</Link>
             </H.MobileMenuItem>
             <H.MobileMenuItem>
               <Link to="/meet-our-team" onClick={closeMenu}>{t('Meet Our Team')}</Link>
             </H.MobileMenuItem>
-            <H.MobileMenuItem style={{ paddingBottom: state.services ? "0" : "0.5rem" }}>
-              <Link to="/services" style={{ paddingBottom: state.services ? "0.875rem" : "0.375rem" }} onClick={closeMenu}>{t('Services')}</Link>
-              <div className="dropdownBtn" onClick={showItemServices} aria-expanded={state.services ? "true" : "false"}>
-                {state.services ? (<div className="up"></div>) : (<div className="down"></div>)}
+            <H.MobileMenuItem style={{ paddingBottom: state.isServicesOn ? "0" : "0.5rem" }}>
+              <Link to="/services" style={{ paddingBottom: state.isServicesOn ? "0.875rem" : "0.375rem" }} onClick={closeMenu}>{t('Services')}</Link>
+              <div className="dropdownBtn" onClick={() => dispatch({type: "isServicesOn"})} aria-expanded={state.isServicesOn ? "true" : "false"}>
+                {state.isServicesOn ? (<div className="up"></div>) : (<div className="down"></div>)}
               </div>
-              <H.MobileMenuList className="mlevel-1" style={{ display: state.services ? "flex" : "none" }}>
+              <H.MobileMenuList className="mlevel-1" style={{ display: state.isServicesOn ? "flex" : "none" }}>
                 <H.MobileMenuItem><Link to="/services/manual-therapy" onClick={closeMenu}>{t('Manual Therapy')}</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/acupuncture" onClick={closeMenu}>{t('Acupuncture')}</Link></H.MobileMenuItem>
                 <H.MobileMenuItem><Link to="/services/exercise-rehabilitation" onClick={closeMenu}>{t('Exercise Rehabilitation')}</Link></H.MobileMenuItem>

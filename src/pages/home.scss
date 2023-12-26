@@ -1,17 +1,18 @@
 @import "../variable";
+
 $header-height: 56.27px;
 $header-height-lg: 152.89px;
-$header-height-xxl: 105px;
+$header-height-xxl: 91.89px;
 .slick-slider {
   // margin-bottom: 30px;
 
   .slick-list {
     .slick-slide {
       .banner {
-        .textbox {
+        position: relative;
+        >img {
+          object-fit: cover;
           width: 100%;
-          // min-height: 56.25vw;
-          // height: 100%;
           height: calc(100vh - $header-height);
           @media (min-width: $lg) {
             height: calc(100vh - $header-height-lg);
@@ -19,32 +20,47 @@ $header-height-xxl: 105px;
           @media (min-width: $xxl) {
             height: calc(100vh - $header-height-xxl);
           }
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          margin: 0 auto;
-          padding: 80px 20px 0;
+        }
+        .textbox {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
           color: $white;
+          @media (min-width: $lg) {
+            margin-top: 50px;
+          }
+          @media (min-width: $xl) {
+            margin-top: 100px;
+          }
+          @media (min-width: $xxl) {
+            margin-top: 150px;
+          }
+      
           .content {
             @include container;
             text-align: center;
             h2 {
-              font-size: 40px;
+              font-size: 30px;
               margin-bottom: 30px;
               color: inherit;
               line-height: 1.2;
-  
+              @media (min-width: $sm) {
+                font-size: 40px;
+              }
               @media (min-width: $lg) {
                 font-size: 64px;
               }
             }
   
             h3 {
-              font-size: 30px;
+              font-size: 24px;
               font-weight: 400;
               color: inherit;
-  
+              line-height: 1.2;
+              @media (min-width: $sm) {
+                font-size: 30px;
+              }
               @media (min-width: $lg) {
                 font-size: 36px;
               }
@@ -116,11 +132,6 @@ $header-height-xxl: 105px;
                 align-self: center;
                 background-color: unset;
                 border: none;
-                img {
-                  width: auto;
-                  margin-left: auto;
-                  margin-right: auto;
-                }
               }
             }
   
@@ -254,7 +265,7 @@ $header-height-xxl: 105px;
 
       .image_wrapper {
         margin-bottom: 20px;
-
+        text-align: center;
         @media (min-width: $sm) {
           width: 70%;
           margin-left: auto;
@@ -283,7 +294,7 @@ $header-height-xxl: 105px;
   background-color: $grey;
   @media (min-width: $lg) {
     height: 700px;
-    background-image: url("../../public/our_services.png");
+    background-image: url("../assets/images/our_services.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -375,6 +386,10 @@ $header-height-xxl: 105px;
       }
       @media (min-width: $lg) {
         flex-basis: 20%
+      }
+
+      img {
+        width: 100%;
       }
 
       h3 {

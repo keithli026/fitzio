@@ -6,6 +6,9 @@
 #header {
   background-color: $black;
   z-index: 2;
+  @media (min-width: $lg) {
+    padding: 10px 0;
+  }
 
   >div {
     display: flex;

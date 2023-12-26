@@ -1,70 +1,93 @@
 @import "../variable";
+
 @mixin dot-left-position($default-left, $left320, $left375, $left412, $left450, $left500, $left576, $left768, $left992, $left1200, $left1400) {
-    left: $default-left;
-    @media (min-width: 320px) {
-        left: $left320;
-    }
-    @media (min-width: 375px) {
-        left: $left375;
-    }
-    @media (min-width: 412px) {
-        left: $left412;
-    }
-    @media (min-width: 450px) {
-        left: $left450;
-    }
-    @media (min-width: 500px) {
-        left: $left500;
-    }
-    @media (min-width: $sm) {
-        left: $left576;
-    }
-    @media (min-width: $md) {
-        left: $left768;
-    }
-    @media (min-width: $lg) {
-        left: $left992;
-    }
-    @media (min-width: $xl) {
-        left: $left1200;
-    }
-    @media (min-width: $xxl) {
-        left: $left1400;
-    }
+  left: $default-left;
+
+  @media (min-width: 320px) {
+    left: $left320;
+  }
+
+  @media (min-width: 375px) {
+    left: $left375;
+  }
+
+  @media (min-width: 412px) {
+    left: $left412;
+  }
+
+  @media (min-width: 450px) {
+    left: $left450;
+  }
+
+  @media (min-width: 500px) {
+    left: $left500;
+  }
+
+  @media (min-width: $sm) {
+    left: $left576;
+  }
+
+  @media (min-width: $md) {
+    left: $left768;
+  }
+
+  @media (min-width: $lg) {
+    left: $left992;
+  }
+
+  @media (min-width: $xl) {
+    left: $left1200;
+  }
+
+  @media (min-width: $xxl) {
+    left: $left1400;
+  }
 }
+
 @mixin dot-top-position($default-top, $top320, $top375, $top412, $top450, $top500, $top576, $top768, $top992, $top1200, $top1400) {
-    top: $default-top;
-    @media (min-width: 320px) {
-        top: $top320;
-    }
-    @media (min-width: 375px) {
-        top: $top375;
-    }
-    @media (min-width: 412px) {
-        top: $top412;
-    }
-    @media (min-width: 450px) {
-        top: $top450;
-    }
-    @media (min-width: 500px) {
-        top: $top500;
-    }
-    @media (min-width: $sm) {
-        top: $top576;
-    }
-    @media (min-width: $md) {
-        top: $top768;
-    }
-    @media (min-width: $lg) {
-        top: $top992;
-    }
-    @media (min-width: $xl) {
-        top: $top1200;
-    }
-    @media (min-width: $xxl) {
-        top: $top1400;
-    }
+  top: $default-top;
+
+  @media (min-width: 320px) {
+    top: $top320;
+  }
+
+  @media (min-width: 375px) {
+    top: $top375;
+  }
+
+  @media (min-width: 412px) {
+    top: $top412;
+  }
+
+  @media (min-width: 450px) {
+    top: $top450;
+  }
+
+  @media (min-width: 500px) {
+    top: $top500;
+  }
+
+  @media (min-width: $sm) {
+    top: $top576;
+  }
+
+  @media (min-width: $md) {
+    top: $top768;
+  }
+
+  @media (min-width: $lg) {
+    top: $top992;
+  }
+
+  @media (min-width: $xl) {
+    top: $top1200;
+  }
+
+  @media (min-width: $xxl) {
+    top: $top1400;
+  }
 }
+
 @mixin right-box-position {
   @media (min-width: $lg) {
     top: 4%;
@@ -74,13 +97,16 @@
     margin: unset;
     max-width: 300px;
   }
+
   @media (min-width: $xxl) {
     max-width: 350px;
   }
+
   @media (min-width: $xxxl) {
     max-width: 450px;
   }
 }
+
 @mixin left-box-position {
   @media (min-width: $lg) {
     top: 4%;
@@ -90,879 +116,1073 @@
     margin: unset;
     max-width: 300px;
   }
+
   @media (min-width: $xxl) {
     max-width: 350px;
   }
+
   @media (min-width: $xxxl) {
     max-width: 450px;
   }
 }
+
 .bodychart {
-    background-image: url("../../public/bodychart_bg.jpg");
-    position: relative;
-    margin-bottom: 100px;
-    .image_wrapper {
-        @media (min-width: $md) {
-            width: 74.5%;
-            margin: auto;
-        }
+  background-image: url("../assets/images/bodychart_bg.jpg");
+  position: relative;
+  margin-bottom: 100px;
+
+  .image_wrapper {
+    @media (min-width: $md) {
+      width: 74.5%;
+      margin: auto;
+    }
+
+    @media (min-width: $lg) {
+      width: 55.4%;
+    }
+
+    @media (min-width: $xl) {
+      width: 46.5%;
+    }
+
+    @media (min-width: $xxl) {
+      width: 40%;
+    }
+
+    img {
+      width: 100%;
+
+    }
+  }
+
+  .dots {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+
+    &.hide {
+      display: none;
+    }
+
+    img {
+      display: block;
+      width: inherit;
+      height: inherit;
+    }
+
+    &#dot0 {
+      @include dot-left-position(48%, 48%, 49%, 49%, 49%, 49.5%, 50%, 50%, 50%, 50%, 50%);
+      @include dot-top-position(5%, 5%, 5%, 5%, 5%, 6%, 6%, 6%, 6%, 6%, 6%);
+    }
+
+    &#dot1 {
+      @include dot-left-position(46.4%, 46.7%, 47%, 47.2%, 47.2%, 47.2%, 47.4%, 48.05%, 48.6%, 48.8%, 49%);
+      top: 15.2%;
+    }
+
+    &#dot2 {
+      @include dot-left-position(33.4%, 33.4%, 34.4%, 34.8%, 35%, 35%, 35%, 39%, 41.7%, 43%, 44%);
+      top: 19.5%;
+    }
+
+    &#dot3 {
+      @include dot-left-position(46.4%, 46.7%, 47%, 47.2%, 47.2%, 47.2%, 47.4%, 48.05%, 48.6%, 48.8%, 49%);
+      top: 24.2%;
+    }
+
+    &#dot4 {
+      @include dot-left-position(23%, 23.6%, 24%, 24%, 24%, 24.5%, 24.5%, 31%, 36%, 38%, 39.8%);
+      top: 32.2%;
+    }
+
+    &#dot5 {
+      @include dot-left-position(46.4%, 46.7%, 47%, 47.2%, 47.2%, 47.2%, 47.4%, 48.05%, 48.6%, 48.8%, 49%);
+      top: 37.5%;
+    }
+
+    &#dot6 {
+      @include dot-left-position(50.5%, 50.5%, 50.5%, 50.5%, 50.5%, 50.8%, 50.8%, 50.8%, 50.8%, 50.5%, 50.5%);
+      top: 41%;
+    }
+
+    &#dot7 {
+      @include dot-left-position(85.5%, 85.5%, 85.5%, 85.5%, 85.5%, 85.5%, 86%, 76.5%, 69.7%, 66.3%, 64.3%);
+      top: 44%;
+    }
+
+    &#dot8 {
+      @include dot-left-position(11%, 11.5%, 11.8%, 12%, 12.5%, 12.8%, 13%, 22.5%, 29.5%, 32.8%, 35.15%);
+      top: 44.5%;
+    }
+
+    &#dot9 {
+      @include dot-left-position(39.5%, 39.5%, 40%, 40.5%, 41%, 41%, 41%, 43%, 44.8%, 45.8%, 46.3%);
+      top: 45.3%;
+    }
+
+    &#dot10 {
+      @include dot-left-position(55.3%, 55.6%, 55.7%, 56%, 56%, 56.25%, 56.3%, 54.7%, 53.5%, 52.9%, 52.5%);
+      top: 57%;
+    }
+
+    &#dot11 {
+      @include dot-left-position(41.7%, 41.7%, 42%, 42.3%, 42.8%, 42.8%, 43%, 44.8%, 46.2%, 46.7%, 47.1%);
+      @include dot-top-position(68%, 68.5%, 68.5%, 68.8%, 68.8%, 68.8%, 68.8%, 68.8%, 68.8%, 68.8%, 68.8%);
+    }
+
+    &#dot12 {
+      @include dot-left-position(53.5%, 53.5%, 54%, 54%, 54.1%, 54.1%, 54.3%, 53.3%, 52.4%, 52%, 51.7%);
+      top: 81%;
+    }
+
+    &#dot13 {
+      @include dot-left-position(53.5%, 53.5%, 53.5%, 53.8%, 54%, 54.5%, 54.5%, 53.5%, 52.5%, 52%, 51.8%);
+      @include dot-top-position(86%, 87%, 87%, 88%, 88%, 88%, 88%, 88%, 88%, 88%, 88%);
+    }
+
+    &#dot14 {
+      @include dot-left-position(44.5%, 44.5%, 44.5%, 44.5%, 44.5%, 45%, 45%, 46%, 47%, 47.5%, 48%);
+      @include dot-top-position(88.5%, 88.5%, 88.5%, 89%, 89%, 89%, 89%, 89%, 89%, 89%, 89%);
+    }
+
+    &#dot15 {
+      @include dot-left-position(41.5%, 42.5%, 42.5%, 42.5%, 42.5%, 43%, 43%, 44.8%, 46%, 46.8%, 47.2%);
+      @include dot-top-position(91.5%, 91.5%, 91.5%, 91.5%, 91.5%, 91.7%, 91.7%, 91.7%, 91.7%, 91.7%, 91.7%);
+    }
+  }
+
+  .shining_dots {
+    display: none;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+
+    &.show {
+      display: block;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../assets/images/blue_dot.png");
+      height: 12px;
+      width: 12px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: auto;
+      border-top: 4px solid $lightblue;
+    }
+
+    img {
+      display: block;
+      width: inherit;
+      height: inherit;
+      position: relative;
+      z-index: 1;
+    }
+
+    &#shining_dot0 {
+      @include dot-top-position(2.7%, 2.9%, 3.2%, 3.5%, 3.7%, 4.7%, 4.7%, 4.8%, 4.8%, 4.8%, 4.8%);
+      @include dot-left-position(44.5%, 45%, 46.5%, 46.7%, 47%, 47.7%, 48.3%, 48.8%, 49.2%, 49.2%, 49.2%);
+
+      &::before {
+        display: none;
+
         @media (min-width: $lg) {
-            width: 55.4%;
+          display: block;
+          top: 9px;
+          left: 123px;
         }
+
         @media (min-width: $xl) {
-            width: 46.5%;
+          left: 203px;
         }
+
         @media (min-width: $xxl) {
-            width: 40%;
+          left: 223px;
         }
-        img {
-            display: block;
-        }
-    }
-    .dots {
-        position: absolute;
-        height: 12px;
-        width: 12px;
-        &.hide {
-            display: none;
-        }
-        img {
-            display: block;
-            width: inherit;
-            height: inherit;
-        }
-        &#dot0 {
-          @include dot-left-position(48%, 48%, 49%, 49%, 49%, 49.5%, 50%, 50%, 50%, 50%, 50%);
-          @include dot-top-position(5%, 5%, 5%, 5%, 5%, 6%, 6%, 6%, 6%, 6%, 6%);
       }
-        &#dot1 {
-            @include dot-left-position(46.4%, 46.7%, 47%, 47.2%, 47.2%, 47.2%, 47.4%, 48.05%, 48.6%, 48.8%, 49%);
-            top: 15.2%;
-        }
-        &#dot2 {
-            @include dot-left-position(33.4%, 33.4%, 34.4%, 34.8%, 35%, 35%, 35%, 39%, 41.7%, 43%, 44%);
-            top: 19.5%;
-        }
-        &#dot3 {
-            @include dot-left-position(46.4%, 46.7%, 47%, 47.2%, 47.2%, 47.2%, 47.4%, 48.05%, 48.6%, 48.8%, 49%);
-            top: 24.2%;
-        }
-        &#dot4 {
-            @include dot-left-position(23%, 23.6%, 24%, 24%, 24%, 24.5%, 24.5%, 31%, 36%, 38%, 39.8%);
-            top: 32.2%;
-        }
-        &#dot5 {
-            @include dot-left-position(46.4%, 46.7%, 47%, 47.2%, 47.2%, 47.2%, 47.4%, 48.05%, 48.6%, 48.8%, 49%);
-            top: 37.5%;
-        }
-        &#dot6 {
-            @include dot-left-position(50.5%, 50.5%, 50.5%, 50.5%, 50.5%, 50.8%, 50.8%, 50.8%, 50.8%, 50.5%, 50.5%);
-            top: 41%;
-        }
-        &#dot7 {
-            @include dot-left-position(85.5%, 85.5%, 85.5%, 85.5%, 85.5%, 85.5%, 86%, 76.5%, 69.7%, 66.3%, 64.3%);
-            top: 44%;
-        }
-        &#dot8 {
-            @include dot-left-position(11%, 11.5%, 11.8%, 12%, 12.5%, 12.8%, 13%, 22.5%, 29.5%, 32.8%, 35.15%);
-            top: 44.5%;
-        }
-        &#dot9 {
-            @include dot-left-position(39.5%, 39.5%, 40%, 40.5%, 41%, 41%, 41%, 43%, 44.8%, 45.8%, 46.3%);
-            top: 45.3%;
-        }
-        &#dot10 {
-            @include dot-left-position(55.3%, 55.6%, 55.7%, 56%, 56%, 56.25%, 56.3%, 54.7%, 53.5%, 52.9%, 52.5%);
-            top: 57%;
-        }
-        &#dot11 {
-            @include dot-left-position(41.7%, 41.7%, 42%, 42.3%, 42.8%, 42.8%, 43%, 44.8%, 46.2%, 46.7%, 47.1%);
-            @include dot-top-position(68%, 68.5%, 68.5%, 68.8%, 68.8%, 68.8%, 68.8%, 68.8%, 68.8%, 68.8%, 68.8%);
-        }
-        &#dot12 {
-            @include dot-left-position(53.5%, 53.5%, 54%, 54%, 54.1%, 54.1%, 54.3%, 53.3%, 52.4%, 52%, 51.7%);
-            top: 81%;
-        }
-        &#dot13 {
-            @include dot-left-position(53.5%, 53.5%, 53.5%, 53.8%, 54%, 54.5%, 54.5%, 53.5%, 52.5%, 52%, 51.8%);
-            @include dot-top-position(86%, 87%, 87%, 88%, 88%, 88%, 88%, 88%, 88%, 88%, 88%);
-        }
-        &#dot14 {
-            @include dot-left-position(44.5%, 44.5%, 44.5%, 44.5%, 44.5%, 45%, 45%, 46%, 47%, 47.5%, 48%);
-            @include dot-top-position(88.5%, 88.5%, 88.5%, 89%, 89%, 89%, 89%, 89%, 89%, 89%, 89%);
-        }
-        &#dot15 {
-          @include dot-left-position(41.5%, 42.5%, 42.5%, 42.5%, 42.5%, 43%, 43%, 44.8%, 46%, 46.8%, 47.2%);
-          @include dot-top-position(91.5%, 91.5%, 91.5%, 91.5%, 91.5%, 91.7%, 91.7%, 91.7%, 91.7%, 91.7%, 91.7%);
-      }
-    }
 
-    .shining_dots {
+      &::after {
         display: none;
-        position: absolute;
-        height: 30px;
-        width: 30px;
-        &.show {
-            display: block;
-        }
-        &::before {
-            content: "";
-            position: absolute;
-            background-image: url("../../public/blue_dot.png");
-            height: 12px;
-            width: 12px;
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            height: auto;
-            border-top: 4px solid $lightblue;
-        }
-        img {
-            display: block;
-            width: inherit;
-            height: inherit;
-            position: relative;
-            z-index: 1;
-        }
-  
-        &#shining_dot0 {
-          @include dot-top-position(2.7%, 2.9%, 3.2%, 3.5%, 3.7%, 4.7%, 4.7%, 4.8%, 4.8%, 4.8%, 4.8%);
-          @include dot-left-position(44.5%, 45%, 46.5%, 46.7%, 47%, 47.7%, 48.3%, 48.8%, 49.2%, 49.2%, 49.2%);
 
-          &::before {
-            display: none;
-
-            @media (min-width: $lg) {
-              display: block;
-              top: 9px;
-              left: 123px;
-            }
-
-            @media (min-width: $xl) {
-              left: 203px;
-            }
-
-            @media (min-width: $xxl) {
-              left: 223px;
-            }
-          }
-
-          &::after {
-            display: none;
-
-            @media (min-width: $lg) {
-              display: block;
-              width: 100px;
-              top: 45.2%;
-              left: 24px;
-            }
-
-            @media (min-width: $xl) {
-              width: 180px;
-            }
-
-            @media (min-width: $xxl) {
-              width: 200px;
-            }
-
-          }
-        }
-        &#shining_dot1 {
-            @include dot-top-position(13.2%, 13.4%, 13.5%, 13.8%, 13.8%, 14.1%, 14.1%, 14.1%, 14%, 14.1%, 14.1%);
-            @include dot-left-position(43.5%, 44.3%, 44.6%, 45%, 45.4%, 45.6%, 45.7%, 46.7%, 47.7%, 48.1%, 48.4%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    display: block;
-                    top: 9px;
-                    left: 123px;
-                }
-                @media (min-width: $xl) {
-                    left: 203px;
-                }
-                @media (min-width: $xxl) {
-                    left: 223px;
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    display: block;
-                    width: 100px;
-                    top: 45.2%;
-                    left: 24px;
-                }
-                @media (min-width: $xl) {
-                    width: 180px;
-                }
-                @media (min-width: $xxl) {
-                    width: 200px;
-                }
-
-            }
-        }
-        &#shining_dot2 {
-            @include dot-top-position(17.2%, 17.5%, 17.7%, 18%, 18.3%, 18.3%, 18.3%, 18.4%, 18.4%, 18.4%, 18.4%);
-            @include dot-left-position(30.5%, 30.8%, 31.8%, 33%, 33.2%, 33.3%, 33.3%, 37.7%, 40.7%, 42.25%, 43.4%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    display: block;
-                    top: 9px;
-                    right: 73px;
-                }
-                @media (min-width: $xl) {
-                    right: 123px;
-                }
-                @media (min-width: $xxl) {
-                    right: 163px;
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    display: block;
-                    width: 50px;
-                    top: 45.2%;
-                    right: 24px;
-                }
-                @media (min-width: $xl) {
-                    width: 100px;
-                }
-                @media (min-width: $xxl) {
-                    width: 140px;
-                }
-
-            }
-        }
-        &#shining_dot3 {
-            @include dot-top-position(21.9%, 22.2%, 22.4%, 22.7%, 22.9%, 22.9%, 22.9%, 22.9%, 22.9%, 22.9%, 22.9%);
-            @include dot-left-position(43.5%, 44.3%, 44.6%, 45%, 45.4%, 45.6%, 45.7%, 46.7%, 47.7%, 48.1%, 48.4%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    display: block;
-                    top: 9px;
-                    right: 123px;
-                }
-                @media (min-width: $xl) {
-                    right: 203px;
-                }
-                @media (min-width: $xxl) {
-                    right: 223px;
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    display: block;
-                    width: 100px;
-                    top: 45.2%;
-                    right: 24px;
-                }
-                @media (min-width: $xl) {
-                    width: 180px;
-                }
-                @media (min-width: $xxl) {
-                    width: 200px;
-                }
-
-            }
-        }
-        &#shining_dot4 {
-            @include dot-top-position(30%, 30.3%, 30.3%, 30.6%, 30.8%, 31%, 31%, 31%, 31%, 31%, 31%);
-            @include dot-left-position(19.8%, 20.8%, 21.6%, 21.6%, 22%, 23%, 22.8%, 29.7%, 35%, 37.2%, 39.1%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    top: 9px;
-                    right: 123px;
-                }
-                @media (min-width: $xl) {
-                    right: 203px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    top: -88px;
-                    right: 106px;
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    width: 0;
-                    top: 45.2%;
-                    right: 24px;
-                }
-                @media (min-width: $xl) {
-                    width: 180px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    width: 133px;
-                    transform: rotate(45deg);
-                    top: -34px;
-                    left: -98px;
-                }
-
-            }
-        }
-        &#shining_dot5 {
-            @include dot-top-position(35.4%, 35.8%, 35.8%, 35.9%, 36.2%, 36.3%, 36.2%, 36.3%, 36.2%, 36.3%, 36.3%);
-            @include dot-left-position(43.5%, 44.3%, 44.6%, 45%, 45.4%, 45.6%, 45.7%, 46.7%, 47.7%, 48.1%, 48.4%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    display: block;
-                    top: -105px;
-                    right: 123px;
-                }
-                @media (min-width: $xl) {
-                    top: -110px;
-                    right: 168px;
-                }
-                @media (min-width: $xxl) {
-                    top: -118px;
-                    right: 223px;
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    display: block;
-                    width: 158px;
-                    top: -150.8%;
-                    right: -7px;
-                    transform: rotate(45deg);
-                }
-                @media (min-width: $xl) {
-                    width: 200px;
-                    transform: rotate(37deg);
-                }
-                @media (min-width: $xxl) {
-                    top: -164.8%;
-                    right: -3px;
-                    width: 250px;
-                    transform: rotate(31deg);
-                }
-
-            }
-        }
-        &#shining_dot6 {
-            @include dot-top-position(39%, 39%, 39.2%, 39.5%, 39.5%, 39.8%, 39.8%, 39.9%, 39.9%, 39.9%, 39.8%);
-            @include dot-left-position(47.5%, 47.5%, 48%, 48.5%, 48.5%, 49%, 49%, 49.5%, 49.8%, 49.7%, 49.8%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    display: block;
-                    top: -114px;
-                    left: 115px;
-                }
-                @media (min-width: $xl) {
-                    top: -138px;
-                    left: 157px;
-                }
-                @media (min-width: $xxl) {
-                    left: 192px;
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    display: block;
-                    width: 160px;
-                    top: -152.8%;
-                    left: -13px;
-                    transform: rotate(-50deg);
-                }
-                @media (min-width: $xl) {
-                    top: -202.8%;
-                    width: 205px;
-                    transform: rotate(-45deg);
-                }
-                @media (min-width: $xxl) {
-                    width: 240px;
-                    transform: rotate(-39deg);
-                }
-
-            }
-        }
-        &#shining_dot7 {
-            @include dot-top-position(41.7%, 42.1%, 42.4%, 42.4%, 42.7%, 42.7%, 42.9%, 42.8%, 42.8%, 42.8%, 42.8%);
-            @include dot-left-position(82.3%, 82.9%, 83%, 83.5%, 83.5%, 83.9%, 84.3%, 75.1%, 68.7%, 65.5%, 63.6%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    top: 9px;
-                    left: 123px;
-                }
-                @media (min-width: $xl) {
-                    left: 203px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    top: -133px;
-                    left: 35px;
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    width: 100px;
-                    top: 45.2%;
-                    left: 24px;
-                }
-                @media (min-width: $xl) {
-                    width: 180px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    width: 150px;
-                    top: -189.8%;
-                    left: -47px;
-                    transform: rotate(-80deg);
-                }
-
-            }
-        }
-        &#shining_dot8 {
-            @include dot-top-position(42.2%, 42.5%, 42.9%, 42.9%, 43.3%, 43.3%, 43.3%, 43.3%, 43.3%, 43.3%, 43.3%);
-            @include dot-left-position(8%, 8.5%, 9.5%, 10%, 10.5%, 11%, 11.5%, 21.3%, 28.6%, 32%, 34.5%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    top: 9px;
-                    right: 123px;
-                }
-                @media (min-width: $xl) {
-                    right: 203px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    top: -160px;
-                    right: 53px;
-
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    width: 100px;
-                    top: 45.2%;
-                    right: 24px;
-                }
-                @media (min-width: $xl) {
-                    width: 180px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    transform: rotate(76deg);
-                    top: -70px;
-                    width: 170px;
-                    right: -47px;
-                }
-
-            }
-        }
-        &#shining_dot9 {
-            @include dot-top-position(43.2%, 43.2%, 43.6%, 43.8%, 43.9%, 43.9%, 44.2%, 44.1%, 44.1%, 44.1%, 44.1%);
-            @include dot-left-position(36.5%, 36.8%, 37.3%, 38.2%, 39.2%, 39.2%, 39.4%, 41.7%, 43.9%, 45%, 45.6%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    top: 9px;
-                    right: 123px;
-                }
-                @media (min-width: $xl) {
-                    right: 203px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    top: -166px;
-                    right: 185px;
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    width: 100px;
-                    top: 45.2%;
-                    right: 24px;
-                }
-                @media (min-width: $xl) {
-                    width: 180px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    width: 250px;
-                    transform: rotate(45deg);
-                    top: -75px;
-                    right: -20px;
-                }
-
-            }
-        }
-        &#shining_dot10 {
-            @include dot-top-position(54.7%, 55%, 55.2%, 55.5%, 55.5%, 55.7%, 55.7%, 55.7%, 55.7%, 55.7%, 55.7%);
-            @include dot-left-position(52%, 53%, 53.3%, 53.7%, 53.9%, 54.5%, 54.7%, 53.4%, 52.6%, 52.1%, 51.8%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    top: 9px;
-                    left: 123px;
-                }
-                @media (min-width: $xl) {
-                    left: 203px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    top: -265px;
-                    left: 168px;
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    width: 100px;
-                    top: 45.2%;
-                    left: 24px;
-                }
-                @media (min-width: $xl) {
-                    width: 180px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    width: 315px;
-                    top: -121px;
-                    left: -64px;
-                    transform: rotate(-60deg);
-                }
-
-            }
-        }
-        &#shining_dot11 {
-            @include dot-top-position(65.7%, 66.7%, 66.9%, 67.4%, 67.4%, 67.6%, 67.6%, 67.6%, 67.6%, 67.6%, 67.6%);
-            @include dot-left-position(38.5%, 39.1%, 39.6%, 40.2%, 40.9%, 40.9%, 41.2%, 43.6%, 45.2%, 45.9%, 46.4%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    top: 9px;
-                    right: 123px;
-                }
-                @media (min-width: $xl) {
-                    right: 203px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    top: -342px; 
-                    right: 176px;            
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    width: 100px;
-                    top: 45.2%;
-                    right: 24px;
-                }
-                @media (min-width: $xl) {
-                    width: 180px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    width: 390px;
-                    transform: rotate(65deg);
-                    top: -160px;
-                    right: -96px;
-                }
-
-            }
-        }
-        &#shining_dot12 {
-            @include dot-top-position(78.8%, 79%, 79%, 79.5%, 79.6%, 79.9%, 79.8%, 79.8%, 79.8%, 79.8%, 79.8%);
-            @include dot-left-position(50.5%, 50.9%, 51.6%, 51.8%, 52.3%, 52.5%, 52.5%, 52%, 51.4%, 51.25%, 51.1%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    top: 9px;
-                    left: 123px;
-                }
-                @media (min-width: $xl) {
-                    left: 203px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    top: -413px;
-                    left: 181px;
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    width: 100px;
-                    top: 45.2%;
-                    left: 24px;
-                }
-                @media (min-width: $xl) {
-                    width: 180px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    width: 450px;
-                    transform: rotate(-68deg);
-                    top: -198px;
-                    left: -123px;
-                }
-
-            }
-        }
-        &#shining_dot13 {
-            @include dot-top-position(83.9%, 85%, 85.5%, 86.5%, 86.8%, 86.8%, 86.8%, 86.8%, 86.8%, 86.8%, 87.3%);
-            @include dot-left-position(50.2%, 50.6%, 51.1%, 51.7%, 52.8%, 52.8%, 52.3%, 52.3%, 51.5%, 51.3%, 51.3%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    top: 9px;
-                    left: 123px;
-                }
-                @media (min-width: $xl) {
-                    left: 203px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    top: -467px;
-                    left: 193px;
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    width: 100px;
-                    top: 45.2%;
-                    left: 24px;
-                }
-                @media (min-width: $xl) {
-                    width: 180px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    width: 510px;
-                    transform: rotate(111deg);
-                    top: -224px;
-                    left: -148px;
-                }
-
-            }
-        }
-        &#shining_dot14 {
-            @include dot-top-position(86.3%, 86.3%, 86.9%, 87.4%, 87.7%, 87.8%, 87.8%, 87.8%, 87.8%, 87.8%, 87.8%);
-            @include dot-left-position(41.5%, 41.5%, 42%, 42.4%, 42.5%, 43.4%, 43.4%, 44.7%, 46%, 46.7%, 47.3%);
-            &::before {
-                display: none;
-                @media (min-width: $lg) {
-                    top: 9px;
-                    right: 123px;
-                }
-                @media (min-width: $xl) {
-                    right: 203px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    top: -485px;
-                    right: 200px;
-                }
-            }
-            &::after {
-                display: none;
-                @media (min-width: $lg) {
-                    width: 100px;
-                    top: 45.2%;
-                    right: 24px;
-                }
-                @media (min-width: $xl) {
-                    width: 180px;
-                }
-                @media (min-width: $xxl) {
-                    display: block;
-                    width: 530px;
-                    transform: rotate(69deg);
-                    top: -232px;
-                    right: -155px;
-                }
-            }
-        }
-        &#shining_dot15 {
-          @include dot-top-position(89.5%, 89.5%, 89.8%, 89.9%, 90%, 90.4%, 90.4%, 90.5%, 90.5%, 90.5%, 90.5%);
-          @include dot-left-position(38.5%, 39.5%, 39.9%, 40.3%, 40.5%, 41.2%, 41.2%, 43.5%, 45%, 46%, 46.5%);
-          &::before {
-              display: none;
-              @media (min-width: $lg) {
-                  top: 9px;
-                  right: 123px;
-              }
-              @media (min-width: $xl) {
-                  right: 203px;
-              }
-              @media (min-width: $xxl) {
-                  display: block;
-                  top: -485px;
-                  right: 200px;
-              }
-          }
-          &::after {
-              display: none;
-              @media (min-width: $lg) {
-                  width: 100px;
-                  top: 45.2%;
-                  right: 24px;
-              }
-              @media (min-width: $xl) {
-                  width: 180px;
-              }
-              @media (min-width: $xxl) {
-                  display: block;
-                  width: 530px;
-                  transform: rotate(69deg);
-                  top: -232px;
-                  right: -155px;
-              }
-          }
-      }
-    }
-
-    .textboxs {
-        display: none;
-        position: absolute;
-        z-index: 1;
-        color: white;
-        background-color: $black;
-        border: 2px solid $white;
-        border-radius: 5px;
-    
-        width: 90%;
-        height: 90%;
-        overflow: auto;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
         @media (min-width: $lg) {
-            background-color: unset;
-            border: none;
-            padding: 0;
+          display: block;
+          width: 100px;
+          top: 45.2%;
+          left: 24px;
         }
-        @media (min-width: $xxxxl) {
-          max-width: 400px;
-        }
-        &.show {
-            display: block;
-        }
-        .icon_wrapper {
-          position: sticky;
-          top: 0;
-          right: 0;
-          background-color: $black;
-          padding-top: 10px;
-          padding-right: 20px;
-          padding-bottom: 10px;
-          @media (min-width: $lg) {
-            background-color: unset;
-          }
-          svg {
-            display: block;
-            margin-left: auto;
-            font-size: 30px;
-            cursor: pointer;
-          }
-        }
-        .content_wrapper {
-          padding: 10px 20px;
-          .title {
-            font-size: 20px;
-            line-height: 1.3;
-            margin-bottom: 20px;
 
-            @media (min-width: $xl) {
-              font-size: 25px;
-            }
-            @media (min-width: $xxxl) {
-              font-size: 30px;
-            }
-          }
+        @media (min-width: $xl) {
+          width: 180px;
+        }
 
-          .description {
-            font-size: 16px;
-            line-height: 1.3;
+        @media (min-width: $xxl) {
+          width: 200px;
+        }
 
-            @media (min-width: $xl) {
-              font-size: 18px;
-            }
-
-            @media (min-width: $xxxl) {
-              font-size: 20px;
-            }
-            .subtitle {
-              margin-bottom: 20px;
-            }
-            ul {
-              font-size: inherit;
-              padding-left: 20px;
-
-              li {
-                margin-bottom: 20px;
-              }
-            }
-          }
-        }
-        &#box0 {
-          @include right-box-position;
-        }
-        &#box1 {
-          @include right-box-position;
-        }
-        &#box2 {
-          @include left-box-position;
-        }
-        &#box3 {
-          @include left-box-position;
-        }
-        &#box4 {
-          @include left-box-position;
-        }
-        &#box5 {
-          @include left-box-position;
-        }
-        &#box6 {
-          @include right-box-position;
-        }
-        &#box7 {
-          @include right-box-position;
-        }
-        &#box8 {
-          @include left-box-position;
-        }
-        &#box9 {
-          @include left-box-position;
-        }
-        &#box10 {
-          @include right-box-position;
-        }
-        &#box11 {
-          @include left-box-position;
-        }
-        &#box12 {
-          @include right-box-position;
-        }
-        &#box13 {
-          @include right-box-position;
-        }
-        &#box14 {
-          @include left-box-position;
-        }
-        &#box15 {
-          @include left-box-position;
       }
     }
+
+    &#shining_dot1 {
+      @include dot-top-position(13.2%, 13.4%, 13.5%, 13.8%, 13.8%, 14.1%, 14.1%, 14.1%, 14%, 14.1%, 14.1%);
+      @include dot-left-position(43.5%, 44.3%, 44.6%, 45%, 45.4%, 45.6%, 45.7%, 46.7%, 47.7%, 48.1%, 48.4%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          display: block;
+          top: 9px;
+          left: 123px;
+        }
+
+        @media (min-width: $xl) {
+          left: 203px;
+        }
+
+        @media (min-width: $xxl) {
+          left: 223px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          display: block;
+          width: 100px;
+          top: 45.2%;
+          left: 24px;
+        }
+
+        @media (min-width: $xl) {
+          width: 180px;
+        }
+
+        @media (min-width: $xxl) {
+          width: 200px;
+        }
+
+      }
+    }
+
+    &#shining_dot2 {
+      @include dot-top-position(17.2%, 17.5%, 17.7%, 18%, 18.3%, 18.3%, 18.3%, 18.4%, 18.4%, 18.4%, 18.4%);
+      @include dot-left-position(30.5%, 30.8%, 31.8%, 33%, 33.2%, 33.3%, 33.3%, 37.7%, 40.7%, 42.25%, 43.4%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          display: block;
+          top: 9px;
+          right: 73px;
+        }
+
+        @media (min-width: $xl) {
+          right: 123px;
+        }
+
+        @media (min-width: $xxl) {
+          right: 163px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          display: block;
+          width: 50px;
+          top: 45.2%;
+          right: 24px;
+        }
+
+        @media (min-width: $xl) {
+          width: 100px;
+        }
+
+        @media (min-width: $xxl) {
+          width: 140px;
+        }
+
+      }
+    }
+
+    &#shining_dot3 {
+      @include dot-top-position(21.9%, 22.2%, 22.4%, 22.7%, 22.9%, 22.9%, 22.9%, 22.9%, 22.9%, 22.9%, 22.9%);
+      @include dot-left-position(43.5%, 44.3%, 44.6%, 45%, 45.4%, 45.6%, 45.7%, 46.7%, 47.7%, 48.1%, 48.4%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          display: block;
+          top: 9px;
+          right: 123px;
+        }
+
+        @media (min-width: $xl) {
+          right: 203px;
+        }
+
+        @media (min-width: $xxl) {
+          right: 223px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          display: block;
+          width: 100px;
+          top: 45.2%;
+          right: 24px;
+        }
+
+        @media (min-width: $xl) {
+          width: 180px;
+        }
+
+        @media (min-width: $xxl) {
+          width: 200px;
+        }
+
+      }
+    }
+
+    &#shining_dot4 {
+      @include dot-top-position(30%, 30.3%, 30.3%, 30.6%, 30.8%, 31%, 31%, 31%, 31%, 31%, 31%);
+      @include dot-left-position(19.8%, 20.8%, 21.6%, 21.6%, 22%, 23%, 22.8%, 29.7%, 35%, 37.2%, 39.1%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          top: 9px;
+          right: 123px;
+        }
+
+        @media (min-width: $xl) {
+          right: 203px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          top: -88px;
+          right: 106px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          width: 0;
+          top: 45.2%;
+          right: 24px;
+        }
+
+        @media (min-width: $xl) {
+          width: 180px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          width: 133px;
+          transform: rotate(45deg);
+          top: -34px;
+          left: -98px;
+        }
+
+      }
+    }
+
+    &#shining_dot5 {
+      @include dot-top-position(35.4%, 35.8%, 35.8%, 35.9%, 36.2%, 36.3%, 36.2%, 36.3%, 36.2%, 36.3%, 36.3%);
+      @include dot-left-position(43.5%, 44.3%, 44.6%, 45%, 45.4%, 45.6%, 45.7%, 46.7%, 47.7%, 48.1%, 48.4%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          display: block;
+          top: -105px;
+          right: 123px;
+        }
+
+        @media (min-width: $xl) {
+          top: -110px;
+          right: 168px;
+        }
+
+        @media (min-width: $xxl) {
+          top: -118px;
+          right: 223px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          display: block;
+          width: 158px;
+          top: -150.8%;
+          right: -7px;
+          transform: rotate(45deg);
+        }
+
+        @media (min-width: $xl) {
+          width: 200px;
+          transform: rotate(37deg);
+        }
+
+        @media (min-width: $xxl) {
+          top: -164.8%;
+          right: -3px;
+          width: 250px;
+          transform: rotate(31deg);
+        }
+
+      }
+    }
+
+    &#shining_dot6 {
+      @include dot-top-position(39%, 39%, 39.2%, 39.5%, 39.5%, 39.8%, 39.8%, 39.9%, 39.9%, 39.9%, 39.8%);
+      @include dot-left-position(47.5%, 47.5%, 48%, 48.5%, 48.5%, 49%, 49%, 49.5%, 49.8%, 49.7%, 49.8%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          display: block;
+          top: -114px;
+          left: 115px;
+        }
+
+        @media (min-width: $xl) {
+          top: -138px;
+          left: 157px;
+        }
+
+        @media (min-width: $xxl) {
+          left: 192px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          display: block;
+          width: 160px;
+          top: -152.8%;
+          left: -13px;
+          transform: rotate(-50deg);
+        }
+
+        @media (min-width: $xl) {
+          top: -202.8%;
+          width: 205px;
+          transform: rotate(-45deg);
+        }
+
+        @media (min-width: $xxl) {
+          width: 240px;
+          transform: rotate(-39deg);
+        }
+
+      }
+    }
+
+    &#shining_dot7 {
+      @include dot-top-position(41.7%, 42.1%, 42.4%, 42.4%, 42.7%, 42.7%, 42.9%, 42.8%, 42.8%, 42.8%, 42.8%);
+      @include dot-left-position(82.3%, 82.9%, 83%, 83.5%, 83.5%, 83.9%, 84.3%, 75.1%, 68.7%, 65.5%, 63.6%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          top: 9px;
+          left: 123px;
+        }
+
+        @media (min-width: $xl) {
+          left: 203px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          top: -133px;
+          left: 35px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          width: 100px;
+          top: 45.2%;
+          left: 24px;
+        }
+
+        @media (min-width: $xl) {
+          width: 180px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          width: 150px;
+          top: -189.8%;
+          left: -47px;
+          transform: rotate(-80deg);
+        }
+
+      }
+    }
+
+    &#shining_dot8 {
+      @include dot-top-position(42.2%, 42.5%, 42.9%, 42.9%, 43.3%, 43.3%, 43.3%, 43.3%, 43.3%, 43.3%, 43.3%);
+      @include dot-left-position(8%, 8.5%, 9.5%, 10%, 10.5%, 11%, 11.5%, 21.3%, 28.6%, 32%, 34.5%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          top: 9px;
+          right: 123px;
+        }
+
+        @media (min-width: $xl) {
+          right: 203px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          top: -160px;
+          right: 53px;
+
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          width: 100px;
+          top: 45.2%;
+          right: 24px;
+        }
+
+        @media (min-width: $xl) {
+          width: 180px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          transform: rotate(76deg);
+          top: -70px;
+          width: 170px;
+          right: -47px;
+        }
+
+      }
+    }
+
+    &#shining_dot9 {
+      @include dot-top-position(43.2%, 43.2%, 43.6%, 43.8%, 43.9%, 43.9%, 44.2%, 44.1%, 44.1%, 44.1%, 44.1%);
+      @include dot-left-position(36.5%, 36.8%, 37.3%, 38.2%, 39.2%, 39.2%, 39.4%, 41.7%, 43.9%, 45%, 45.6%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          top: 9px;
+          right: 123px;
+        }
+
+        @media (min-width: $xl) {
+          right: 203px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          top: -166px;
+          right: 185px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          width: 100px;
+          top: 45.2%;
+          right: 24px;
+        }
+
+        @media (min-width: $xl) {
+          width: 180px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          width: 250px;
+          transform: rotate(45deg);
+          top: -75px;
+          right: -20px;
+        }
+
+      }
+    }
+
+    &#shining_dot10 {
+      @include dot-top-position(54.7%, 55%, 55.2%, 55.5%, 55.5%, 55.7%, 55.7%, 55.7%, 55.7%, 55.7%, 55.7%);
+      @include dot-left-position(52%, 53%, 53.3%, 53.7%, 53.9%, 54.5%, 54.7%, 53.4%, 52.6%, 52.1%, 51.8%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          top: 9px;
+          left: 123px;
+        }
+
+        @media (min-width: $xl) {
+          left: 203px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          top: -265px;
+          left: 168px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          width: 100px;
+          top: 45.2%;
+          left: 24px;
+        }
+
+        @media (min-width: $xl) {
+          width: 180px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          width: 315px;
+          top: -121px;
+          left: -64px;
+          transform: rotate(-60deg);
+        }
+
+      }
+    }
+
+    &#shining_dot11 {
+      @include dot-top-position(65.7%, 66.7%, 66.9%, 67.4%, 67.4%, 67.6%, 67.6%, 67.6%, 67.6%, 67.6%, 67.6%);
+      @include dot-left-position(38.5%, 39.1%, 39.6%, 40.2%, 40.9%, 40.9%, 41.2%, 43.6%, 45.2%, 45.9%, 46.4%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          top: 9px;
+          right: 123px;
+        }
+
+        @media (min-width: $xl) {
+          right: 203px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          top: -342px;
+          right: 176px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          width: 100px;
+          top: 45.2%;
+          right: 24px;
+        }
+
+        @media (min-width: $xl) {
+          width: 180px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          width: 390px;
+          transform: rotate(65deg);
+          top: -160px;
+          right: -96px;
+        }
+
+      }
+    }
+
+    &#shining_dot12 {
+      @include dot-top-position(78.8%, 79%, 79%, 79.5%, 79.6%, 79.9%, 79.8%, 79.8%, 79.8%, 79.8%, 79.8%);
+      @include dot-left-position(50.5%, 50.9%, 51.6%, 51.8%, 52.3%, 52.5%, 52.5%, 52%, 51.4%, 51.25%, 51.1%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          top: 9px;
+          left: 123px;
+        }
+
+        @media (min-width: $xl) {
+          left: 203px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          top: -413px;
+          left: 181px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          width: 100px;
+          top: 45.2%;
+          left: 24px;
+        }
+
+        @media (min-width: $xl) {
+          width: 180px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          width: 450px;
+          transform: rotate(-68deg);
+          top: -198px;
+          left: -123px;
+        }
+
+      }
+    }
+
+    &#shining_dot13 {
+      @include dot-top-position(83.9%, 85%, 85.5%, 86.5%, 86.8%, 86.8%, 86.8%, 86.8%, 86.8%, 86.8%, 87.3%);
+      @include dot-left-position(50.2%, 50.6%, 51.1%, 51.7%, 52.8%, 52.8%, 52.3%, 52.3%, 51.5%, 51.3%, 51.3%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          top: 9px;
+          left: 123px;
+        }
+
+        @media (min-width: $xl) {
+          left: 203px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          top: -467px;
+          left: 193px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          width: 100px;
+          top: 45.2%;
+          left: 24px;
+        }
+
+        @media (min-width: $xl) {
+          width: 180px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          width: 510px;
+          transform: rotate(111deg);
+          top: -224px;
+          left: -148px;
+        }
+
+      }
+    }
+
+    &#shining_dot14 {
+      @include dot-top-position(86.3%, 86.3%, 86.9%, 87.4%, 87.7%, 87.8%, 87.8%, 87.8%, 87.8%, 87.8%, 87.8%);
+      @include dot-left-position(41.5%, 41.5%, 42%, 42.4%, 42.5%, 43.4%, 43.4%, 44.7%, 46%, 46.7%, 47.3%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          top: 9px;
+          right: 123px;
+        }
+
+        @media (min-width: $xl) {
+          right: 203px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          top: -485px;
+          right: 200px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          width: 100px;
+          top: 45.2%;
+          right: 24px;
+        }
+
+        @media (min-width: $xl) {
+          width: 180px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          width: 530px;
+          transform: rotate(69deg);
+          top: -232px;
+          right: -155px;
+        }
+      }
+    }
+
+    &#shining_dot15 {
+      @include dot-top-position(89.5%, 89.5%, 89.8%, 89.9%, 90%, 90.4%, 90.4%, 90.5%, 90.5%, 90.5%, 90.5%);
+      @include dot-left-position(38.5%, 39.5%, 39.9%, 40.3%, 40.5%, 41.2%, 41.2%, 43.5%, 45%, 46%, 46.5%);
+
+      &::before {
+        display: none;
+
+        @media (min-width: $lg) {
+          top: 9px;
+          right: 123px;
+        }
+
+        @media (min-width: $xl) {
+          right: 203px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          top: -485px;
+          right: 200px;
+        }
+      }
+
+      &::after {
+        display: none;
+
+        @media (min-width: $lg) {
+          width: 100px;
+          top: 45.2%;
+          right: 24px;
+        }
+
+        @media (min-width: $xl) {
+          width: 180px;
+        }
+
+        @media (min-width: $xxl) {
+          display: block;
+          width: 530px;
+          transform: rotate(69deg);
+          top: -232px;
+          right: -155px;
+        }
+      }
+    }
+  }
+
+  .textboxs {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    background-color: $black;
+    border: 2px solid $white;
+    border-radius: 5px;
+
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    @media (min-width: $lg) {
+      background-color: unset;
+      border: none;
+      padding: 0;
+    }
+
+    @media (min-width: $xxxxl) {
+      max-width: 400px;
+    }
+
+    &.show {
+      display: block;
+    }
+
+    .icon_wrapper {
+      position: sticky;
+      top: 0;
+      right: 0;
+      background-color: $black;
+      padding-top: 10px;
+      padding-right: 20px;
+      padding-bottom: 10px;
+
+      @media (min-width: $lg) {
+        background-color: unset;
+      }
+
+      svg {
+        display: block;
+        margin-left: auto;
+        font-size: 30px;
+        cursor: pointer;
+      }
+    }
+
+    .content_wrapper {
+      padding: 10px 20px;
+
+      .title {
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+
+        @media (min-width: $xl) {
+          font-size: 25px;
+        }
+
+        @media (min-width: $xxxl) {
+          font-size: 30px;
+        }
+      }
+
+      .description {
+        font-size: 16px;
+        line-height: 1.3;
+
+        @media (min-width: $xl) {
+          font-size: 18px;
+        }
+
+        @media (min-width: $xxxl) {
+          font-size: 20px;
+        }
+
+        .subtitle {
+          margin-bottom: 20px;
+        }
+
+        ul {
+          font-size: inherit;
+          padding-left: 20px;
+
+          li {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    &#box0 {
+      @include right-box-position;
+    }
+
+    &#box1 {
+      @include right-box-position;
+    }
+
+    &#box2 {
+      @include left-box-position;
+    }
+
+    &#box3 {
+      @include left-box-position;
+    }
+
+    &#box4 {
+      @include left-box-position;
+    }
+
+    &#box5 {
+      @include left-box-position;
+    }
+
+    &#box6 {
+      @include right-box-position;
+    }
+
+    &#box7 {
+      @include right-box-position;
+    }
+
+    &#box8 {
+      @include left-box-position;
+    }
+
+    &#box9 {
+      @include left-box-position;
+    }
+
+    &#box10 {
+      @include right-box-position;
+    }
+
+    &#box11 {
+      @include left-box-position;
+    }
+
+    &#box12 {
+      @include right-box-position;
+    }
+
+    &#box13 {
+      @include right-box-position;
+    }
+
+    &#box14 {
+      @include left-box-position;
+    }
+
+    &#box15 {
+      @include left-box-position;
+    }
+  }
 }

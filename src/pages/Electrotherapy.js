@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from "../GlobalStyle"
 import "../components/i18n"
 import { useTranslation, Trans } from 'react-i18next'
+import electrotherapy from "../assets/images/Electrotherapy.jpg"
 
 const Electrotherapy = () => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ const Electrotherapy = () => {
         <h1 className='service'>{t('Electrotherapy')}</h1>
         <div className='flexbox'>
           <div className='image_wrapper'>
-            <img src={process.env.PUBLIC_URL + "/Electrotherapy.jpg"} alt="Electrotherapy"></img>
+            <img src={electrotherapy} alt={t('Electrotherapy')} />
           </div>
           <div className='content'>
             <p>{t('Electrotherapy is the use of electrical energy as a medical treatment. This includes interferential therapy, magnetic field therapy, or therapeutic ultrasound.')}</p>

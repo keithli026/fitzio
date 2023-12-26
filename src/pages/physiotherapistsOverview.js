@@ -1,11 +1,11 @@
-import { NavLink, Outlet, useSearchParams, useLocation } from "react-router-dom";
-import { Container } from "../GlobalStyle";
+import { NavLink, Outlet, useSearchParams, useLocation } from "react-router-dom"
+import { Container } from "../GlobalStyle"
 import "./physiotherapists.scss";
-import { getPhysiotherapists } from "../PhysiotherapistInfo";
-import { getPosts } from "../api/axios";
-import { useState, useEffect } from "react";
-import SearchBar from "../components/SearchBar";
-import ListPage from "../components/ListPage";
+import { getPhysiotherapists } from "../PhysiotherapistInfo"
+import { getPosts } from "../api/axios"
+import { useState, useEffect } from "react"
+import SearchBar from "../components/SearchBar"
+import ListPage from "../components/ListPage"
 
 const PhysiotherapistsOverview = () => {
   const physiotherapists = getPhysiotherapists();

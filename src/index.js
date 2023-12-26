@@ -27,6 +27,9 @@ import NoPage from "./pages/NoPage";
 import MeetOurTeamOverview from './pages/MeetOurTeamOverview';
 import ScrollToTop from './components/ScrollToTop';
 import WhatsappButton from './components/WhatsappButton';
+// import Testing from './pages/Testing';
+// import TestingOverview from './pages/TestingOverview';
+// import TestingContentPage from './pages/TestingContentPage';
 
 export default function MainApp() {
   return (
@@ -58,6 +61,10 @@ export default function MainApp() {
             <Route path="conditions" element={<Conditions />} />
             <Route path="contact" element={<Contact />} />
             <Route path="book-online" element={<BookOnline />} />
+            {/* <Route path="testing" element={<Testing/>}>
+              <Route index element={<TestingOverview/>}></Route>
+              <Route path="testing-content-page" element={<TestingContentPage/>} />
+            </Route> */}
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>

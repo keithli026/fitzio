@@ -1,25 +1,32 @@
-import { Container, Row } from "../../GlobalStyle";
-import * as F from "./style";
-import "./footer.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Container, Row } from "../../GlobalStyle"
+import "./footer.scss"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook, faInstagram, faTwitter, faYoutube, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
-import { phone } from "../WhatsappButton";
+import { phone } from "../WhatsappButton"
+import logoIcon from "../../assets/images/logo_white.png"
+import mailIcon from "../../assets/images/Mail.png"
+import "../../components/i18n";
+import { useTranslation, Trans } from 'react-i18next';
+
 
 const email = "info@fitsiophysiotherapyandfitness.com.hk";
 const Footer = () => {
+  const { t, i18n } = useTranslation();
   return (
     <>
       <div id="footer">
         <Container>
           <div className="logo">
             <a href="/">
-              <img src={`${process.env.PUBLIC_URL}/logo_white.png`} alt="Home" />
+            <img src={logoIcon} alt={t('Home')} />
+              {/* <img src={`${process.env.PUBLIC_URL}/logo_white.png`} alt="Home" /> */}
             </a>
           </div>
           <div className="contact">
             <div className="email">
               <a href={`mailto: ${email}`}>
-                <img src={`${process.env.PUBLIC_URL}/Mail.png`} alt="Email" /><div>{email}</div>
+              <img src={mailIcon} alt={t('email')} /><div>{email}</div>
+                {/* <img src={`${process.env.PUBLIC_URL}/Mail.png`} alt="Email" /><div>{email}</div> */}
               </a>
             </div>
             <div className="whatsapp">
@@ -39,7 +46,7 @@ const Footer = () => {
               East Fremantle 6158
             </div>
             <div className="follow-us">
-              <div>Follow Us on</div>
+              <div>{t('Follow Us on')}</div>
               <div className="socialMedia">
                 <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebook} /></a>
                 <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
@@ -49,15 +56,15 @@ const Footer = () => {
             </div>
           </div>
           <div id="opening">
-            <h2 className="underline">Opening Hours</h2>
+            <h2 className="underline">{t('Opening Hours')}</h2>
             <div className="time">
-              Monday to Friday: 6am – 8pm<br />
-              Saturday: 7am – 2pm<br />
-              Sunday: Appointment only
+              {t('Monday to Friday: 6am – 8pm')}<br />
+              {t('Saturday: 7am – 2pm')}<br />
+              {t('Sunday: Appointment only')}
             </div>
           </div>
           <div className="disclaimer">
-            Fitsio. Copyright 2024 - All rights reserved.
+            {t('Fitsio. Copyright 2024 - All rights reserved.')}
           </div>
         </Container>
       </div>
