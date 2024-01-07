@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from "../GlobalStyle"
-import "../components/i18n"
-import { useTranslation, Trans } from 'react-i18next'
+// import "../components/i18n"
+import { useTranslation } from 'react-i18next'
 import acupuncture from "../assets/images/Acupuncture.jpg"
 
 const Acupuncture = () => {

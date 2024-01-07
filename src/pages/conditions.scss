@@ -1,4 +1,5 @@
-@import "../variable";
+// @import "../variable";
+@import "../index";
 
 @mixin dot-left-position($default-left, $left320, $left375, $left412, $left450, $left500, $left576, $left768, $left992, $left1200, $left1400) {
   left: $default-left;
@@ -23,23 +24,23 @@
     left: $left500;
   }
 
-  @media (min-width: $sm) {
+  @include media-breakpoint-up(sm) {
     left: $left576;
   }
 
-  @media (min-width: $md) {
+  @include media-breakpoint-up(md) {
     left: $left768;
   }
 
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     left: $left992;
   }
 
-  @media (min-width: $xl) {
+  @include media-breakpoint-up(xl) {
     left: $left1200;
   }
 
-  @media (min-width: $xxl) {
+  @include media-breakpoint-up(xxl) {
     left: $left1400;
   }
 }
@@ -67,29 +68,29 @@
     top: $top500;
   }
 
-  @media (min-width: $sm) {
+  @include media-breakpoint-up(sm) {
     top: $top576;
   }
 
-  @media (min-width: $md) {
+  @include media-breakpoint-up(md) {
     top: $top768;
   }
 
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     top: $top992;
   }
 
-  @media (min-width: $xl) {
+  @include media-breakpoint-up(xl) {
     top: $top1200;
   }
 
-  @media (min-width: $xxl) {
+  @include media-breakpoint-up(xxl) {
     top: $top1400;
   }
 }
 
 @mixin right-box-position {
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     top: 4%;
     left: unset;
     right: 3%;
@@ -98,17 +99,17 @@
     max-width: 300px;
   }
 
-  @media (min-width: $xxl) {
+  @include media-breakpoint-up(xxl) {
     max-width: 350px;
   }
 
-  @media (min-width: $xxxl) {
+  @include media-breakpoint-up(xxxl) {
     max-width: 450px;
   }
 }
 
 @mixin left-box-position {
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     top: 4%;
     left: 3%;
     right: unset;
@@ -117,11 +118,11 @@
     max-width: 300px;
   }
 
-  @media (min-width: $xxl) {
+  @include media-breakpoint-up(xxl) {
     max-width: 350px;
   }
 
-  @media (min-width: $xxxl) {
+  @include media-breakpoint-up(xxxl) {
     max-width: 450px;
   }
 }
@@ -132,20 +133,20 @@
   margin-bottom: 100px;
 
   .image_wrapper {
-    @media (min-width: $md) {
+    @include media-breakpoint-up(md) {
       width: 74.5%;
       margin: auto;
     }
 
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       width: 55.4%;
     }
 
-    @media (min-width: $xl) {
+    @include media-breakpoint-up(xl) {
       width: 46.5%;
     }
 
-    @media (min-width: $xxl) {
+    @include media-breakpoint-up(xxl) {
       width: 40%;
     }
 
@@ -273,7 +274,7 @@
       content: "";
       position: absolute;
       height: auto;
-      border-top: 4px solid $lightblue;
+      border-top: 4px solid $cyan;
     }
 
     img {
@@ -291,17 +292,17 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           display: block;
           top: 9px;
           left: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           left: 203px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           left: 223px;
         }
       }
@@ -309,18 +310,18 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           display: block;
           width: 100px;
           top: 45.2%;
           left: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 180px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           width: 200px;
         }
 
@@ -334,17 +335,17 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           display: block;
           top: 9px;
           left: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           left: 203px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           left: 223px;
         }
       }
@@ -352,18 +353,18 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           display: block;
           width: 100px;
           top: 45.2%;
           left: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 180px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           width: 200px;
         }
 
@@ -377,17 +378,17 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           display: block;
           top: 9px;
           right: 73px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           right: 123px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           right: 163px;
         }
       }
@@ -395,18 +396,18 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           display: block;
           width: 50px;
           top: 45.2%;
           right: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 100px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           width: 140px;
         }
 
@@ -420,17 +421,17 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           display: block;
           top: 9px;
           right: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           right: 203px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           right: 223px;
         }
       }
@@ -438,18 +439,18 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           display: block;
           width: 100px;
           top: 45.2%;
           right: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 180px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           width: 200px;
         }
 
@@ -463,16 +464,16 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           top: 9px;
           right: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           right: 203px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           top: -88px;
           right: 106px;
@@ -482,17 +483,17 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           width: 0;
           top: 45.2%;
           right: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 180px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           width: 133px;
           transform: rotate(45deg);
@@ -510,18 +511,18 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           display: block;
           top: -105px;
           right: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           top: -110px;
           right: 168px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           top: -118px;
           right: 223px;
         }
@@ -530,7 +531,7 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           display: block;
           width: 158px;
           top: -150.8%;
@@ -538,12 +539,12 @@
           transform: rotate(45deg);
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 200px;
           transform: rotate(37deg);
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           top: -164.8%;
           right: -3px;
           width: 250px;
@@ -560,18 +561,18 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           display: block;
           top: -114px;
           left: 115px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           top: -138px;
           left: 157px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           left: 192px;
         }
       }
@@ -579,7 +580,7 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           display: block;
           width: 160px;
           top: -152.8%;
@@ -587,13 +588,13 @@
           transform: rotate(-50deg);
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           top: -202.8%;
           width: 205px;
           transform: rotate(-45deg);
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           width: 240px;
           transform: rotate(-39deg);
         }
@@ -608,16 +609,16 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           top: 9px;
           left: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           left: 203px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           top: -133px;
           left: 35px;
@@ -627,17 +628,17 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           width: 100px;
           top: 45.2%;
           left: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 180px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           width: 150px;
           top: -189.8%;
@@ -655,16 +656,16 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           top: 9px;
           right: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           right: 203px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           top: -160px;
           right: 53px;
@@ -675,17 +676,17 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           width: 100px;
           top: 45.2%;
           right: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 180px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           transform: rotate(76deg);
           top: -70px;
@@ -703,16 +704,16 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           top: 9px;
           right: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           right: 203px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           top: -166px;
           right: 185px;
@@ -722,17 +723,17 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           width: 100px;
           top: 45.2%;
           right: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 180px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           width: 250px;
           transform: rotate(45deg);
@@ -750,16 +751,16 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           top: 9px;
           left: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           left: 203px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           top: -265px;
           left: 168px;
@@ -769,17 +770,17 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           width: 100px;
           top: 45.2%;
           left: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 180px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           width: 315px;
           top: -121px;
@@ -797,16 +798,16 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           top: 9px;
           right: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           right: 203px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           top: -342px;
           right: 176px;
@@ -816,17 +817,17 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           width: 100px;
           top: 45.2%;
           right: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 180px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           width: 390px;
           transform: rotate(65deg);
@@ -844,16 +845,16 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           top: 9px;
           left: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           left: 203px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           top: -413px;
           left: 181px;
@@ -863,17 +864,17 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           width: 100px;
           top: 45.2%;
           left: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 180px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           width: 450px;
           transform: rotate(-68deg);
@@ -891,16 +892,16 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           top: 9px;
           left: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           left: 203px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           top: -467px;
           left: 193px;
@@ -910,17 +911,17 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           width: 100px;
           top: 45.2%;
           left: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 180px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           width: 510px;
           transform: rotate(111deg);
@@ -938,16 +939,16 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           top: 9px;
           right: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           right: 203px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           top: -485px;
           right: 200px;
@@ -957,17 +958,17 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           width: 100px;
           top: 45.2%;
           right: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 180px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           width: 530px;
           transform: rotate(69deg);
@@ -984,16 +985,16 @@
       &::before {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           top: 9px;
           right: 123px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           right: 203px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           top: -485px;
           right: 200px;
@@ -1003,17 +1004,17 @@
       &::after {
         display: none;
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           width: 100px;
           top: 45.2%;
           right: 24px;
         }
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           width: 180px;
         }
 
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           display: block;
           width: 530px;
           transform: rotate(69deg);
@@ -1042,13 +1043,13 @@
     right: 0;
     margin: auto;
 
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       background-color: unset;
       border: none;
       padding: 0;
     }
 
-    @media (min-width: $xxxxl) {
+    @include media-breakpoint-up(xxxxl) {
       max-width: 400px;
     }
 
@@ -1065,7 +1066,7 @@
       padding-right: 20px;
       padding-bottom: 10px;
 
-      @media (min-width: $lg) {
+      @include media-breakpoint-up(lg) {
         background-color: unset;
       }
 
@@ -1085,11 +1086,11 @@
         line-height: 1.3;
         margin-bottom: 20px;
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           font-size: 25px;
         }
 
-        @media (min-width: $xxxl) {
+        @include media-breakpoint-up(xxxl) {
           font-size: 30px;
         }
       }
@@ -1098,11 +1099,11 @@
         font-size: 16px;
         line-height: 1.3;
 
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           font-size: 18px;
         }
 
-        @media (min-width: $xxxl) {
+        @include media-breakpoint-up(xxxl) {
           font-size: 20px;
         }
 

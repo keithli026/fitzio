@@ -1,7 +1,8 @@
+import './index.scss';
+import "./components/i18n";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom';
-import './index.scss';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";

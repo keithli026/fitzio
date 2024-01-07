@@ -2,7 +2,7 @@ import React from 'react'
 import Breadcrumb from "../components/Breadcrumb"
 import { Container } from "../GlobalStyle"
 import { Link } from "react-router-dom"
-import "../components/i18n"
+// import "../components/i18n"
 import { useTranslation, Trans } from 'react-i18next'
 import acupuncture from "../assets/images/Acupuncture.jpg"
 import manualTherapy from "../assets/images/Manual_therapy.jpg"

@@ -1,35 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import "variable";
-* {
-  box-sizing: border-box;
-}
+@import "fonts";
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
 
 body {
-  font-family: 'Hind', sans-serif;
-  font-weight: 400;
-  line-height: 2;
-  font-size: 16px;
   overflow-x: hidden;
   margin: 0;
   letter-spacing: 0.5px;
 }
-h1, h2 ,h3 ,h4 ,h5 ,h6 {
-  margin-top: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.6;
-  font-weight: 600;
-  margin-top: 0;
-  color: black;
-}
 
 h1 {
   font-size: 30px;
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     font-size: 45px;
   }
-  @media (min-width: $xxl) {
+  @include media-breakpoint-up(xxl) {
     font-size: 54px;
   }
 }
@@ -37,11 +22,11 @@ h1 {
 h2 {
   font-size: 25px;
   margin-bottom: 30px;
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     font-size: 37px;
     margin-bottom: 80px;
   }
-  @media (min-width: $xxl) {
+  @include media-breakpoint-up(xxl) {
     font-size: 45px;
   }
   &.underline {
@@ -50,7 +35,7 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     border-bottom: 5px solid $red;
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       border-bottom: 10px solid $red;
     }
   }
@@ -58,21 +43,21 @@ h2 {
 
 h3 {
   font-size: 22px;
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     font-size: 37px;
   }
 }
 
 h4 {
   font-size: 20px;
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     font-size: 30px;
   }
 }
 
 h5 {
   font-size: 18px;
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     font-size: 25px;
   }
 }
@@ -82,10 +67,10 @@ ul, ol {
   letter-spacing: 0.4px;
   margin-top: 0;
   margin-bottom: 30px;
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     font-size: 16px;
   }
-  @media (min-width: $xxl) {
+  @include media-breakpoint-up(xxl) {
     font-size: 18px;
   }
 }
@@ -112,9 +97,9 @@ img {
 }
 
 a {
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     &:hover {
-      color: $lightblue;
+      color: $cyan;
     }
   }
   &.button {
@@ -128,7 +113,7 @@ a {
     border-bottom: 3px solid $black;
     box-shadow: 0px 1px 0 0 $white;
     border-radius: 10px;
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       &:hover {
         background-color: $red;
         color: $white;
@@ -138,50 +123,32 @@ a {
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 30px;
   line-height: 35px;
 }
 
-.table_wrapper {
-  overflow-x: auto;
-  table {
-    width: 100%;
-    margin-bottom: 30px;
-    border-spacing: 0;
-    border: 0.5px solid grey;
-    tbody {
-      tr {
-        &:nth-of-type(odd) {
-          background-color: $white;
-        }
-        @media (min-width: $lg) {
-          &:hover {
-            background-color: $lightblue;
-            color: $white;
-            // font-weight: 700;
-          }
+
+.table {
+  tbody {
+    tr {
+      @include media-breakpoint-up(lg) {
+        &:hover {
+          font-weight: 700;
         }
       }
     }
-    tr {
-      th {
-        text-align: start;
-        border: 0.5px solid grey;
-        padding: 0.5rem;
+  }
+  tr {
+    th {
+ 
+    }
+    td {
+      p:last-of-type {
+        margin-bottom: 0;
       }
-      td {
-        text-align: start;
-        border: 0.5px solid grey;
-        padding: 0.5rem;
-        p:last-of-type {
+      ul {
+        padding-left: 2rem;
+        &:last-of-type {
           margin-bottom: 0;
-        }
-        ul {
-          padding-left: 2rem;
-          &:last-of-type {
-            margin-bottom: 0;
-          }
         }
       }
     }
@@ -190,12 +157,11 @@ p {
 
 .breadcrumb {
   margin-top: 30px;
-  margin-bottom: 30px;
   a {
     text-decoration: none;
     &.active {
       &:last-child {
-        color: $lightblue;
+        color: $cyan;
       }
     }
   }
@@ -208,10 +174,10 @@ p {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 30px;
-  @media (min-width: $sm) {
+  @include media-breakpoint-up(sm) {
     justify-content: space-between;
   }
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     justify-content: unset;
     margin-bottom: 50px;
   }
@@ -219,17 +185,17 @@ p {
     position: relative;
     margin-bottom: 30px;
     flex-basis: 100%;
-    @media (min-width: $sm) {
+    @include media-breakpoint-up(sm) {
       flex-basis: 48%;
     }
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       margin-right: 2%;
       flex-basis: 32%;
       &:nth-child(3n) {
         margin-right: 0;
       }
     }
-    @media (min-width: $xxl) {
+    @include media-breakpoint-up(xxl) {
       margin-right: 2%;
       flex-basis: 23.5%;
       &:nth-child(3n) {
@@ -244,19 +210,19 @@ p {
     }
     img {
       width: 100%;
-      @media (min-width: $sm) {
+      @include media-breakpoint-up(sm) {
         height: 200px;
       }
-      @media (min-width: $md) {
+      @include media-breakpoint-up(md) {
         height: 250px;
       }
-      @media (min-width: $lg) {
+      @include media-breakpoint-up(lg) {
         height: 300px;
       }
-      @media (min-width: $xl) {
+      @include media-breakpoint-up(xl) {
         height: 350px;
       }
-      @media (min-width: $xxl) {
+      @include media-breakpoint-up(xxl) {
         height: 400px;
       }
     }
@@ -278,9 +244,9 @@ p {
       background-color: grey;
       padding: 10px 0;
       font-size: 20px;
-      @media (min-width: $lg) {
+      @include media-breakpoint-up(lg) {
         &:hover {
-          color: $lightblue;
+          color: $cyan;
         }
       }
     }
@@ -291,7 +257,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 30px;
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     margin-bottom: 50px;
     > div:nth-child(3n) {
       margin-right: 0;
@@ -300,12 +266,12 @@ p {
   .card {
     position: relative;
     margin-bottom: 30px;
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       flex-basis: 32%;
       margin-right: 2%;
     }
     img {
-      display: block;
+      width: 100%;
     }
     .summary {
       position: absolute;
@@ -316,10 +282,10 @@ p {
       background-color: rgba(0,0,0,0.5);
       color: $white;
       padding: 10px 0;
-      @media (min-width: $lg) {
+      @include media-breakpoint-up(lg) {
         padding: 0;
         &:hover {
-          color: $lightblue;
+          color: $cyan;
         }
       }
       .name {
@@ -328,7 +294,7 @@ p {
       }
       .title {
         color: inherit;
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           font-size: 30px;
         }
       }

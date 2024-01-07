@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from "../GlobalStyle"
-import i18n from '../components/i18n'
+// import i18n from '../components/i18n'
 import { useTranslation, Trans } from 'react-i18next'
 import shockwaveTherapy from "../assets/images/Shockwave_therapy.jpg"
 

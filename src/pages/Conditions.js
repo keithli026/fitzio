@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState, useReducer } from 'react'
+import React, { useEffect, useRef, useReducer } from 'react'
 import { Container } from "../GlobalStyle"
 import Breadcrumb from "../components/Breadcrumb"
 import "./conditions.scss"
 import { getCondition } from './ConditionInfo'
-import "../components/i18n"
-import { useTranslation, Trans } from 'react-i18next'
+// import "../components/i18n"
+import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import bodyChart from "../assets/images/bodychart.png"
@@ -12,7 +12,7 @@ import dotImg from "../assets/images/dot.png"
 import shiningDotImg from "../assets/images/shining_dot.png"
 
 const Conditions = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const dot = useRef([]);
   const shiningDot = useRef([]);
   const textBox = useRef([]);

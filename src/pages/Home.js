@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { Container } from "../GlobalStyle";
 import "./home.scss";
 import { getPhysiotherapists } from "../PhysiotherapistInfo";
-import "../components/i18n";
+// import "../components/i18n";
 import { useTranslation, Trans } from 'react-i18next';
 import bannerImg from "../assets/images/banner-image-1.jpg"
 import banner2Img from "../assets/images/banner-image-2.jpg"
@@ -47,7 +47,7 @@ const Home = () => {
           <div className="banner">
             <img src={bannerImg} alt={t('banner')} />
             <div className="textbox">
-              <div className="content">
+              <div className="content container">
                 <h2>{t('GET BACK TO DOING WHAT YOU LOVE')}</h2>
                 <h3>{t("DON'T SUFFER FROM PAIN WHEN YOU CAN MANAGE IT")}</h3>
                 <ul>
@@ -173,7 +173,7 @@ const Home = () => {
               </div>
             </div>
             <div className="button_wrapper">
-              <Link className="button" to="/about">Learn more</Link>
+              <Link className="button" to="/about">{t('Learn More')}</Link>
             </div>
           </div>
         </Container>

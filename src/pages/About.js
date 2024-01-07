@@ -2,11 +2,10 @@ import React from 'react';
 import { Outlet } from "react-router-dom";
 import { Container } from "../GlobalStyle";
 import Breadcrumb from "../components/Breadcrumb";
-import i18n from '../components/i18n';
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <>
       <Container>

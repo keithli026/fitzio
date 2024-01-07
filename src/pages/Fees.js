@@ -1,6 +1,6 @@
 import { Container } from "../GlobalStyle";
 import "./fees.scss";
-import i18n from '../components/i18n';
+// import i18n from '../components/i18n';
 import { useTranslation, Trans } from 'react-i18next';
 import Breadcrumb from '../components/Breadcrumb'
 
@@ -12,8 +12,8 @@ const Fees = () => {
         <Breadcrumb />
         <h1>{t('Fees')}</h1>
         <h2>Physiotherapy Consultation Fees</h2>
-        <div className="table_wrapper">
-          <table>
+        <div className="table-responsive">
+          <table className="table table-bordered table-hover">
             <thead>
               <tr>
                 <th>Consultation</th>
@@ -36,8 +36,8 @@ const Fees = () => {
           </table>
         </div>
         <h2>Physiotherapy Program Fees</h2>
-        <div className="table_wrapper">
-          <table>
+        <div className="table-responsive">
+          <table className="table table-bordered table-hover">
             <thead>
               <tr>
                 <th>Program</th>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from "../GlobalStyle"
-import "../components/i18n"
+// import "../components/i18n"
 import { useTranslation, Trans } from 'react-i18next'
 import manualTherapy from "../assets/images/Manual_therapy.jpg"
 
