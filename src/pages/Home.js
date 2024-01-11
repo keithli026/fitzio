@@ -45,7 +45,7 @@ const Home = () => {
       <Slider {...settings}>
         <div className="slide">
           <div className="banner">
-            <img src={bannerImg} alt={t('banner')} />
+            <img src={bannerImg} alt={t('banner')} loading="lazy"/>
             <div className="textbox">
               <div className="content container">
                 <h2>{t('GET BACK TO DOING WHAT YOU LOVE')}</h2>
@@ -71,7 +71,7 @@ const Home = () => {
         </div>
         <div className="slide">
           <div className="banner">
-            <img src={banner2Img} alt={t('banner')} />
+            <img src={banner2Img} alt={t('banner')} loading="lazy"/>
             <div className="textbox">
               <div className="content">
                 <h2>{t('GET BACK TO DOING WHAT YOU LOVE')}</h2>
@@ -88,8 +88,7 @@ const Home = () => {
                 </div>
                 <div className="learn-more">
                   <div>{t('Learn More')}</div>
-                  <button onClick={executeScroll}><img src={arrowIcon} alt={t('arrow')} /></button>
-                  {/* <button onClick={executeScroll}><img src={process.env.PUBLIC_URL + '/arrow.png'} alt={t('arrow')} /></button> */}
+                  <button onClick={executeScroll}><img src={arrowIcon} alt={t('arrow')} loading="lazy"/></button>
                 </div>
               </div>
             </div>
@@ -109,64 +108,56 @@ const Home = () => {
             <div className="boxes">
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={holisticCare} alt={t('Holistic care')} />
-                  {/* <img src={process.env.PUBLIC_URL + "/Holistic_approach.png"} alt="Holistic care"></img> */}
+                  <img src={holisticCare} alt={t('Holistic care')} loading="lazy"/>
                 </div>
                 <h3>{t('Holistic care')}</h3>
                 {/* <p>{t("We consider our clients' general well-being.")}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={individualizedServices} alt={t('Individualized services')} />
-                  {/* <img src={process.env.PUBLIC_URL + "/Individualised_service.png"} alt="Individualized services"></img> */}
+                  <img src={individualizedServices} alt={t('Individualized services')} loading="lazy"/>
                 </div>
                 <h3>{t('Individualized services')}</h3>
                 {/* <p>{t('We provide services on a one-to-one basis.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={exerciseRehabilitation} alt={t('Exercise rehabilitation')} />
-                  {/* <img src={process.env.PUBLIC_URL + "/Exercise_based_rehabilitation.png"} alt="Exercise rehabilitation"></img> */}
+                  <img src={exerciseRehabilitation} alt={t('Exercise rehabilitation')} loading="lazy"/>
                 </div>
                 <h3>{t('Exercise rehabilitation')}</h3>
                 {/* <p>{t('We prescribe exercises as part of the management.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={goalOriented} alt={t('Goal-oriented')} />
-                  {/* <img src={process.env.PUBLIC_URL + "/Goal_oriented.png"} alt="Goal-oriented"></img> */}
+                  <img src={goalOriented} alt={t('Goal-oriented')} loading="lazy"/>
                 </div>
                 <h3>{t('Goal-oriented')}</h3>
                 {/* <p>{t("Our treatment and exercise rehabilitation are guided by clients' goals.")}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={empowerment} alt={t('Empowerment')} />
-                  {/* <img src={process.env.PUBLIC_URL + "/Empowerment.png"} alt="Empowerment"></img> */}
+                  <img src={empowerment} alt={t('Empowerment')} loading="lazy"/>
                 </div>
                 <h3>{t('Empowerment')}</h3>
                 {/* <p>{t('We promote self-management and disease prevention.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={longLastingClinicalOutcomes} alt={t('Long-lasting clinical outcomes')} />
-                  {/* <img src={process.env.PUBLIC_URL + "/Long_lasting_clinical_outcomes.png"} alt="Long-lasting clinical outcomes"></img> */}
+                  <img src={longLastingClinicalOutcomes} alt={t('Long-lasting clinical outcomes')} loading="lazy"/>
                 </div>
                 <h3>{t('Long-lasting clinical outcomes')}</h3>
                 {/* <p>{t('We focus on long-term solutions by addressing causes and symptoms of musculoskeletal conditions.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={ongoingSupport} alt={t('Ongoing support')} />
-                  {/* <img src={process.env.PUBLIC_URL + "/Ongoing_support.png"} alt="Ongoing support"></img> */}
+                  <img src={ongoingSupport} alt={t('Ongoing support')} loading="lazy"/>
                 </div>
                 <h3>{t('Ongoing support')}</h3>
                 {/* <p>{t('Our team will follow up on our clients regularly. Please contact us if you have any concerns.')}</p> */}
               </div>
               <div className="box">
                 <div className='image_wrapper'>
-                  <img src={evidenceBasedPractice} alt={t('Evidence-based practice')} />
-                  {/* <img src={process.env.PUBLIC_URL + "/Evidence_based_practice.png"} alt="Evidence-based practice"></img> */}
+                  <img src={evidenceBasedPractice} alt={t('Evidence-based practice')} loading="lazy"/>
                 </div>
                 <h3>{t('Evidence-based practice')}</h3>
                 {/* <p>{t("We integrate the best available research evidence with clinical expertise and clients' values for our treatment.")}</p> */}
@@ -199,7 +190,7 @@ const Home = () => {
             {physiotherapists.map((physiotherapist, i) => {
               return (
                 <div className="member" key={i}>
-                  <img src={physiotherapist.photo} alt={t(physiotherapist.name)}></img>
+                  <img src={physiotherapist.photo} alt={t(physiotherapist.name)} loading="lazy"></img>
                   <h3>{t(physiotherapist.name)}</h3>
                   <p>{t(physiotherapist.title)}</p>
                 </div>
