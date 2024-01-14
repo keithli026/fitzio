@@ -7,6 +7,7 @@
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 @import "./components/footer/footer.scss";
 @import "./components/header/header.scss";
+@import "./components/whatsappButton.scss";
 @import "./components/searchBar.scss";
 @import "./pages/bookOnline.scss";
 @import "./pages/conditions.scss";
@@ -14,6 +15,7 @@
 @import "./pages/home.scss";
 @import "./pages/physiotherapists.scss";
 @import "./pages/staff.scss";
+
 
 body {
   overflow-x: hidden;
@@ -310,23 +312,4 @@ p {
       }
     }
   }
-}
-
-.whatsapp_float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: #FFF;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 100;
-}
-
-.whatsapp-icon {
-  margin-top: 16px;
 }

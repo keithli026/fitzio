@@ -24,6 +24,7 @@ $header-height-xxl: 87.89px;
           right: 0;
           color: $white;
           @include media-breakpoint-up(lg) {
+            top: 0;
             margin-top: 50px;
           }
           @include media-breakpoint-up(xl) {
