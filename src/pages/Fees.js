@@ -1,14 +1,12 @@
-import { Container } from "../GlobalStyle";
-import "./fees.scss";
-// import i18n from '../components/i18n';
-import { useTranslation, Trans } from 'react-i18next';
+import Container from "react-bootstrap/Container"
+import { useTranslation, Trans } from 'react-i18next'
 import Breadcrumb from '../components/Breadcrumb'
 
 const Fees = () => {
   const { t } = useTranslation();
   return (
     <>
-      <Container>
+      <Container id="fee">
         <Breadcrumb />
         <h1>{t('Fees')}</h1>
         <h2>Physiotherapy Consultation Fees</h2>

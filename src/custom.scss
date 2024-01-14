@@ -2,10 +2,21 @@
 @import "fonts";
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "./components/footer/footer.scss";
+@import "./components/header/header.scss";
+@import "./components/searchBar.scss";
+@import "./pages/bookOnline.scss";
+@import "./pages/conditions.scss";
+@import "./pages/fees.scss";
+@import "./pages/home.scss";
+@import "./pages/physiotherapists.scss";
+@import "./pages/staff.scss";
 
 body {
   overflow-x: hidden;
-  margin: 0;
   letter-spacing: 0.5px;
 }
 
@@ -75,19 +86,19 @@ ul, ol {
   }
 }
 
-nav ul, nav ol {
-  list-style-type: none;
-  padding: 0;
-  font-weight: 700;
-}
-
-nav ul li, nav ol li {
-  padding: 0.5rem 1rem;
-}
-
-nav ul li a, nav ol li a {
-  text-decoration: none;
-  color: black;
+nav {
+  ul, ol {
+    list-style-type: none;
+    padding: 0;
+    font-weight: 700;
+    li {
+      padding: 0.5rem 1rem;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
 }
 
 img {
@@ -125,7 +136,6 @@ a {
 p {
   line-height: 35px;
 }
-
 
 .table {
   tbody {

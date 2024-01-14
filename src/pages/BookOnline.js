@@ -1,7 +1,6 @@
-import React from 'react';
-import { Container } from "../GlobalStyle";
-import Breadcrumb from "../components/Breadcrumb";
-import "./bookOnline.scss";
+import React from 'react'
+import Breadcrumb from "../components/Breadcrumb"
+import Container from "react-bootstrap/Container"
 
 const BookOnline = () => {
   window.addEventListener('message', function handleIFrameMessage(e) {
@@ -15,7 +14,7 @@ const BookOnline = () => {
   });
   return (
     <>
-      <Container>
+      <Container id="book-online">
         <Breadcrumb />
         <iframe title="booking" id='cliniko-39882858' src='https://kin-ho-li.au3.cliniko.com/bookings?embedded=true'></iframe>
       </Container>

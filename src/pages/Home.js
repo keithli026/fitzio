@@ -1,12 +1,10 @@
-import Slider from "react-slick";
-import { useRef } from "react";
-import { Link } from "react-router-dom";
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { Container } from "../GlobalStyle";
-import "./home.scss";
+import Slider from "react-slick"
+import { useRef } from "react"
+import { Link } from "react-router-dom"
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import Container from "react-bootstrap/Container"
 import { getPhysiotherapists } from "../PhysiotherapistInfo";
-// import "../components/i18n";
 import { useTranslation, Trans } from 'react-i18next';
 import bannerImg from "../assets/images/banner-image-1.jpg"
 import banner2Img from "../assets/images/banner-image-2.jpg"
@@ -46,7 +44,7 @@ const Home = () => {
         <div className="slide">
           <div className="banner">
             <img src={bannerImg} alt={t('banner')} loading="lazy"/>
-            <div className="textbox">
+            <div className="textbox container">
               <div className="content container">
                 <h2>{t('GET BACK TO DOING WHAT YOU LOVE')}</h2>
                 <h3>{t("DON'T SUFFER FROM PAIN WHEN YOU CAN MANAGE IT")}</h3>
@@ -72,7 +70,7 @@ const Home = () => {
         <div className="slide">
           <div className="banner">
             <img src={banner2Img} alt={t('banner')} loading="lazy"/>
-            <div className="textbox">
+            <div className="textbox container">
               <div className="content">
                 <h2>{t('GET BACK TO DOING WHAT YOU LOVE')}</h2>
                 <h3>{t("DON'T SUFFER FROM PAIN WHEN YOU CAN MANAGE IT")}</h3>

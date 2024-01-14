@@ -1754,6 +1754,14 @@ $pre-color:                         null !default;
 
 // @import "variables-dark"; // TODO: can be removed safely in v6, only here to avoid breaking changes in v5.3
 
+// $sm: map.get($grid-breakpoints, sm); 
+// $md: map.get($grid-breakpoints, md); 
+// $lg: map.get($grid-breakpoints, lg); 
+// $xl: map.get($grid-breakpoints, xl); 
+// $xxl: map.get($grid-breakpoints, xxl); 
+// $xxxl: map.get($grid-breakpoints, xxxl); 
+// $xxxxl: map.get($grid-breakpoints, xxxxl); 
+
 $sm-max-width: map.get($container-max-widths, sm); 
 $md-max-width: map.get($container-max-widths, md); 
 $lg-max-width: map.get($container-max-widths, lg); 

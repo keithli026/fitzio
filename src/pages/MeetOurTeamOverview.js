@@ -1,9 +1,7 @@
 import React from 'react'
-import { Container } from '../GlobalStyle'
+import Container from "react-bootstrap/Container"
 import { Link, useParams, useNavigate, useLocation } from "react-router-dom"
 import { getPhysiotherapist, getPhysiotherapists, deletePhysiotherapist } from "../PhysiotherapistInfo"
-import { useState, useEffect } from "react"
-// import i18n from '../components/i18n'
 import { useTranslation, Trans } from 'react-i18next'
 
 const MeetOurTeamOverview = () => {

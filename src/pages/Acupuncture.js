@@ -1,8 +1,7 @@
 import React from 'react'
-import { Container } from "../GlobalStyle"
-// import "../components/i18n"
 import { useTranslation } from 'react-i18next'
 import acupuncture from "../assets/images/Acupuncture.jpg"
+import Container from 'react-bootstrap/Container'
 
 const Acupuncture = () => {
   const { t } = useTranslation();

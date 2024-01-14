@@ -1,13 +1,11 @@
-import { Container, Row } from "../../GlobalStyle"
-import "./footer.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook, faInstagram, faTwitter, faYoutube, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import { phone } from "../WhatsappButton"
 import logoIcon from "../../assets/images/logo_white.png"
 import mailIcon from "../../assets/images/Mail.png"
-import "../../components/i18n";
-import { useTranslation, Trans } from 'react-i18next';
-
+import "../../components/i18n"
+import { useTranslation, Trans } from 'react-i18next'
+import Container from "react-bootstrap/Container"
 
 const email = "info@fitsiophysiotherapyandfitness.com.hk";
 const Footer = () => {

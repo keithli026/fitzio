@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useReducer } from 'react'
-import { Container } from "../GlobalStyle"
+import Container from "react-bootstrap/Container"
 import Breadcrumb from "../components/Breadcrumb"
-import "./conditions.scss"
 import { getCondition } from './ConditionInfo'
-// import "../components/i18n"
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'

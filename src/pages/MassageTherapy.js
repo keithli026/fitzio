@@ -1,6 +1,5 @@
 import React from 'react'
-import { Container } from "../GlobalStyle"
-// import "../components/i18n"
+import Container from "react-bootstrap/Container"
 import { useTranslation, Trans } from 'react-i18next'
 import massageTherapy from "../assets/images/Massage_therapy.jpg"
 

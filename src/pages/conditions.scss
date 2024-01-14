@@ -1,6 +1,3 @@
-// @import "../variable";
-@import "../index";
-
 @mixin dot-left-position($default-left, $left320, $left375, $left412, $left450, $left500, $left576, $left768, $left992, $left1200, $left1400) {
   left: $default-left;
 

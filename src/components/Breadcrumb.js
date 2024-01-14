@@ -4,7 +4,6 @@ import useBreadcrumbs from "use-react-router-breadcrumbs";
 import "../components/i18n";
 import { useTranslation, Trans } from 'react-i18next';
 
-
 const Breadcrumb = () => {
   const breadcrumbs = useBreadcrumbs();
   const { t, i18n } = useTranslation();

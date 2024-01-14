@@ -1,12 +1,7 @@
-// @import "../variable";
-@import "../index";
-
-$header-height: 56.27px;
-$header-height-lg: 152.89px;
-$header-height-xxl: 91.89px;
+$header-height: 72.27px;
+$header-height-lg: 148.89px;
+$header-height-xxl: 87.89px;
 .slick-slider {
-  // margin-bottom: 30px;
-
   .slick-list {
     .slick-slide {
       .banner {
@@ -24,7 +19,7 @@ $header-height-xxl: 91.89px;
         }
         .textbox {
           position: absolute;
-          top: 0;
+          top: 10vw;
           left: 0;
           right: 0;
           color: $white;
@@ -75,6 +70,7 @@ $header-height-xxl: 91.89px;
               }
               li {
                 width: fit-content;
+                text-align: start;
                 &::marker {
                   color: $red;
                 }
@@ -248,6 +244,9 @@ $header-height-xxl: 91.89px;
     }
 
     .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       flex-basis: 100%;
       margin-bottom: 50px;
       @include media-breakpoint-up(sm) {
@@ -265,15 +264,9 @@ $header-height-xxl: 91.89px;
 
       .image_wrapper {
         margin-bottom: 20px;
-        text-align: center;
-        @include media-breakpoint-up(sm) {
-          width: 70%;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
         img {
           height: 200px;
+          width: 100%;
         }
       }
 

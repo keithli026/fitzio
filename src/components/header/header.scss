@@ -1,22 +1,19 @@
-@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "~@fortawesome/fontawesome-free/scss/solid.scss";
-@import "~@fortawesome/fontawesome-free/scss/brands.scss";
-// @import "../../variable";
-@import "../../index";
-
 #header {
   background-color: $black;
   z-index: 2;
+  position: sticky;
+  top: 0;
+  background-color: white;
   @include media-breakpoint-up(lg) {
-    padding: 10px 0;
+    // padding: 10px 0;
   }
 
-  >div {
+  #navTop {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-
+    background-color: $black;
     .logo {
       order: 2;
 
@@ -35,74 +32,94 @@
         }
       }
     }
-
-    .level-0 {
-      margin: 0;
-      align-items: center;
-      li {
-        &.expandable {
-          >a {
-            &::after {
-              font: var(--fa-font-solid);
-              content: "\f078";
-              font-size: 14px;
-              margin-left: 10px;
-            }
-          }
-        }
-
-        a {
-          color: $white;
-        }
-
-        ul {
-          $white-space: nowrap;
-          position: absolute;
-          background-color: $black;
-        }
-
-        &:hover {
-          >ul {
-            display: flex;
-          }
-        }
-
+    .wrapper {
+      display: none;
+      @media (min-width: 992px) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        order: 2;
+        flex-basis: 100%;
+        justify-content: center;
       }
-
-      >li {
-        position: relative;
-
-        &:last-child {
-          a {
-            color: $red;
-
-            &:hover {
-              color: $white;
-              background-color: $red;
-            }
-          }
+      @media (min-width: 1400px) {
+        order: unset;
+        flex-basis: auto;
+      }
+      #level-0 {
+        margin: 0;
+        align-items: center;
+        @include media-breakpoint-up(lg) {
+          display: flex;
+          flex-direction: row;
         }
-
-        >ul {
-          top: 100%;
-          left: 0;
-          width: max-content;
-
-          >li {
-            &.expandable {
-              >a {
-                &::after {
-                  font: var(--fa-font-solid);
-                  content: "\f054";
-                  font-size: 14px;
-                  margin-left: 10px;
-                }
+        li {
+          &.expandable {
+            >a {
+              &::after {
+                font: var(--fa-font-solid);
+                content: "\f078";
+                font-size: 14px;
+                margin-left: 10px;
               }
             }
-
-            ul {
-              top: 0;
-              left: 100%;
+          }
+  
+          a {
+            color: $white;
+          }
+  
+          ul {
+            display: none;
+            $white-space: nowrap;
+            position: absolute;
+            background-color: $black;
+          }
+  
+          &:hover {
+            >ul {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+  
+        }
+  
+        >li {
+          position: relative;
+  
+          &:last-child {
+            a {
+              color: $red;
+  
+              &:hover {
+                color: $white;
+                background-color: $red;
+              }
+            }
+          }
+  
+          >ul {
+            top: 100%;
+            left: 0;
+            width: max-content;
+  
+            >li {
+              &.expandable {
+                >a {
+                  &::after {
+                    font: var(--fa-font-solid);
+                    content: "\f054";
+                    font-size: 14px;
+                    margin-left: 10px;
+                  }
+                }
+              }
+  
+              ul {
+                top: 0;
+                left: 100%;
+              }
             }
           }
         }
@@ -129,9 +146,11 @@
 
     .menuBtn {
       order: 1;
+      display: block;
 
       @include media-breakpoint-up(lg) {
         order: unset;
+        display: none;
       }
 
       svg {
@@ -143,7 +162,7 @@
 
     .telphone {
       order: 3;
-
+      display: block;
       @include media-breakpoint-up(lg) {
         display: none;
         order: unset;
@@ -159,10 +178,16 @@
     }
   }
 
-  .mnav {
+  #navMain {
     background-color: $dark;
-
+    display: block;
+    padding-top: 0;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
     li {
+      padding-left: 0;
+      padding-right: 0;
       a {
         color: $white;
       }
@@ -172,21 +197,34 @@
       }
     }
 
-    .mlevel-0 {
+
+    #mlevel-0 {
       overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+      margin-bottom: 0;
       >li {
         border-bottom: 1px solid $gray-600;
-
+        padding: 10px;
         a {
           display: inline-block;
           max-width: 90%;
-          padding: 10px 20px;
+          // margin: 10px 20px;
+        }
+        button {
+          // margin: 10px 20px;
+          padding: 0;
+          border: none;
+          background-color: inherit;
+          color: $white;
+          margin-right: 15px;
         }
 
         .dropdownBtn {
           max-width: 10%;
           float: right;
-          padding: 10px 20px 10px 0;
+          // padding: 10px 20px 10px 0;
           text-align: end;
 
           >div {
@@ -200,7 +238,13 @@
         }
       }
 
-      .mlevel-1 {
+      #mlevel-1 {
+        display: none;
+        &.expanded {
+          display: flex;
+          flex-direction: column;
+
+        }
         >li {
           position: relative;
 
@@ -231,8 +275,6 @@
           }
         }
       }
-
-      .mlevel-2 {}
 
     }
   }

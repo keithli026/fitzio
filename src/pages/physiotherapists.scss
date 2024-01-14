@@ -1,19 +1,16 @@
-@import "../variable";
-
 .physiotherapists_list {
   margin-bottom: 30px;
 
   .members_wrapper {
     display: flex;
     flex-direction: column;
-
-    @media (min-width: $tablet-min-width) {
+    @include media-breakpoint-up(md) {
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
     }
 
-    @media (min-width: $desktop-min-width) {
+    @include media-breakpoint-up(lg) {
       justify-content: start;
     }
 
@@ -24,18 +21,18 @@
       &:not(:last-child) {
         border-bottom: 1px solid grey;
 
-        @media (min-width: $tablet-min-width) {
+        @include media-breakpoint-up(md) {
           border-bottom: none;
         }
       }
 
-      @media (min-width: $tablet-min-width) {
+      @include media-breakpoint-up(md) {
         display: flex;
         flex-direction: column;
         flex-basis: 48%;
       }
 
-      @media (min-width: $desktop-min-width) {
+      @include media-breakpoint-up(lg) {
         flex-basis: 33.333333%;
 
         &:nth-child(3n+1) {

@@ -1,7 +1,7 @@
 import { useParams, useNavigate, useLocation } from "react-router-dom"
 import { getPhysiotherapist, getPhysiotherapists, deletePhysiotherapist, getPhysiotherapistByName } from "../PhysiotherapistInfo"
-import { Container } from "../GlobalStyle"
-import "./staff.scss"
+import Container from "react-bootstrap/Container"
+// import "./staff.scss"
 import parse from 'html-react-parser'
 
 const Staff = () => {

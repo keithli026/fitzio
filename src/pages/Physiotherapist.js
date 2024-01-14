@@ -1,6 +1,6 @@
 import { useParams, useNavigate, useLocation } from "react-router-dom"
 import { getPhysiotherapist, deletePhysiotherapist } from "../PhysiotherapistInfo"
-import { Container } from "../GlobalStyle"
+import Container from "react-bootstrap/Container"
 
 const Physiotherapist = () => {
   let navigate = useNavigate();
