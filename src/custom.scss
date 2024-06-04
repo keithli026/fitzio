@@ -25,22 +25,15 @@ body {
 h1 {
   font-size: 30px;
   @include media-breakpoint-up(lg) {
-    font-size: 45px;
-  }
-  @include media-breakpoint-up(xxl) {
     font-size: 54px;
+    margin-bottom: 50px;
   }
 }
 
 h2 {
   font-size: 25px;
-  margin-bottom: 30px;
   @include media-breakpoint-up(lg) {
     font-size: 37px;
-    margin-bottom: 80px;
-  }
-  @include media-breakpoint-up(xxl) {
-    font-size: 45px;
   }
   &.underline {
     text-transform: uppercase;
@@ -144,7 +137,7 @@ p {
     tr {
       @include media-breakpoint-up(lg) {
         &:hover {
-          font-weight: 700;
+          // font-weight: 700;
         }
       }
     }

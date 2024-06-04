@@ -9,32 +9,27 @@ const Fees = () => {
       <Container id="fee">
         <Breadcrumb />
         <h1>{t('Fees')}</h1>
-        <h2>Physiotherapy Consultation Fees</h2>
-        <div className="table-responsive">
+        <h2>{t('Physiotherapy Consultation Fees')}</h2>
+        <div className="table-responsive mb-5">
           <table className="table table-bordered table-hover">
             <thead>
               <tr>
-                <th>Consultation</th>
+                <th></th>
                 <th>Time</th>
                 <th>Fee</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Initial Consultation</td>
-                <td>60 min</td>
-                <td>$1500</td>
-              </tr>
-              <tr>
-                <td>Follow-up Consultation</td>
-                <td>40 min</td>
-                <td>$1200</td>
+                <td>Consultation</td>
+                <td>20 min</td>
+                <td>$108</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <h2>Physiotherapy Program Fees</h2>
-        <div className="table-responsive">
+        <h2>Physiotherapy Program and Package Fees</h2>
+        <div className="table-responsive mb-5">
           <table className="table table-bordered table-hover">
             <thead>
               <tr>
@@ -46,31 +41,29 @@ const Fees = () => {
             </thead>
             <tbody>
               <tr>
-                <td>Intensive</td>
+                <td>Intensive Program</td>
                 <td>
                   <ul>
-                    <li>For clients who need more than one session per week</li>
-                    <li>Unlimited physiotherapy throughout the week</li>
+                    <li>Unlimited physiotherapy throughout the week (up to 1 session daily for 7 days)</li>
+                    <li>For client who needs multiple sessions per week due to severe pain</li>
                   </ul>
                 </td>
-                <td>40-60 min</td>
-                <td>$2500 per week</td>
+                <td>20 min per session</td>
+                <td>$298 per week</td>
               </tr>
               <tr>
-                <td>Maintenance</td>
+                <td>Wellness Packages</td>
                 <td>
                   <ul>
-                    <li>For wellness and maintenance</li>
-                    <li>For existing clients who have recurrent episodes</li>
-                    <li>For clients who have tightness/stiffness</li>
+                    <li>No expiry date for the package</li>
+                    <li>For client who needs ongoing physiotherapy</li>
                   </ul>
                 </td>
-                <td>20-40 min</td>
+                <td>20 min per session</td>
                 <td>
                   <ul>
-                    <li>$900 per session</li>
-                    <li>$4500 per 6 sessions</li>
-                    <li>$9000 per 13 sessions</li>
+                    <li>$540 for 6 sessions</li>
+                    <li>$1120 for 14 sessions</li>
                   </ul>
                 </td>
               </tr>
