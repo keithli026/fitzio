@@ -9,7 +9,7 @@ import { useTranslation, Trans } from 'react-i18next'
 import logoIcon from "../../assets/images/logo_white.png"
 import Container from "react-bootstrap/Container"
 import Navbar from "react-bootstrap/Navbar"
-
+import LanguageSwitcher from "../LanguageSwitcher"
 
 const lngs = {
   en: { nativeName: 'English', symbol: 'EN' },
@@ -45,6 +45,7 @@ const Header = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
+    console.log(i18n.resolvedLanguage)
     refMenu.current.style.height = `${window.innerHeight - refHeader.current.clientHeight}px`;
     // console.log(window.innerHeight, refHeader.current.clientHeight);
     // console.log("pathname: " + location.pathname + "; search: " + location.search);
@@ -130,11 +131,12 @@ const Header = () => {
               </ul>
             </div>
             <div className="language-switcher">
-              {Object.keys(lngs).map((lng) => (
+            <LanguageSwitcher />
+              {/* {Object.keys(lngs).map((lng) => (
                 <button key={lng} style={{ textDecoration: i18n.resolvedLanguage === lng ? 'underline' : 'none' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
                   {lngs[lng].symbol}
                 </button>
-              ))}
+              ))} */}
             </div>
             <div className="menuBtn" onClick={() => setShow(!show)}>
               <FontAwesomeIcon icon={show ? faTimes : faBars} />
@@ -189,11 +191,12 @@ const Header = () => {
               <Link to="/book-online" onClick={closeMenu}>{t('Book Online')}</Link>
             </li>
             <li>
-              {Object.keys(lngs).map((lng) => (
+              <LanguageSwitcher />
+              {/* {Object.keys(lngs).map((lng) => (
                 <button key={lng} style={{ textDecoration: i18n.resolvedLanguage === lng ? 'underline' : 'none' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
                   {lngs[lng].symbol}
                 </button>
-              ))}
+              ))} */}
             </li>
           </ul>
         </Navbar>

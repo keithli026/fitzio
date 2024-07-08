@@ -5,7 +5,7 @@ import { useTranslation, Trans } from 'react-i18next'
 import electrotherapy from "../assets/images/Electrotherapy.jpg"
 
 const Electrotherapy = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['electrotherapy', 'common']);
   return (
     <>
       <Container>

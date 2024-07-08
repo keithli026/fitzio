@@ -12,7 +12,7 @@ import cuppingTherapy from "../assets/images/Cupping_therapy.jpg"
 import shockwaveTherapy from "../assets/images/Shockwave_therapy.jpg"
 
 const ServicesOverview = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   return (
     <Container className="overviews">
       <div className="overview">

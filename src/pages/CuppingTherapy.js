@@ -5,7 +5,7 @@ import { useTranslation, Trans } from 'react-i18next'
 import cuppingTherapy from "../assets/images/Cupping_therapy.jpg"
 
 const CuppingTherapy = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['cupping-therapy', 'common']);
   return (
     <>
       <Container>

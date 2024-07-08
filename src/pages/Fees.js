@@ -3,69 +3,103 @@ import { useTranslation, Trans } from 'react-i18next'
 import Breadcrumb from '../components/Breadcrumb'
 
 const Fees = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['fees', 'common']);
+  const { line1, line2, line3, line4, line5, line6, line7, line8 } = t('description');
+  
   return (
     <>
       <Container id="fee">
         <Breadcrumb />
-        <h1>{t('Fees')}</h1>
-        <h2>{t('Physiotherapy Consultation Fees')}</h2>
+        <h1>{t('Fees', { ns: 'common' })}</h1>
+        <h2>{t('table-title-1')}</h2>
         <div className="table-responsive mb-5">
           <table className="table table-bordered table-hover">
             <thead>
               <tr>
                 <th></th>
-                <th>Time</th>
-                <th>Fee</th>
+                <th>{t('table-heading-3')}</th>
+                <th>{t('table-heading-4')}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Consultation</td>
-                <td>20 min</td>
+                <td>{t('service')}</td>
+                <td>{t('time')}</td>
                 <td>$108</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <h2>Physiotherapy Program and Package Fees</h2>
+        <h2>{t('table-title-2')}</h2>
         <div className="table-responsive mb-5">
           <table className="table table-bordered table-hover">
             <thead>
               <tr>
-                <th>Program</th>
-                <th>Description</th>
-                <th>Time</th>
-                <th>Fee</th>
+                <th>{t('table-heading-1')}</th>
+                <th>{t('table-heading-2')}</th>
+                <th>{t('table-heading-3')}</th>
+                <th>{t('table-heading-4')}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Intensive Program</td>
+                <td>{t('program-1')}</td>
                 <td>
                   <ul>
-                    <li>Unlimited physiotherapy throughout the week (up to 1 session daily for 7 days)</li>
-                    <li>For client who needs multiple sessions per week due to severe pain</li>
+                    <li>
+                      <Trans
+                        i18nKey={line1}
+                        components={{ italic: <i />, bold: <strong /> }}
+                      />
+                    </li>
+                    <li>{line2}</li>
                   </ul>
                 </td>
-                <td>20 min per session</td>
-                <td>$298 per week</td>
+                <td>{t('time')}</td>
+                <td>{t('fee-1')}</td>
               </tr>
               <tr>
-                <td>Wellness Packages</td>
+                <td>{t('program-2')}</td>
                 <td>
                   <ul>
-                    <li>No expiry date for the package</li>
-                    <li>For client who needs ongoing physiotherapy</li>
+                    <li>
+                      <Trans
+                        i18nKey={line3}
+                        components={{ italic: <i />, bold: <strong /> }}
+                      />
+                    </li>
+                    <li>{line4}</li>
                   </ul>
                 </td>
-                <td>20 min per session</td>
+                <td>{t('time')}</td>
+                <td>{t('fee-2')}</td>
+              </tr>
+              <tr>
+                <td>{t('program-3')}</td>
                 <td>
                   <ul>
-                    <li>$540 for 6 sessions</li>
-                    <li>$1120 for 14 sessions</li>
+                    <li>
+                      <Trans
+                        i18nKey={line5}
+                        components={{ italic: <i />, bold: <strong /> }}
+                      />
+                    </li>
+                    <li>{line6}</li>
                   </ul>
                 </td>
+                <td>{t('time')}</td>
+                <td>{t('fee-3')}</td>
+              </tr>
+              <tr>
+                <td>{t('program-4')}</td>
+                <td>
+                  <ul>
+                    <li>{line7}</li>
+                    <li>{line8}</li>
+                  </ul>
+                </td>
+                <td>{t('time')}</td>
+                <td>{t('fee-4')}</td>
               </tr>
             </tbody>
           </table>

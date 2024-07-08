@@ -1,0 +1,29 @@
+{
+  "table-title-1": "Physiotherapy Consultation Fees",
+  "table-title-2": "Physiotherapy Program and Package Fees",
+  "table-heading-1": "Program",
+  "table-heading-2": "Description",
+  "table-heading-3": "Time",
+  "table-heading-4": "Fee",
+  "service": "Consultation",
+  "program-1": "Intensive Week",
+  "program-2": "Intensive Fortnight",
+  "program-3": "Intensive Month",
+  "program-4": "Wellness Package",
+  "description": {
+    "line1": "Unlimited physiotherapy throughout a week (<bold>up to</bold> 1 session daily)",
+    "line2": "For client who needs multiple sessions per week due to severe pain",
+    "line3": "Unlimited physiotherapy throughout a fortnight (<bold>up to</bold> 1 session daily)",
+    "line4": "For client who needs multiple sessions per week due to severe pain",
+    "line5": "Unlimited physiotherapy throughout a month (<bold>up to</bold> 1 session daily)",
+    "line6": "For client who needs comprehensive rehabilitation treatment throughout the month",
+    "line7": "No expiry date for the package",
+    "line8": "For client who needs ongoing physiotherapy"
+  },
+  "time": "20 min per session",
+  "fee-1": "$288 a week",
+  "fee-2": "$270 a week ($540 a fortnight)",
+  "fee-3": "$249 a week ($996 a month)",
+  "fee-4": "$600 for 6 sessions",
+  "fee-5": "$1080 for 12 sessions"
+}

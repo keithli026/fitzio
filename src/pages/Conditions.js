@@ -10,7 +10,7 @@ import dotImg from "../assets/images/dot.png"
 import shiningDotImg from "../assets/images/shining_dot.png"
 
 const Conditions = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['conditions', 'common']);
   const dot = useRef([]);
   const shiningDot = useRef([]);
   const textBox = useRef([]);

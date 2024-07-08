@@ -5,7 +5,7 @@ import { useTranslation, Trans } from 'react-i18next'
 import exerciseRehabilitation from "../assets/images/Exercise_therapy.jpg"
 
 const ExerciseRehabilitation = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['exercise-rehabilitation', 'common']);
   return (
     <>
       <Container>

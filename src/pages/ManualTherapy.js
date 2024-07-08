@@ -4,7 +4,7 @@ import { useTranslation, Trans } from 'react-i18next'
 import manualTherapy from "../assets/images/Manual_therapy.jpg"
 
 const ManualTherapy = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['manual-therapy', 'common']);
   return (
     <>
       <Container>

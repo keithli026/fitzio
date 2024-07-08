@@ -9,7 +9,7 @@ const MeetOurTeamOverview = () => {
   let staffTotal = getPhysiotherapists();
   let staff = getPhysiotherapist(parseInt(params.staffId, 10));
   // console.log(staffTotal.length);
-  const { t } = useTranslation();
+  const { t } = useTranslation(['meet-our-team', 'common']);
   return (
     <>
       <Container>

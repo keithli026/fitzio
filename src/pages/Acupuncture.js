@@ -4,7 +4,8 @@ import acupuncture from "../assets/images/Acupuncture.jpg"
 import Container from 'react-bootstrap/Container'
 
 const Acupuncture = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['acupuncture', 'common']);
+  
   return (
     <>
     <Container>

@@ -19,7 +19,7 @@ import evidenceBasedPractice from "../assets/images/Evidence_based_practice.png"
 import arrowIcon from "../assets/images/arrow.png"
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['home', 'common']);
   const ref = useRef(null);
   const executeScroll = () => ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   var settings = {
